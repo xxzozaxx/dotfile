@@ -1,0 +1,217 @@
+! __  _______ _____
+! \ \/ /  ___|_   _|
+!  \  /| |_    | |
+!  /  \|  _|   | |
+! /_/\_\_|     |_|  :xft:
+
+Xft*dpi: 96
+Xft*antialias:  true
+xft*hinting:    true
+Xft*rgba:       rgb
+!Xft*autohint:   false
+Xft*hintstyle:  hintslight
+Xft*lcdfilter:  lcddefault
+Xcursor.theme: Chameleon-Pearl-Regular-0.5
+Xcursor.size:  0
+! special: Monochrome theme
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
+*.color0:       #000000
+*.color8:       #202020
+*.color1:       #6b6b6b
+*.color9:       #464646
+*.color2:       #c4c4c4
+*.color10:      #f8f8f8
+*.color3:       #b3b3b3
+*.color11:      #eeeeee
+*.color4:       #999999
+*.color12:      #7c7c7c
+*.color5:       #717171
+*.color13:      #adadad
+*.color6:       #8a8a8a
+*.color14:      #c0c0c0
+*.color7:       #b5cabb
+*.color15:      #99ac9e
+
+! __  ___
+! \ \/ / |_ ___ _ __ _ __ ___
+!  \  /| __/ _ \ '__| '_ ` _ \
+!  /  \| ||  __/ |  | | | | | |
+! /_/\_\\__\___|_|  |_| |_| |_| :xterm:
+XTerm*vt100.faceName: Iosevka:pixelsize=13
+UXTerm*vt100.faceName: Iosevka:pixelsize=13
+XTerm.font1: 5x7
+XTerm.font2: 6x10
+XTerm.font3: fixed
+XTerm.font4: 9x15
+XTerm*boldFont: fixed
+XTerm*loginShell: true
+XTerm*faceName: DejaVuSansMono
+XTerm*faceSize: 9.4
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+!Make 'Alt' key behave as on other terminal emulators
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.translations: #override \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+UXTerm.vt100.translations: #override \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+XTerm*intensityStyles:	true
+UXTerm*intensityStyles:  true
+!uxterm*depth:		32
+XTerm*termName: xterm-256color
+UXTerm*termName: uxterm-256color
+!uxterm*letterSpace: 1
+XTerm*scrollBar:    false
+UXTerm*scrollBar:   false
+!uxterm*cursorColor:	white
+!uxterm*resize-font.smaller:    C-Down
+!uxterm*resize-font.bigger:     C-Up
+
+XTerm*scrollBar: False
+XTerm*scrollBar.DrawBorder: False
+XTerm*saveLines: 2000
+XTerm*reverseVideo: false
+XTerm*reverseWrap: true
+XTerm*fullCursor: true
+XTerm*scrollTtyOutput: on
+XTerm*scrollKey: on
+XTerm*eightBitInput: false
+!XTerm*pointerColor: white
+!XTerm*pointerShape: left_ptr
+XTerm*charClass: 37:48,45-47:48,58:48,64:48,126:48
+XTerm*foreground: #DCDCCC
+XTerm*background: #2F2F2F
+XTerm*cursorColor: #DDDDFF
+XTerm*cursorColor2: #020202
+!! colors
+XTerm*color0: #3F3F5F
+XTerm*color1: #E07050
+XTerm*color2: #60B48A
+XTerm*color3: #DFAF8F
+XTerm*color4: #4F5F6F
+XTerm*color5: #DC8CC3
+XTerm*color6: #8CD0D3
+XTerm*color7: #104050
+XTerm*color8: #709080
+XTerm*color9: #FC5555
+XTerm*color10: #72D5A3
+XTerm*color11: #F0DFAF
+XTerm*color12: #94BFF3
+XTerm*color13: #EC93D3
+XTerm*color14: #E3E0E3
+XTerm*color15: white
+XTerm*colorBD: #709080
+XTerm*colorUL: #4C7CFC
+XTerm*colorBDMode: on
+XTerm*colorULMode: on
+XTerm*underLine: on
+
+XTerm*utf8: true
+XTerm*geometry: 100x80
+
+
+!  _   _ ____               _
+! | | | |  _ \ __  ____   _| |_
+! | | | | |_) |\ \/ /\ \ / / __|
+! | |_| |  _ <  >  <  \ V /| |_
+!  \___/|_| \_\/_/\_\  \_/  \__| :urxvt:
+! URxvt.background: #020202
+! URxvt.foreground: #F2F1F0
+! URxvt.cursorColor: #F67730
+!URxvt.color0: #222222
+!URxvt.color1: #D23D3D
+!URxvt.color8: #666666
+!URxvt.color9: #E84F4F
+!URxvt.color2: #B7CE42
+!URxvt.color10: #BDE077
+!URxvt.color3: #F6784F
+!URxvt.color11: #F07746
+!URxvt.color4: #66AABB
+!URxvt.color12: #AACCBB
+!URxvt.color5: #B7416E
+!URxvt.color13: #E16A98
+!URxvt.color6: #6D878D
+!URxvt.color14: #42717B
+!URxvt.color7: #F2F1F0
+!URxvt.color15: #F2F1F0
+URxvt.color24:  #076678
+URxvt.color66:  #427b58
+URxvt.color88:  #9d0006
+URxvt.color96:  #8f3f71
+URxvt.color100: #79740e
+URxvt.color108: #8ec07c
+URxvt.color109: #83a598
+URxvt.color130: #af3a03
+URxvt.color136: #b57614
+URxvt.color142: #b8bb26
+URxvt.color167: #fb4934
+URxvt.color175: #d3869b
+URxvt.color208: #fe8019
+URxvt.color214: #fabd2f
+URxvt.color223: #ebdbb2
+URxvt.color228: #f2e5bc
+URxvt.color229: #fbf1c7
+URxvt.color230: #f9f5d7
+URxvt.color234: #1d2021
+URxvt.color235: #282828
+URxvt.color236: #32302f
+URxvt.color237: #3c3836
+URxvt.color239: #504945
+URxvt.color241: #665c54
+URxvt.color243: #7c6f64
+URxvt.color244: #928374
+URxvt.color245: #928374
+URxvt.color246: #a89984
+URxvt.color248: #bdae93
+URxvt.color250: #d5c4a1
+URxvt.highlightColor: #bdbdbd
+URxvt.highlighTextColor: #424242
+URxvt.perl-lib : /home/master/.urxvt/
+! !URxvt*perl-ext-common: default,keyboard-select,bidi
+URxvt*perl-ext-common: default
+!URxvt.perl-ext: clipboard,tabbedex,url-select,autocomplete-ALL-the-things,matcher,bidi,resize-font
+
+!!!! Config
+!URxvt*termName:    xterm-256color
+!URxvt*depth:        32
+! Transparency
+!URxvt*transparent : true
+!URxvt*shading : 5
+! Font
+! URxvt.font: xft:Mononoki:pixelsize=13,
+! URxvt.font: 		xft:CodeNewRoman Nerd Font Mono:size=11
+URxvt.font: 		xft:mononoki Nerd Font Mono:size=11
+! Scroll
+URxvt*scrollBar:	false
+! Settings
+urxvt*internalBorder: 3
+!URxvt*cursorUnderline: true
+URxvt*cursorBlink: true
+URxvt*savelines: 10000
+! Optionnal settings
+!URxvt.letterSpace:-1
+!!!!! copy, paste and search
+URxvt.keysym.Control-Shift-V: perl:clipboard:paste
+URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+!!!! Compelete
+URxvt.keysym.M-colon:   perl:aAtt:word-complete
+
+!!!! URLs
+!URxvt.urlLauncher: firefox
+URxvt.url-launcher:         /usr/bin/qutebrowser
+URxvt.keysym.M-u:           perl:mark-yank-urls:activate_mark_mode
+URxvt.url-select.underline: true
+URxvt.colorUL:		          #4682B4
+URxvt.url-select.autocopy:  true
+URxvt.url_select.underline:	true
+
+!!!! matche
+URxvt.matcher.button:	1

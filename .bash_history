@@ -4350,3 +4350,13 @@ sudo poweroff
 echo "Today I earned \$58327 but lost \$3826." | colout "\\$\d{,5}" 34
 sudo poweroff 
 telnet mapscii.me
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+./.fzf/install 
+reset 
+reset 
+cd Downloads/test/
+tat xzvf uw-ttyp0-1.3.tar.gz 
+tar xzvf uw-ttyp0-1.3.tar.gz 
+ls
+mv uw-ttyp0-1.3 ~/.fonts/
+fc-cache -v 

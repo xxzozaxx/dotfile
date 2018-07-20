@@ -1,0 +1,2 @@
+rofi.theme:  /home/master/.config/rofi/gruvbox-rofi/gruvbox-dark-soft.rasi
+#include "/usr/share/rofi/themes//Monokai.theme"
