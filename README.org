@@ -2,24 +2,23 @@
 #+AUTHOR: Ahmed Khaled
 
 * Screenshot
-  Date: Fri Jul 20 17:09:35 EET 2018
-** TODO
-
+  #+DATE: Fri Jul 20 17:09:35 EET 2018
+  [[https://github.com/xxzozaxx/dotfile/blob/master/Pictures/2018-07-20_11:32:15_1600x900.png]]
 * What programs here:
-** I3wm without gaps
-** urxvt
-** Screen (I don't use tmux anymore)
+- I3wm without gaps
+- urxvt
+- Screen (I don't use tmux anymore)
 ** Emacs (Spacemacs)
-*** Dired layer
-** Vim
-** TODO Bash
-** Qutebrowser
-** Ranger
-** rofi
-** zathura
-** misc
-*** Compton
-*** neofetch
-
+   - Dired layer
+- Vim
+- Bash (TODO )
+- Qutebrowser
+- Ranger
+- rofi
+- zathura
+- misc
+- Compton
+- neofetch
+-
 * Feel free to suggest me anything
   you know how to use github, huh.
