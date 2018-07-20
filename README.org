@@ -8,8 +8,7 @@
 - I3wm without gaps
 - urxvt
 - Screen (I don't use tmux anymore)
-** Emacs (Spacemacs)
-   - Dired layer
+- Emacs (Spacemacs) :: - Dired layer
 - Vim
 - Bash (TODO )
 - Qutebrowser
