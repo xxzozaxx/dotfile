@@ -60,8 +60,9 @@ values."
              :ssl t
              :nick "Ahmedkh")))
 
-     (mu4e :variables mu4e-installation-path "run/current-system/sw/share/emacs/site-lisp/"
-           :variables mu4e-enable-mode-line t)
+     ;; (mu4e :variables mu4e-installation-path "run/current-system/sw/share/emacs/site-lisp/"
+     ;;       :variables mu4e-enable-mode-line t)
+     mu4e
 
      ;; fun stuff
      graphviz ;selectric ; exwm
