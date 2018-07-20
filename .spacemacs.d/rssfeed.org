@@ -1,0 +1,19 @@
+# youtube prefix : https://www.youtube.com/feeds/videos.xml?channel_id=
+* Plant                                                              :elfeed:
+**  http://planet.emacsen.org/atom.xml
+**  https://planet.gnu.org/rss20.xml
+# **  https://planet.nixos.org/rss20.xml
+**  https://planet.lisp.org/rss20.xml
+* Comic                                                              :elfeed:
+**  https://xkcd.com/rss.xml
+**  https://linux.pictures/feed
+* Youtube                                                            :elfeed:
+** https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA
+** https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw
+** https://www.youtube.com/feeds/videos.xml?channel_id=UC9yt3wz-6j19RwD5m5f6HSg
+** https://www.youtube.com/feeds/videos.xml?channel_id=UCd0dc7kQA1FUpJ76o1EjLqQ
+** https://www.youtube.com/feeds/videos.xml?channel_id=UConVfxXodg78Tzh5nNu85Ew
+* Blog                                                               :elfeed:
+** https://lukesmith.xyz/rss.xml
+* News                                                               :elfeed:
+** https://hnrss.org/newest?points=10
