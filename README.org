@@ -1,4 +1,4 @@
-#+TITLE: My dotfile (aka My GNHO/linux rice)
+#+TITLE: My Monochrome dotfile (aka My GNHO/linux rice)
 #+AUTHOR: Ahmed Khaled
 
 * Screenshot
