@@ -58,8 +58,7 @@ values."
           '(("irc.freenode.net"
              :port "6697"
              :ssl t
-             :nick "Ahmedkh"
-             :password "123ahmed123")))
+             :nick "Ahmedkh")))
 
      (mu4e :variables mu4e-installation-path "run/current-system/sw/share/emacs/site-lisp/"
            :variables mu4e-enable-mode-line t)
@@ -361,8 +360,7 @@ values."
    )
 
   ;;; Jabber account list
-  (setq jabber-account-list '(("DavidGabriel@jabberd.tk"
-                               (:password . "123ahmed123"))))
+  (setq jabber-account-list '(("DavidGabriel@jabberd.tk")))
 
   ;;; arabic font
   (when window-system
