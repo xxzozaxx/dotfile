@@ -33,7 +33,7 @@
 ### --- Set var ---
 font pango:3270Medium Nerd Font 0
 set $mod Mod4
-set $term urxvt
+set $term st
 set $video --no-startup-id bash ~/.config/Scripts/video.sh
 set $stoprec --no-startup-id killall ffmpeg & killall screenkey
 set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
@@ -124,7 +124,8 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 645 420
 #for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id $term -name dropdown -e screen
+# exec --no-startup-id $term -name dropdown -e screen
+exec --no-startup-id $term -n dropdown -e screen
 
 ### ---- Basic Bindings ----
 # --- Non-letter Key Bindings
