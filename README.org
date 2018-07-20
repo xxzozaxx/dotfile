@@ -1,0 +1,25 @@
+#+TITLE: My dotfile (aka My GNHO/linux rice)
+#+AUTHOR: Ahmed Khaled
+
+* Screenshot
+  Date: Fri Jul 20 17:09:35 EET 2018
+** TODO
+
+* What programs here:
+** I3wm without gaps
+** urxvt
+** Screen (I don't use tmux anymore)
+** Emacs (Spacemacs)
+*** Dired layer
+** Vim
+** TODO Bash
+** Qutebrowser
+** Ranger
+** rofi
+** zathura
+** misc
+*** Compton
+*** neofetch
+
+* Feel free to suggest me anything
+  you know how to use github, huh.
