@@ -36,50 +36,53 @@ values."
    '(
      ;; ---- Languages -----
      emacs-lisp shell-scripts
-     haskell common-lisp python scheme
-     c-c++ html sml racket ;nixos
-     markdown
-     (latex :variables latex-enable-auto-fill t
-            :variables latex-enable-folding t)
+                haskell common-lisp python scheme
+                c-c++ html sml racket ruby ;nixos
+                markdown
+                (latex :variables latex-enable-auto-fill t
+                       :variables latex-enable-folding t)
 
-     ;;  ---- Editor -----
-     ivy syntax-checking imenu-list ibuffer dash git
-     semantic
-     (spell-checking :variables spell-checking-enable-by-default nil)
-     (colors :variables colors-colorize-identifiers 'variables)
+                ;;  ---- Editor -----
+                ivy syntax-checking imenu-list ibuffer dash git
+                semantic
+                (spell-checking :variables spell-checking-enable-by-default nil)
+                (colors :variables colors-colorize-identifiers 'variables)
 
-     ;;  ---- Application -----
-     org pdf-tools dired ;jabber ;vinegar
-     (elfeed :variables
-             rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
+                ;;  ---- Application -----
+                org pdf-tools dired ;jabber ;vinegar
+                (elfeed :variables
+                        rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
 
-     (erc :variables
-          erc-server-list
-          '(("irc.freenode.net"
-             :port "6697"
-             :ssl t
-             :nick "Ahmedkh")))
+                (erc :variables
+                     erc-server-list
+                     '(;; ("irc.freenode.net"
+                       ;;  :port "6697"
+                       ;;  :ssl t
+                       ;;  :nick "Ahmedkh")
+                       ("irc.rizon.net"
+                        :port "6697"
+                        :ssl t
+                        :nick "Ahmedkh")))
 
-     ;; (mu4e :variables mu4e-installation-path "run/current-system/sw/share/emacs/site-lisp/"
-     ;;       :variables mu4e-enable-mode-line t)
-     mu4e
+                ;; (mu4e :variables mu4e-installation-path "run/current-system/sw/share/emacs/site-lisp/"
+                ;;       :variables mu4e-enable-mode-line t)
+                mu4e
 
-     ;; fun stuff
-     graphviz ;selectric ; exwm
-     (shell :variables shell-enable-smart-eshell t)
-     )
+                ;; fun stuff
+                graphviz ;selectric ; exwm
+                (shell :variables shell-enable-smart-eshell t)
+                )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
-   ;; packages, then consider creating a layer. You can also put the
-   ;; configuration in `dotspacemacs/user-config'.
+   ;; packages.
    dotspacemacs-additional-packages '(;; --- External Package ----
                                       zoom
                                       smart-mode-line
                                       all-the-icons-ivy
                                         ; --- NAND2Tetris packages ---
-                                      nand2tetris
-                                      nand2tetris-assembler
-                                      company-nand2tetris
+                                      ;; nand2tetris
+                                      ;; nand2tetris-assembler
+                                      ;; company-nand2tetris
                                         ; --- NAND2Tetris End here ---
                                       ;; --- Theme ---
                                       ;; doom-themes
@@ -182,8 +185,9 @@ values."
    ;; font test: a g l i α λ
 
    ;; List of fonts that you could use "Monoisome""DejaVu Sans Mono""Iosevka"
-   dotspacemacs-default-font '("Mononoki"
-                               :size 15
+   ;; dotspacemacs-default-font '("mplus Nerd Font Mono"
+   dotspacemacs-default-font '("FantasqueSansMono Nerd Font Mono"
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -377,22 +381,19 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; allow aggressive-indent-mode
+  (add-hook 'prog-mode-hook #'aggressive-indent-mode)
 
+  ;; ivy buffer icon for eyecandy
   (use-package all-the-icons-ivy
     :config
     (all-the-icons-ivy-setup))
-
-  ;; modeline
-  ;; (setq sml/no-confirm-load-theme t)
-  ;; (sml/setup)
-
 
   ;; time in power line
   (display-time-mode 1)
 
   ;; 6. prettify mode
   (global-prettify-symbols-mode t)
-  ;; for prog mode 
   (add-hook 'prog-mode-hook
             (lambda ()
               (push '("!=" . ?≠) prettify-symbols-alist)
@@ -426,7 +427,6 @@ you should place your code here."
               ;; Math operation
               (push '("sqrt"    . ?√) prettify-symbols-alist)))
 
-  ;; for python mode .⁚:
   ;; command insert-char for add char at point
   (add-hook 'python-mode-hook
             (lambda ()
@@ -442,22 +442,19 @@ you should place your code here."
               (push '("**2"   . ?²) prettify-symbols-alist)
               (push '("**3"   . ?³) prettify-symbols-alist)))
 
-  ;; for emacs-lisp mode
   (add-hook 'emacs-lisp-mode-hook
             (lambda ()
               (push '("nil"   . ?Ø) prettify-symbols-alist)))
 
-  ;; for scheme mode
   (add-hook 'scheme-mode-hook
             (lambda ()
               (push '("lambda" . ?λ) prettify-symbols-alist)))
-  ;; Unprettify at point
   (setq prettify-symbols-unprettify-at-point t)
 
   ;; Browser setting
   (setq browse-url-generic-program (executable-find "qutebrowser"))
-  (setq browse-url-browser-function #'eww-browse-url)
-  ;; re-name buffer with page title in eww
+  ;; (setq browse-url-browser-function #'eww-browse-url)
+  ;;; re-name buffer with page title in eww
   (unless (version< emacs-version "24.4")
     (defadvice eww-tag-title (after rrix/eww-rename-buffer-ad (cont))
       "Update EWW buffer title with new page load."
@@ -470,49 +467,24 @@ you should place your code here."
   ;; Open in new windows if possible
   (setq browse-url-new-window-flag nil)
 
-
-  ;; Youtube
-  ;; (defun elfeed-play-with-mpv ()
-  ;;   "Play entry link with mpv."
-  ;;   (interactive)
-  ;;   (let ((entry (if (eq major-mode 'elfeed-show-mode) elfeed-show-entry (elfeed-search-selected :single)))
-  ;;         (quality-arg "")
-  ;;         (quality-val (completing-read "Max height resolution (0 for unlimited): " '("0" "360" "480" "720") nil nil)))
-  ;;     (setq quality-val (string-to-number quality-val))
-  ;;     (message "Opening %s with height≤%s with mpv..." (elfeed-entry-link entry) quality-val)
-  ;;     (when (< 0 quality-val)
-  ;;     (setq quality-arg (format "--ytdl-format=[height<=?%s]" quality-val)))
-  ;;     (start-process "elfeed-mpv" nil "mpv" quality-arg (elfeed-entry-link entry))))
-
-  ;; (defvar elfeed-mpv-patterns
-  ;;   '("youtu\\.?be")
-  ;;   "List of regexp to match against elfeed entry link to know whether to use mpv to visit the link.")
-
-  ;; (defun elfeed-visit-or-play-with-mpv ()
-  ;;   "Play in mpv if entry link matches `elfeed-mpv-patterns', visit otherwise. See `elfeed-play-with-mpv'."
-  ;;   (interactive)
-  ;;   (let ((entry (if (eq major-mode 'elfeed-show-mode) elfeed-show-entry (elfeed-search-selected :single)))
-  ;;         (patterns elfeed-mpv-patterns))
-  ;;     (while (and patterns (not (string-match (car elfeed-mpv-patterns) (elfeed-entry-link entry))))
-  ;;       (setq patterns (cdr patterns)))
-  ;;     (if patterns
-  ;;         (elfeed-play-with-mpv)
-  ;;       (if (eq major-mode 'elfeed-search-mode)
-  ;;           (elfeed-search-browse-url)
-  ;;         (elfeed-show-visit)))))
+  ;; IRC:
+  (erc-spelling-mode 1)
+  (setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
+  (setq erc-autojoin-channels-alist '(("rizon.net" . ("#nfo"
+                                                      "#/g/sicp"))))
 
   ;; --- NAND2Tetris init here ---
-  (use-package nand2tetris
-    :defer t
-    ;; :init
-    ;; (setq nand2tetris-core-base-dir "~/Documents/Technical/Computer_Arch_&_Critic_Eng/NAND2Tetris/nand2tetris")
-    :config
-    (use-package nand2tetris-assembler
-      :defer t)
-    (use-package company-nand2tetris
-      :defer t))
+  ;; TODO make a layer
+  ;; (use-package nand2tetris
+  ;;   :defer t
+  ;;   ;; :init
+  ;;   ;; (setq nand2tetris-core-base-dir "~/Documents/Technical/Computer_Arch_&_Critic_Eng/NAND2Tetris/nand2tetris")
+  ;;   :config
+  ;;   (use-package nand2tetris-assembler
+  ;;     :defer t)
+  ;;   (use-package company-nand2tetris
+  ;;     :defer t))
   ;; --- NAND2Tetris init End here ---
-
 
   )
 
@@ -539,12 +511,7 @@ you should place your code here."
      "-%-")))
  '(package-selected-packages
    (quote
-    (eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse smart-mode-line rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy)))
- '(sml/numbers-separator ":")
- '(sml/show-eol t)
- '(sml/show-frame-identification t)
- '(sml/theme (quote respectful))
- '(symon-sparkline-width 80))
+    (rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse smart-mode-line rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

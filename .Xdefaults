@@ -215,3 +215,11 @@ URxvt.url_select.underline:	true
 
 !!!! matche
 URxvt.matcher.button:	1
+
+     _
+!  ___| |_
+! / __| __|
+! \__ \ |_
+! |___/\__|
+!!!!!!!!!!!
+st.font =	"Terminus:pixelsize=12"

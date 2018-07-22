@@ -108,7 +108,7 @@ nnoremap : :<C-f>i
 nnoremap <silent>gi :call Preserve("normal! gg=G")<CR>
 nnoremap <silent>gw :call WordProcessorMode()<CR>
 nnoremap Q @q
-inoremap <silent> m <C-r>=EscapeSequence()<CR>
+"inoremap <silent> m <C-r>=EscapeSequence()<CR>
 nnoremap Z zz
 
 

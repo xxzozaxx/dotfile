@@ -24,3 +24,4 @@ fi
 
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 if [ -e /home/master/.nix-profile/etc/profile.d/nix.sh ]; then . /home/master/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
