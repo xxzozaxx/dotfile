@@ -187,7 +187,7 @@ values."
    ;; List of fonts that you could use "Monoisome""DejaVu Sans Mono""Iosevka"
    ;; dotspacemacs-default-font '("mplus Nerd Font Mono"
    dotspacemacs-default-font '("FantasqueSansMono Nerd Font Mono"
-                               :size 14
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -381,6 +381,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
   ;; allow aggressive-indent-mode
   (add-hook 'prog-mode-hook #'aggressive-indent-mode)
 
@@ -388,6 +389,17 @@ you should place your code here."
   (use-package all-the-icons-ivy
     :config
     (all-the-icons-ivy-setup))
+
+  ;; Source: https://dougie.io/coding/tabs-in-emacs/
+  ;; Visualize tabs as a pipe character - "|"
+  ;; This will also show trailing characters as they are useful to spot.
+  (setq whitespace-style '(face tabs tab-mark trailing))
+  (custom-set-faces
+   '(whitespace-tab ((t (:foreground "#636363")))))
+  (setq whitespace-display-mappings
+        '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
+  (global-whitespace-mode) ; Enable whitespace mode everywhere
+
 
   ;; time in power line
   (display-time-mode 1)
