@@ -6,11 +6,9 @@
 " Website: http://brennier.com
 " Description: My general vim configuration file
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""
 """ General Settings
 """""""""""""""""""""""""""""""""""""""""""""""""
-
 set showcmd
 set laststatus=2          " Status bar enable by default
 set splitright            " Makes sure that new windows open on the right
@@ -22,9 +20,9 @@ set hid                   " hide buffer
 set autoread              " update if the file is changed from the outside
 set mouse=a               " Enable mouse
 set foldmethod=marker     " Auto-fold tripe braces
-"set colorcolumn=80        " Add a line at column 80
-"set cursorcolumn          " Highlight the cursor column
-set noshowmode           " Don't show what mode I'm in
+"set colorcolumn=80       " Add a line at column 80
+"set cursorcolumn         " Highlight the cursor column
+set noshowmode            " Don't show what mode I'm in
 set clipboard=unnamedplus " Use the OS clipboard for yanking/pasting
 set textwidth=80          " Hard limit for the length of a line
 

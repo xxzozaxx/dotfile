@@ -15,5 +15,6 @@
 ** https://www.youtube.com/feeds/videos.xml?channel_id=UConVfxXodg78Tzh5nNu85Ew
 * Blog                                                               :elfeed:
 ** https://lukesmith.xyz/rss.xml
+** http://blog.z3bra.org/rss/feed.xml
 * News                                                               :elfeed:
 ** https://hnrss.org/newest?points=10

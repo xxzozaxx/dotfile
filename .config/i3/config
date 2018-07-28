@@ -1,10 +1,13 @@
 ##################################################
-#     _    _                        _   _ _____    ____             __ _
-#    / \  | |__  _ __ ___   ___  __| | (_)___ /   / ___|___  _ __  / _(_) __ _
-#   / _ \ | '_ \| '_ ` _ \ / _ \/ _` | | | |_ \  | |   / _ \| '_ \| |_| |/ _` |
-#  / ___ \| | | | | | | | |  __/ (_| | | |___) | | |__| (_) | | | |  _| | (_| |
-# /_/   \_\_| |_|_| |_| |_|\___|\__,_| |_|____/   \____\___/|_| |_|_| |_|\__, |
-#                                                                        |___/
+#  _ _____    ____             __ _
+# (_)___ /   / ___|___  _ __  / _(_) __ _
+# | | |_ \  | |   / _ \| '_ \| |_| |/ _` |
+# | |___) | | |__| (_) | | | |  _| | (_| |
+# |_|____/   \____\___/|_| |_|_| |_|\__, |
+#                                   |___/ :Ahmed's i3 config file:
+# ┏┓╻╻ ╻
+# ┃┗┫╺╋╸
+# ╹ ╹╹ ╹
 # This is Ahmed Khaλed's i3-gaps configuration file.
 # Email: xxzozaxxah@hotmail.com
 #
@@ -37,7 +40,7 @@ set $term st
 set $video --no-startup-id bash ~/.config/Scripts/video.sh
 set $stoprec --no-startup-id killall ffmpeg & killall screenkey
 set $flash --no-startup-id bash ~/.config/Scripts/flash_win.sh
-set $BROWSER tabbed surf -e
+set $BROWSER qutebrowser
 
 #Music CMUS
 set $music $term -e cmus
@@ -100,10 +103,9 @@ exec --no-startup-id feh --bg-fill /home/master/.config/wall.png
 
 ##Remape cps lock to ctrl
 # exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
-# exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 ##Remap Menu button to Super:
-exec_always --no-startup-id xmodmap -e 'keycode 135 = Super_R'
+#exec_always --no-startup-id xmodmap -e 'keycode 135 = Super_R'
 
 ##Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
@@ -129,13 +131,13 @@ exec --no-startup-id $term -n dropdown -e screen
 
 ### ---- Basic Bindings ----
 # --- Non-letter Key Bindings
-bindsym $mod+Return 		exec $term
+bindsym $mod+Return         exec $term
 bindsym $mod+Shift+Return 	exec $term -e tmux
 
 bindsym $mod+Shift+space 	floating toggle
-bindsym $mod+space		focus mode_toggle
+bindsym $mod+space		      focus mode_toggle
 
-bindsym $mod+Escape		workspace prev
+bindsym $mod+Escape		    workspace prev
 bindsym $mod+Shift+Escape 	exec i3-msg exit
 
 # bindsym $mod+BackSpace		exec $flash

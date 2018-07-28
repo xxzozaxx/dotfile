@@ -3,6 +3,9 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
+# add blockedHosts to adblock host
+c.content.host_blocking.lists.append( str(config.configdir) + "/blockedHosts")
+
 # Uncomment this to still load settings configured via autoconfig.yml
 # config.load_autoconfig()
 
@@ -75,10 +78,10 @@ c.colors.messages.info.fg = base05
 c.colors.messages.warning.bg = base0E
 c.colors.messages.warning.border = base0E
 c.colors.messages.warning.fg = base00
-c.colors.prompts.bg = base00 
-c.colors.prompts.border = base00 
-c.colors.prompts.fg = base05 
-c.colors.prompts.selected.bg = base0A 
+c.colors.prompts.bg = base00
+c.colors.prompts.border = base00
+c.colors.prompts.fg = base05
+c.colors.prompts.selected.bg = base0A
 c.colors.statusbar.caret.bg = base0E
 c.colors.statusbar.caret.fg = base00
 c.colors.statusbar.caret.selection.bg = base0D
@@ -100,7 +103,7 @@ c.colors.statusbar.url.error.fg = base08
 c.colors.statusbar.url.fg = base05
 c.colors.statusbar.url.hover.fg = base05
 c.colors.statusbar.url.success.http.fg = base0C
-c.colors.statusbar.url.success.https.fg =base0B 
+c.colors.statusbar.url.success.https.fg =base0B
 c.colors.statusbar.url.warn.fg = base0E
 c.colors.tabs.bar.bg = base00
 c.colors.tabs.even.bg = base00

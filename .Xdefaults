@@ -186,7 +186,9 @@ URxvt*perl-ext-common: default
 ! URxvt.font: xft:Mononoki:pixelsize=13,
 ! URxvt.font: 		xft:CodeNewRoman Nerd Font Mono:size=11
 ! URxvt.font: 		xft:mononok Nerd Font Mono:size=11
-URxvt.font: 		xft:mplus Nerd Font Mono:size=11
+! URxvt.font: 		xft:mplus Nerd Font Mono:size=11
+! URxvt.font: 		xft:GohuFont:size=9
+URxvt.font: 		xft:gohufont:pixelsize=14:antialias=false
 ! Scroll
 URxvt*scrollBar:	false
 ! Settings

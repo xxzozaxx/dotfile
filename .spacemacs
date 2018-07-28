@@ -1,9 +1,17 @@
 ;; -*- mode: emacs-lisp -*-
+;;  ____
+;; / ___| _ __   __ _  ___ ___ _ __ ___   __ _  ___ ___
+;; \___ \| '_ \ / _` |/ __/ _ \ '_ ` _ \ / _` |/ __/ __|
+;;  ___) | |_) | (_| | (_|  __/ | | | | | (_| | (__\__ \
+;; |____/| .__/ \__,_|\___\___|_| |_| |_|\__,_|\___|___/
+;;       |_| :Ahmed's spacemacs config file:
+;;           :ahmed_khaledATzohoDoTCoM:
+;; ┏┓╻╻ ╻
+;; ┃┗┫╺╋╸
+;; ╹ ╹╹ ╹
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 ;; mode line format
-;; ("%e" mode-line-front-space mode-line-mule-info mode-line-client mode-line-modified mode-line-remote mode-line-frame-identification mode-line-buffer-identification mode-line-position evil-mode-line-tag (vc-mode vc-mode) mode-line-modes mode-line-misc-info )
-
 
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
@@ -37,7 +45,7 @@ values."
      ;; ---- Languages -----
      emacs-lisp shell-scripts
                 haskell common-lisp python scheme
-                c-c++ html sml racket ruby ;nixos
+                c-c++ html sml racket ruby javascript ;nixos
                 markdown
                 (latex :variables latex-enable-auto-fill t
                        :variables latex-enable-folding t)
@@ -90,7 +98,8 @@ values."
                                       ;; cyberpunk-theme
                                       nyx-theme
                                       dracula-theme
-                                      sexy-monochrome-theme
+                                      monochrome-theme
+                                      color-theme-modern
                                       ;; --- Fun ---
                                       speed-type
                                       ;; pretty-symbols
@@ -390,6 +399,13 @@ you should place your code here."
     :config
     (all-the-icons-ivy-setup))
 
+  ;; eyebrowse constancs
+  (setq eyebrowse-mode-line-separator "|")
+  (setq eyebrowse-mode-line-right-delimiter "] ")
+  (setq eyebrowse-mode-line-left-delimiter "[")
+  (setq eyebrowse-new-workspace t)
+  (eyebrowse-mode t)
+
   ;; Source: https://dougie.io/coding/tabs-in-emacs/
   ;; Visualize tabs as a pipe character - "|"
   ;; This will also show trailing characters as they are useful to spot.
@@ -463,21 +479,8 @@ you should place your code here."
               (push '("lambda" . ?λ) prettify-symbols-alist)))
   (setq prettify-symbols-unprettify-at-point t)
 
-  ;; Browser setting
-  (setq browse-url-generic-program (executable-find "qutebrowser"))
-  ;; (setq browse-url-browser-function #'eww-browse-url)
-  ;;; re-name buffer with page title in eww
-  (unless (version< emacs-version "24.4")
-    (defadvice eww-tag-title (after rrix/eww-rename-buffer-ad (cont))
-      "Update EWW buffer title with new page load."
-      (let ((eww-current-title
-             (if (version< emacs-version "25.0")
-                 eww-current-title
-               (plist-get eww-data :title))))
-        (rename-buffer (format "*eww : %s *" (cce/str-chomp eww-current-title)) t)))
-    (ad-activate 'eww-tag-title))
-  ;; Open in new windows if possible
-  (setq browse-url-new-window-flag nil)
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "/usr/bin/conkeror")
 
   ;; IRC:
   (erc-spelling-mode 1)
@@ -523,16 +526,16 @@ you should place your code here."
      "-%-")))
  '(package-selected-packages
    (quote
-    (rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse smart-mode-line rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))))
+    (web-beautify livid-mode skewer-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode color-theme-modern rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse smart-mode-line rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((((class color) (min-colors 89)) (:background "#000000" :foreground "#f8f8f8"))))
- '(eyebrowse-mode-line-separator ((t (nil nil))))
  '(org-level-1 ((t (:inherit outline-1 :height 1.6))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.4))))
  '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
- '(vc-state-base ((t nil))))
+ '(vc-state-base ((t nil)))
+ '(whitespace-tab ((t (:foreground "#636363")))))
