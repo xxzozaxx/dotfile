@@ -14,12 +14,16 @@ call_after_load("google-search-results",
 define_key(content_buffer_normal_keymap, "o", "find-url")
 define_key(content_buffer_normal_keymap, "O", "find-url-new-buffer")
 
+// follow from F
+define_key(content_buffer_normal_keymap, "F", "follow-new-buffer-background")
+
 // yank as emacs
 undefine_key(caret_keymap,"M-w");
-define_key(caret_keymap,"M-w", "jrm_cmd_copy");
+define_key(caret_keymap,"M-w", "cmd_copy");
 undefine_key(content_buffer_normal_keymap,"M-w");
-define_key(content_buffer_normal_keymap,"M-w", "jrm_cmd_copy");
+define_key(content_buffer_normal_keymap,"M-w", "cmd_copy");
 undefine_key(special_buffer_keymap,"M-w");
-define_key(special_buffer_keymap,"M-w", "jrm_cmd_copy");
 undefine_key(text_keymap,"M-w");
-define_key(text_keymap,"M-w", "jrm_cmd_copy");
+
+// Excute as vim
+define_key(content_buffer_normal_keymap, ":", "execute-extended-command")

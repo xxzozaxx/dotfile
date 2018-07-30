@@ -1,5 +1,9 @@
 require("casual-spelling");
 
+// save a keystroke when selecting a dom node by number.
+hints_auto_exit_delay = 500;
+hints_ambiguous_auto_exit_delay = 500;
+
 hint_background_color = 'white';
 active_hint_background_color = '#00ccff';
 

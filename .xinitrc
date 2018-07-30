@@ -6,19 +6,20 @@
 # /_/\_\_|_| |_|_|\__| :ahmed_khaledATzohoDoTCoM:
 
 
-exec i3
+#exec i3
 
 # when open dwm uncomment the follow
 
 # launch programs
-# setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle
-# feh --bg-fill /home/master/.config/wall.png &
-# compton --xrender-sync-fence &
-# redshift &
-# xbindkeys &
+setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle
+feh --bg-fill /home/master/.config/wall.png &
+compton --xrender-sync-fence &
+redshift &
+xbindkeys &
+slstatus -s | dzen2 -e - -h '15' -ta r &
 
-# # export erea
-# export BROWSER=qutebrowser
+# export erea
+export BROWSER=qutebrowser
 
 
 # while true
@@ -40,3 +41,4 @@ exec i3
 # done &
 
 # exec dwm
+exec frankenwm
