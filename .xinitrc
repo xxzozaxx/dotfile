@@ -16,10 +16,11 @@ feh --bg-fill /home/master/.config/wall.png &
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
-slstatus -s | dzen2 -e - -h '15' -ta r &
+# slstatus -s | dzen2 -e - -h '15' -ta r &
+bash ~/.config/Scripts/Dzen2.sh &
 
 # export erea
-export BROWSER=qutebrowser
+export BROWSER=conkeror
 
 
 # while true
