@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 
 Vol() {
-	  mute=$(amixer get PCM | grep Mono: | cut -d " " -f 8)
-	  echo -n $mute
+	  # mute=$(amixer get PCM | grep Mono: | cut -d " " -f 8)
+	  # echo -n $mute
 	  #then
     #		echo -n "^fg(orange)^i("/home/wilhem/dzen-icons/spkr_02.xbm") : Muet  ^fg()| "
     #fi
+    status=$(amixer get Master | grep "Right:" | cut -d " " -f 8 | cut -c2-3)
+    prec=$(amixer get Master | grep "Right:" | cut -d " " -f 7 | cut -c2-4)
+    case status
+    in
+        "on") echo -n "^fg(blue) \[VOL: $prec]";;
+        "of") echo -n "^fg(red) \[VOL: Muet]";;
+        "else") echo -n "ERR";;
+    esac
 	  return
 }
 
@@ -50,7 +58,7 @@ Rss() {
 }
 
 Print () {
-	  #Vol
+	  Vol
 	  # Disk
 	  Wifi
 	  # Battery

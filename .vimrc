@@ -45,6 +45,7 @@ set t_Co=256
 "set t_AB=^[[48;5;%dm
 "set t_AF=^[[38;5;%dm
 
+colorscheme preto
 syntax on
 filetype plugin indent on
 
@@ -304,7 +305,6 @@ iabbrev dont don't
 iabbrev isnt isn't
 iabbrev seperate separate
 iabbrev waht what
-
 
 "{{{ Compile Commands
 nnoremap <leader>c :Compile<CR>

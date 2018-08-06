@@ -12,5 +12,5 @@ function define_switch_buffer_key (key, buf_num) {
                });
 }
 for (let i = 0; i < 10; ++i) {
-    define_switch_buffer_key(String((i+1)%10), i);
+    define_switch_buffer_key("M-" + String((i+1)%10), i);
 }

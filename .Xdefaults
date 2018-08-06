@@ -83,7 +83,7 @@ URxvt*termName:    xterm-256color
 ! URxvt.font: 		xft:mononok Nerd Font Mono:size=11
 ! URxvt.font: 		xft:mplus Nerd Font Mono:size=11
 URxvt.font: 		xft:FantasqueSansMono Nerd Font Mono:size=11
-! URxvt.font: 		xft:gohufont:pixelsize=14:antialias=false
+URxvt.font: 		xft:mplus Nerd Font Mono:size=11
 !!!! Scroll
 URxvt*scrollBar:	false
 !!!! Settings
@@ -114,6 +114,5 @@ URxvt.matcher.button:	1
 ! | | | |_  / _ \ '_ \  __) |
 ! | |_| |/ /  __/ | | |/ __/
 ! |____//___\___|_| |_|_____|
-dzen2.font:       -*-fixed-*-*-*-*-*-*-*-*-*-*-*-*
 dzen2.foreground: #22EE11
 dzen2.background: black

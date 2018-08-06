@@ -2,6 +2,14 @@ require("index-webjump.js");
 //index_webjumps_directory = get_home_directory();
 //index_webjumps_directory.appendRelativePath(".conkerorrc/index-webjumps");
 
+// bookmark
+define_webjump("bookmark",
+               function(term) {return term;},
+               $completer = history_completer($use_history = false,
+                                              $use_bookmarks = true,
+                                              $match_required = true),
+               $description = "Visit a conkeror bookmark");
+
 /* search engines */
 define_opensearch_webjump("blekko", "blekko.xml");
 define_opensearch_webjump("image", "googleimages.xml");

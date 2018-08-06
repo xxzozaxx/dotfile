@@ -74,8 +74,8 @@
                 ;; Example (cons '(control shift q) "xbindkeys_show")
                 ;; non char key:
                 ;; (cons '(mod4 Return) "st")
-                ;; (cons '(mod4 shift Return) "st -e screen")
-                ;; char key
+                (cons '(mod4 shift Return) "st -e tmux attach")
+                ;; XXX char number
                 ;; (cons '(SEQ 1) "BIND")
                 ;; (cons '(SEQ shift 1) "BIND")
                 ;; (cons '(SEQ 2) "BIND")
@@ -96,6 +96,7 @@
                 ;; (cons '(SEQ shift 9) "BIND")
                 ;; (cons '(SEQ 0) "BIND")
                 ;; (cons '(SEQ shift 0) "BIND")
+                ;; XXX char char
                 ;; (cons '(SEQ q) "BIND")
                 ;; (cons '(SEQ shift q) "BIND")
                 ;; (cons '(SEQ w) "BIND")
@@ -108,8 +109,8 @@
                 ;; (cons '(SEQ shift t) "BIND")
                 ;; (cons '(SEQ y) "BIND")
                 ;; (cons '(SEQ shift y) "BIND")
-                ;; (cons '(SEQ u) "BIND")
-                ;; (cons '(SEQ shift u) "BIND")
+                (cons '(mod4 u) "st -t dropdown -e tmux attach")
+                (cons '(mod4 shift u) "urxvt -title dropdown -geometry 70x25 -e tmux attach")
                 (cons '(mod4 i) "st -e htop")
                 ;; (cons '(SEQ shift i) "BIND")
                 ;; (cons '(SEQ o) "BIND")
@@ -136,7 +137,7 @@
                 ;; (cons '(SEQ shift l) "BIND")
                 ;; (cons '(SEQ z) "BIND")
                 ;; (cons '(SEQ shift z) "BIND")
-                ;; (cons '(SEQ x) "BIND")
+                (cons '(mod4 shift x) "i3lock -i ~/.config/i3/web.png")
                 ;; (cons '(SEQ shift x) "BIND")
                 ;; (cons '(SEQ c) "BIND")
                 ;; (cons '(SEQ shift c) "BIND")

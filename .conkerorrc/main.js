@@ -3,6 +3,10 @@ require("new-tabs.js");
 require("favicon");
 require("clicks-in-new-buffer.js");
 
+
+// the default page for new buffers.
+// homepage = "about:blank";
+
 // tabls icon
 tab_bar_show_icon = true;
 

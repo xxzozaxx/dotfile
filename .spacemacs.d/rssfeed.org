@@ -18,3 +18,5 @@
 ** http://blog.z3bra.org/rss/feed.xml
 * News                                                               :elfeed:
 ** https://hnrss.org/newest?points=10
+** https://www.reddit.com/.rss?feed=6006ffdbfcd15338c670b59364ddbb0f0a6af4ff&user=XxZozaxX
+** https://freepo.st/rss/new

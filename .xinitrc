@@ -1,10 +1,12 @@
 #!/bin/bash
-# __  ___       _ _
-# \ \/ (_)_ __ (_) |_
-#  \  /| | '_ \| | __|
-#  /  \| | | | | | |_  :Ahmed's xinitrc:
-# /_/\_\_|_| |_|_|\__| :ahmed_khaledATzohoDoTCoM:
-
+##__  ___       _ _
+##\ \/ (_)_ __ (_) |_
+## \  /| | '_ \| | __|
+## /  \| | | | | | |_  :Ahmed's xinitrc:
+##/_/\_\_|_| |_|_|\__| :ahmed_khaledATzohoDoTCoM:
+## ┏┓╻╻ ╻
+## ┃┗┫╺╋╸
+## ╹ ╹╹ ╹
 
 #exec i3
 
@@ -18,9 +20,6 @@ redshift &
 xbindkeys &
 # slstatus -s | dzen2 -e - -h '15' -ta r &
 bash ~/.config/Scripts/Dzen2.sh &
-
-# export erea
-export BROWSER=conkeror
 
 
 # while true
@@ -43,3 +42,4 @@ export BROWSER=conkeror
 
 # exec dwm
 exec frankenwm
+#exec xmonad
