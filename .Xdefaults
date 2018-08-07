@@ -82,8 +82,7 @@ URxvt*termName:    xterm-256color
 ! URxvt.font: 		xft:CodeNewRoman Nerd Font Mono:size=11
 ! URxvt.font: 		xft:mononok Nerd Font Mono:size=11
 ! URxvt.font: 		xft:mplus Nerd Font Mono:size=11
-URxvt.font: 		xft:FantasqueSansMono Nerd Font Mono:size=11
-URxvt.font: 		xft:mplus Nerd Font Mono:size=11
+URxvt.font: 		xft:tamsyn:size=11
 !!!! Scroll
 URxvt*scrollBar:	false
 !!!! Settings
