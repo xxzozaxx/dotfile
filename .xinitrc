@@ -8,20 +8,16 @@
 ## ┃┗┫╺╋╸
 ## ╹ ╹╹ ╹
 
-#exec i3
-
-# when open dwm uncomment the follow
-
 # launch programs
-setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle
-feh --bg-fill /home/master/.config/wall.png &
+setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle &
+# feh --bg-fill /home/master/.config/wall.png &
+hsetroot -cover /home/master/.config/wall.png &
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
-# slstatus -s | dzen2 -e - -h '15' -ta r &
 bash ~/.config/Scripts/Dzen2.sh &
 
-
+### when open dwm uncomment the follow
 # while true
 # do
 # 	  VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
@@ -40,6 +36,6 @@ bash ~/.config/Scripts/Dzen2.sh &
 # 	  sleep 20s
 # done &
 
-# exec dwm
+#exec i3
+#exec dwm
 exec frankenwm
-#exec xmonad

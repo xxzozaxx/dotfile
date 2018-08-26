@@ -13,27 +13,9 @@
 ;; To specify a key, you can use 'xbindkeys --key' or
 ;; 'xbindkeys --multikey' and put one of the two lines in this file.
 
-;; A list of keys is in /usr/include/X11/keysym.h and in
-;; /usr/include/X11/keysymdef.h
-;; The XK_ is not needed.
-
 ;; List of modifier:
 ;;   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
 ;;   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
-
-;; The release modifier is not a standard X modifier, but you can
-;; use it if you want to catch release instead of press events
-
-;; By defaults, xbindkeys does not pay attention to modifiers
-;; NumLock, CapsLock and ScrollLock.
-;; Uncomment the lines below if you want to use them.
-;; To dissable them, call the functions with #f
-
-
-;;;;EXTRA FUNCTIONS: Enable numlock, scrolllock or capslock usage
-;;(set-numlock! #t)
-;;(set-scrolllock! #t)
-;;(set-capslock! #t)
 
 ;;;;; Scheme API reference
 ;;;;
@@ -46,10 +28,6 @@
 ;; (xbindkey key "foo-bar-command [args]")
 ;; (xbindkey '(modifier* key) "foo-bar-command [args]")
 ;;
-;; Scheme function key:
-;; (xbindkey-function key function-name-or-lambda-function)
-;; (xbindkey-function '(modifier* key) function-name-or-lambda-function)
-;;
 ;; Other functions:
 ;; (remove-xbindkey key)
 ;; (run-command "foo-bar-command [args]")
@@ -58,24 +36,20 @@
 ;; (remove-all-keys)
 ;; (debug)
 
-;; MOD
-;;     wer y i  a   g    zxcvb
-;; MOD SH
-;;    qwertyuiopasdfg    zxcvbn
-;; MOD CON
-;;     werty  opasd g    zxcv nm
-;; MOD ALT
-;;    qwertyuiopasdfg    zxcvbnm
-
-
 ;; list of cons contain keyseq and function as follow:
 ;; (list '(key seq here) "function here")
 (define keyLst (list
                 ;; Example (cons '(control shift q) "xbindkeys_show")
-                ;; non char key:
+                ;; ––– •non char key• –––
+                ;; -- •Functional key• ––
+                (cons '(XF86MonBrightnessDown) "xbacklight -dec 10")
+                (cons '(XF86MonBrightnessUp) "xbacklight -inc 10")
+                (cons '(XF86AudioRaiseVolume) "pactl set-sink-volume @DEFAULT_SINK@ +1000")
+                (cons '(XF86AudioLowerVolume) "pactl set-sink-volume @DEFAULT_SINK@ -1000")
+                (cons '(XF86AudioMute) "pactl set-sink-mute @DEFAULT_SINK@ toggle")
                 ;; (cons '(mod4 Return) "st")
                 (cons '(mod4 shift Return) "st -e tmux attach")
-                ;; XXX char number
+                ;; ––– •char number• –––
                 ;; (cons '(SEQ 1) "BIND")
                 ;; (cons '(SEQ shift 1) "BIND")
                 ;; (cons '(SEQ 2) "BIND")
@@ -156,26 +130,6 @@
        (xbindkey (car x) (cdr x)))
      keyLst)
 
-
-
-;; Examples of commands:
-
-;; set directly keycode (here control + f with my keyboard)
-;; (xbindkey '("m:0x4" "c:41") "xterm")
-
-;; specify a mouse button
-;; (xbindkey '(control "b:2") "xterm")
-
-;;(xbindkey '(shift mod2 alt s) "xterm -geom 50x20+20+20")
-
-;; set directly keycode (control+alt+mod2 + f with my keyboard)
-;; (xbindkey '(alt "m:4" mod2 "c:0x29") "xterm")
-
-;; Control+Shift+a  release event starts rxvt
-;;(xbindkey '(release control shift a) "rxvt")
-
-;; Control + mouse button 2 release event starts rxvt
-;;(xbindkey '(releace control "b:2") "rxvt")
 
 
 ;; Extra features

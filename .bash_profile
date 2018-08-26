@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #  ____             __ _ _
 # |  _ \ _ __ ___  / _(_) | ___
 # | |_) | '__/ _ \| |_| | |/ _ \
@@ -9,6 +8,9 @@
 ## ┃┗┫╺╋╸
 ## ╹ ╹╹ ╹
 
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# ––––––––––––––––––––––––––––––––––– BASH –––––––––––––––––––––––––––––––––––
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 # Load bashrc
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
@@ -17,38 +19,35 @@ if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
 	startx
 fi
 
-# Varable mange area
-if [[ -f /usr/bin/waterfox ]]; then
-	export BROWSER="waterfox"
-elif [[ -f /usr/bin/palemoon ]]; then
-	export BROWSER="palemoon"
-elif [[ -f /usr/bin/iceweasel ]]; then
-	export BROWSER="iceweasel"
-else
-#   export BROWSER="firefox"
-#	export BROWSER="qutebrowser"
-    export BROWSER=conkeror
-fi
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# ––––––––––––––––––––––––––––––––– Programs –––––––––––––––––––––––––––––––––
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#gpg
+GPG_TTY=$(tty)
+export GPG_TTY
+# if [ -z "$GPG_AGENT_INFO" ]; then
+#     eval "$(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf)"
+# fi
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+# ––––––––––––––––––––––––––––––– Language PATH ––––––––––––––––––––––––––––––
+# ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+# export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 if [ -e /home/master/.nix-profile/etc/profile.d/nix.sh ]; then . /home/master/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 
 # Ruby
-export GEM_HOME=$HOME/.gem
+# export GEM_HOME=$HOME/.gem
 
-#Editor
-export EDITOR=emacsclient
+# Python
+# export PATH=$PATH:/home/master/.local/bin/
 
 # GO home and bin
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
+# export GOROOT=$HOME/go
+# export PATH=$PATH:$GOROOT/bin
 
-#gpg
-GPG_TTY=$(tty)
-export GPG_TTY
-if [ -z "$GPG_AGENT_INFO" ]; then
-    eval "$(gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf)"
-fi
-_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
+# export PATH=$PATH:$HOME/go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
+
+export PATH="$HOME/.cargo/bin:$PATH"

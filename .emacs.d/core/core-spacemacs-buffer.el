@@ -19,7 +19,7 @@
 (defconst spacemacs-buffer-name "*spacemacs*"
   "The name of the spacemacs buffer.")
 
-(defconst spacemacs-buffer-logo-title "(λ) this is KAE, KAE is Ahmed's Emacs. also mean pure or chaste"
+(defconst spacemacs-buffer-logo-title "•this is KAE ”[K]AE is [A]hmed's [E]macs”. KAE mean ‘pure or chaste’•"
   "The title displayed beneath the logo.")
 
 (defconst spacemacs-buffer-buttons-startup-lists-offset 25

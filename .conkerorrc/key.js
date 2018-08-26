@@ -18,12 +18,14 @@ define_key(content_buffer_normal_keymap, "O", "find-url-new-buffer")
 define_key(content_buffer_normal_keymap, "F", "follow-new-buffer-background")
 
 // yank as emacs
-undefine_key(caret_keymap,"M-w");
-define_key(caret_keymap,"M-w", "cmd_copy");
-undefine_key(content_buffer_normal_keymap,"M-w");
-define_key(content_buffer_normal_keymap,"M-w", "cmd_copy");
-undefine_key(special_buffer_keymap,"M-w");
-undefine_key(text_keymap,"M-w");
+//undefine_key(caret_keymap,"M-w");
+define_key(caret_keymap,"C-M-c", "cmd_copy");
+//define_key(caret_keymap,"C-M-v", "cmd_paste");
+//undefine_key(content_buffer_normal_keymap,"M-w");
+define_key(content_buffer_normal_keymap,"C-M-c", "cmd_copy");
+//define_key(content_buffer_normal_keymap,"C-M-v", "cmd_paste");
+//undefine_key(special_buffer_keymap,"M-w");
+//undefine_key(text_keymap,"M-w");
 
 // Excute as vim
 define_key(content_buffer_normal_keymap, ":", "execute-extended-command")

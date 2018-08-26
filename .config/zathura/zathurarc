@@ -4,7 +4,7 @@ set recolor-lightcolor "#252525"
 set recolor-darkcolor "#afafaf"
 set default-bg "#252525"
 set default-fg "#AFAFAF"
-set recolor "true"
+# set recolor "true"
 
 set adjust-open "width"
 set selection-clipboard clipboard

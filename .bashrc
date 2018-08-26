@@ -7,7 +7,6 @@ export BASH_IT="/home/master/.bash_it"
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 ## to preview them https://github.com/Bash-it/bash-it/wiki/Themes
-# export BASH_IT_THEME='liquidprompt'
 export BASH_IT_THEME='purity'
 # export BASH_IT_THEME='90210'
 
@@ -63,10 +62,6 @@ source ~/.bash_it/custom/h.sh
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
 
-# Command to run
-## swap CTL with CAP
-#setxkbmap -option "ctrl:swapcaps"
-
 # Console fbterm config
 case "$TERM" in
     xterm*)
@@ -85,5 +80,22 @@ esac
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-#Editor
+# programs
+export PAGER=less
+export BROWSERCLI=links2
+export READER=zathura
+export IMAGEVIEWER=meh
+export VIDEOPLAYER=mpv
 export EDITOR=emacsclient
+export BROWSER=conkeror
+
+#Ruby
+export GEM_HOME=$HOME/.gem
+
+#GO
+export GOROOT=$HOME/.go
+export GOPATH=$HOME/.go/pkg
+
+#PATH
+export PATH=$PATH:$HOME/.go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
+export PATH="$HOME/.cargo/bin:$PATH" # rust

@@ -5,7 +5,8 @@
 # **  https://planet.nixos.org/rss20.xml
 **  https://planet.lisp.org/rss20.xml
 * Comic                                                              :elfeed:
-**  https://xkcd.com/rss.xml
+#**  https://xkcd.com/rss.xml
+**  http://explainxkcd.com/rss.xml
 **  https://linux.pictures/feed
 * Youtube                                                            :elfeed:
 ** https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA

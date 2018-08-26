@@ -12,100 +12,104 @@ Xft*hintstyle:  hintslight
 Xft*lcdfilter:  lcddefault
 Xcursor.theme: Chameleon-Pearl-Regular-0.5
 Xcursor.size:  0
-! special: Monochrome theme
-*.foreground:   #ffffff
-*.background:   #000000
-*.cursorColor:  #ffffff
-*.color0:       #000000
-*.color8:       #202020
-*.color1:       #6b6b6b
-*.color9:       #464646
-*.color2:       #c4c4c4
-*.color10:      #f8f8f8
-*.color3:       #b3b3b3
-*.color11:      #eeeeee
-*.color4:       #999999
-*.color12:      #7c7c7c
-*.color5:       #717171
-*.color13:      #adadad
-*.color6:       #8a8a8a
-*.color14:      #c0c0c0
-*.color7:       #b5cabb
-*.color15:      #99ac9e
+! special
+*.foreground:   #c5c5c5
+*.background:   #1c1c1c
+*.cursorColor:  #c5c5c5
+
+! black
+*.color0:       #1c1c1c
+*.color8:       #666666
+
+! red
+*.color1:       #ff005b
+*.color9:       #ff00a0
+
+! green
+*.color2:       #cee318
+*.color10:      #ccff00
+
+! yellow
+*.color3:       #ffe755
+*.color11:      #ff9f00
+
+! blue
+*.color4:       #048ac7
+*.color12:      #48c6ff
+
+! magenta
+*.color5:       #833c9f
+*.color13:      #be67e1
+
+! cyan
+*.color6:       #0ac1cd
+*.color14:      #63e7f0
+
+! white
+*.color7:       #e5e5e5
+*.color15:      #f3f3f3
 
 !  _   _ ____               _
 ! | | | |  _ \ __  ____   _| |_
 ! | | | | |_) |\ \/ /\ \ / / __|
 ! | |_| |  _ <  >  <  \ V /| |_
 !  \___/|_| \_\/_/\_\  \_/  \__| :urxvt:
-URxvt.color24:  #076678
-URxvt.color66:  #427b58
-URxvt.color88:  #9d0006
-URxvt.color96:  #8f3f71
-URxvt.color100: #79740e
-URxvt.color108: #8ec07c
-URxvt.color109: #83a598
-URxvt.color130: #af3a03
-URxvt.color136: #b57614
-URxvt.color142: #b8bb26
-URxvt.color167: #fb4934
-URxvt.color175: #d3869b
-URxvt.color208: #fe8019
-URxvt.color214: #fabd2f
-URxvt.color223: #ebdbb2
-URxvt.color228: #f2e5bc
-URxvt.color229: #fbf1c7
-URxvt.color230: #f9f5d7
-URxvt.color234: #1d2021
-URxvt.color235: #282828
-URxvt.color236: #32302f
-URxvt.color237: #3c3836
-URxvt.color239: #504945
-URxvt.color241: #665c54
-URxvt.color243: #7c6f64
-URxvt.color244: #928374
-URxvt.color245: #928374
-URxvt.color246: #a89984
-URxvt.color248: #bdae93
-URxvt.color250: #d5c4a1
-URxvt.highlightColor: #bdbdbd
+URxvt.color24:         #076678
+URxvt.color66:         #427b58
+URxvt.color88:         #9d0006
+URxvt.color96:         #8f3f71
+URxvt.color100:        #79740e
+URxvt.color108:        #8ec07c
+URxvt.color109:        #83a598
+URxvt.color130:        #af3a03
+URxvt.color136:        #b57614
+URxvt.color142:        #b8bb26
+URxvt.color167:        #fb4934
+URxvt.color175:        #d3869b
+URxvt.color208:        #fe8019
+URxvt.color214:        #fabd2f
+URxvt.color223:        #ebdbb2
+URxvt.color228:        #f2e5bc
+URxvt.color229:        #fbf1c7
+URxvt.color230:        #f9f5d7
+URxvt.color234:        #1d2021
+URxvt.color235:        #282828
+URxvt.color236:        #32302f
+URxvt.color237:        #3c3836
+URxvt.color239:        #504945
+URxvt.color241:        #665c54
+URxvt.color243:        #7c6f64
+URxvt.color244:        #928374
+URxvt.color245:        #928374
+URxvt.color246:        #a89984
+URxvt.color248:        #bdae93
+URxvt.color250:        #d5c4a1
+URxvt.highlightColor:  #bdbdbd
 URxvt.highlighTextColor: #424242
-URxvt.perl-lib : /home/master/.urxvt/
+URxvt.perl-lib :         /home/master/.urxvt/
 ! !URxvt*perl-ext-common: default,keyboard-select,bidi
 URxvt*perl-ext-common: default
 !URxvt.perl-ext: clipboard,tabbedex,url-select,autocomplete-ALL-the-things,matcher,bidi,resize-font
 
 !!!! Config
-URxvt*termName:    xterm-256color
-!!!! Font
-! URxvt.font: xft:Mononoki:pixelsize=13,
-! URxvt.font: 		xft:CodeNewRoman Nerd Font Mono:size=11
-! URxvt.font: 		xft:mononok Nerd Font Mono:size=11
-! URxvt.font: 		xft:mplus Nerd Font Mono:size=11
-URxvt.font: 		xft:tamsyn:size=11
-!!!! Scroll
-URxvt*scrollBar:	false
-!!!! Settings
-urxvt*internalBorder: 3
-URxvt*cursorBlink: true
-URxvt*savelines: 10000
-!!!!! copy, paste and search
+URxvt*termName:               xterm-256color
+URxvt.font:                   xft:tamsyn:size=11
+URxvt*scrollBar:              false
+urxvt*internalBorder:         3
+URxvt*cursorBlink:            true
+URxvt*savelines:              10000
 URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 URxvt.keysym.Control-Shift-C: perl:clipboard:copy
-URxvt.clipboard.autocopy: true
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-s: perl:keyboard-select:search
-!!!! Compelete
-URxvt.keysym.M-colon:   perl:aAtt:word-complete
-!!!! URLs
-!URxvt.urlLauncher: firefox
-URxvt.url-launcher:         $BROWSER
-URxvt.url-select.underline: true
-URxvt.colorUL:		          #4682B4
-URxvt.url-select.autocopy:  true
-URxvt.url_select.underline:	true
-!!!! matche
-URxvt.matcher.button:	1
+URxvt.clipboard.autocopy:     true
+URxvt.keysym.M-Escape:        perl:keyboard-select:activate
+URxvt.keysym.M-s:             perl:keyboard-select:search
+URxvt.keysym.M-colon:         perl:aAtt:word-complete
+URxvt.url-launcher:           $BROWSER
+URxvt.url-select.underline:   true
+URxvt.colorUL:                #4682B4
+URxvt.url-select.autocopy:    true
+URxvt.url_select.underline:   true
+URxvt.matcher.button:         1
 
 
 !  ____                ____
