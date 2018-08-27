@@ -17,7 +17,7 @@ define_key(content_buffer_normal_keymap, "O", "find-url-new-buffer")
 // follow from F
 define_key(content_buffer_normal_keymap, "F", "follow-new-buffer-background")
 
-// yank as emacs
+// yank as term
 //undefine_key(caret_keymap,"M-w");
 define_key(caret_keymap,"C-M-c", "cmd_copy");
 //define_key(caret_keymap,"C-M-v", "cmd_paste");
