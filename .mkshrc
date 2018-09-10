@@ -1,0 +1,53 @@
+#            _        _
+#  _ __ ___ | | _____| |__  _ __ ___
+# | '_ ` _ \| |/ / __| '_ \| '__/ __|
+# | | | | | |   <\__ \ | | | | | (__ :Ahmed Khaled:
+# |_| |_| |_|_|\_\___/_| |_|_|  \___|:ahmed_khaledATzohoDoTCoM:
+## ┏┓╻╻ ╻
+## ┃┗┫╺╋╸
+## ╹ ╹╹ ╹
+# ––– •External START here• –––
+[ -o login ] && . $HOME/.profile
+. $HOME/.mksh/alias
+# ––– •External END here• –––
+
+
+# ––– •Style START here• –––
+PS1='$(/home/master/bin/pwr)'
+# ––– •Style END here• –––
+
+# ––– •Export START here• –––
+BROWSER=qutebrowser
+BROWSERCLI=links2
+EDITOR=emacsclient
+GEM_HOME=$HOME/.gem
+GEM_HOME=$HOME/.gem
+GOPATH=$HOME/.go/pkg
+GOROOT=$HOME/.go
+IMAGEVIEWER=meh
+PAGER=less
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH=$HOME/.cargo/bin:$PATH
+PATH=$PATH:$GOROOT/bin
+PATH=$PATH:$HOME/.go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
+READER=zathura
+VIDEOPLAYER=mpv
+VISUAL=$EDITOR
+
+export PAGER BROWSERCLI READER IMAGEVIEWER VIDEOPLAYER EDITOR VISUAL BROWSER GOROOT GEM_HOME GOPATH PATH
+
+export _JAVA_AWT_WM_NONREPARENTING=1   # FOR NAND2Tetris course, cuz Java GUI suck
+# ––– •Export END here• –––
+
+# ––– •export START here• –––
+export GIT_HOSTING='xxzozaxx@github.com'
+# ––– •export  END here• –––
+
+# ––– •OTHER START here• –––
+## FZF
+[ -f ~/.fzf.mksh ] && source ~/.fzf.mksh
+stty -ixon
+## History
+HISTFILE=$HOME/history
+HISTSIZE=4096
+# ––– •OTHER END here• –––

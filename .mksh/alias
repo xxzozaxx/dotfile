@@ -1,21 +1,12 @@
-# You can put files here to add functionality separated per file, which
-# will be ignored by git.
-# Files on the custom/ directory will be automatically loaded by the init
-# script, in alphabetical order.
+#!/usr/bin/env bash
 
-# For example: add yourself some shortcuts to projects you often work on.
-#
-# brainstormr=~/Projects/development/planetargon/brainstormr
-# cd $brainstormr
-#
-
+# ––– •Alias START here• –––
 # better view
 alias cp='cp -iv'         # Preferred 'cp' implementation
 alias mv='mv -iv'         # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'   # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'     # Preferred 'ls' implementation
 alias less='less -FSRXc'  # Preferred 'less' implementation
-
 # Open program faster
 alias r='ranger'
 alias d='date && cal'
@@ -26,12 +17,10 @@ alias emt='emacsclient -t'
 alias nf='neofetch'
 alias tr='trans :ar'
 alias pping='prettyping'
-
 # mpv short cut
 alias mpvs='mpv --sub-file'
 alias mpvm='mpv --ytdl-format=18'
 alias mpvms='mpv --ytdl-format=18 --sub-file'
-
 # Git alias and color
 alias g='grc git'
 alias ga='git add'
@@ -50,7 +39,6 @@ alias gc='grc git clone'
 alias gd='git diff'
 # Magic Git
 alias magit='emacsclient -c -n -e "(progn (magit-status) (delete-other-windows))"'
-
 ### Colorize program
 ## with grc
 alias ping='grc ping'
@@ -62,8 +50,12 @@ alias diff='grc diff'
 alias last='grc last'
 alias ldap='grc ldap'
 alias cvs='grc cvs'
-
 ## with colout
 alias colorshow='for c in {0..255}; do echo "$c color" | colout "color" $c; done'
 alias aptup='sudo apt update | colout "Get" 118 | colout "Ign" 124 | colout "Hit" 226 | colout "^.*see.*$" 51'
 alias aptin='sudo apt install'
+aptse () { apt search $1 | colout "^.*installed.*" 242
+         }
+aptsh () { apt show $1 | colout "Version" 45 | colout "Download-Size" 35
+         }
+# ––– •Alias END here• –––

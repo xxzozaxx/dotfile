@@ -9,6 +9,16 @@
 ;; ┏┓╻╻ ╻
 ;; ┃┗┫╺╋╸
 ;; ╹ ╹╹ ╹
+;; ░░▄▄
+;; ░▀▀▀█
+;; ▀░░░▀█
+;; ░░░░░█
+;; ░░░░▄██
+;; ░░░▄█▀█
+;; ░░▄██░▀▄
+;; ░▄██░░░█
+;; ▄██░░░░▀█▄▄█
+;; ▀▀░░░░░░▀▀▀
 (defun dotspacemacs/layers ()
   (setq-default
    dotspacemacs-distribution 'spacemacs ; spacemacs distribution: spacemacs full features
@@ -57,6 +67,9 @@
    dotspacemacs-additional-packages '(;; --- Extra Package ----
                                       all-the-icons-ivy
                                       git-gutter
+                                      carbon-now-sh
+                                      sqlite
+                                      esqlite
                                       ;; --- Theme ---
                                       ;; doom-themes
                                       ;; base16-theme
@@ -67,6 +80,7 @@
                                       monochrome-theme
                                       gruvbox-theme
                                       night-owl-theme
+                                      poet-theme
                                       ;; --- Fun ---
                                       speed-type
                                       symon
@@ -362,7 +376,6 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   ;; allow aggressive-indent-mode
-  ;;(add-hook 'prog-mode-hook #'aggressive-indent-mode)
   (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
   (add-hook 'scheme-mode-hook #'aggressive-indent-mode)
   (add-hook 'racket-mode-hook #'aggressive-indent-mode)
@@ -416,6 +429,7 @@ you should place your code here."
  '(ansi-term-color-vector
    [unspecified "#1b1818" "#ca4949" "#4b8b8b" "#a06e3b" "#7272ca" "#8464c4" "#7272ca" "#8a8585"] t)
  '(compilation-message-face (quote default))
+ '(ecb-options-version "2.50")
  '(evil-want-Y-yank-to-eol nil)
  '(fci-rule-color "#010F1D" t)
  '(highlight-changes-colors (quote ("#EF5350" "#7E57C2")))
@@ -443,7 +457,7 @@ you should place your code here."
      "-%-")))
  '(package-selected-packages
    (quote
-    (fuzzy company-web web-completion-data company-tern tern company-statistics company-shell company-cabal company-c-headers company-auctex company-anaconda common-lisp-snippets auto-yasnippet ac-ispell auto-complete carbon-now-sh toml-mode flycheck-rust cargo rust-mode challenger-deep-theme night-owl-theme git-gutter smart-tabs-mode volatile-highlights vi-tilde-fringe uuidgen toc-org restart-emacs request rainbow-delimiters persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu eval-sexp-fu highlight dumb-jump column-enforce-mode clean-aindent-mode auto-highlight-symbol adaptive-wrap ace-link gruvbox-theme web-beautify livid-mode skewer-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode color-theme-modern rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse smart-mode-line rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy)))
+    (sqlite esqlite pcsv poet-theme autothemer symon speed-type monochrome-theme ibuffer-sidebar focus zeno-theme ecb fuzzy company-web web-completion-data company-tern tern company-statistics company-shell company-cabal company-c-headers company-auctex company-anaconda common-lisp-snippets auto-yasnippet ac-ispell auto-complete carbon-now-sh toml-mode flycheck-rust cargo rust-mode challenger-deep-theme night-owl-theme git-gutter smart-tabs-mode volatile-highlights vi-tilde-fringe uuidgen toc-org restart-emacs request rainbow-delimiters persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu eval-sexp-fu highlight dumb-jump column-enforce-mode clean-aindent-mode auto-highlight-symbol adaptive-wrap ace-link gruvbox-theme web-beautify livid-mode skewer-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode color-theme-modern rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse smart-mode-line rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy)))
  '(paradox-github-token t)
  '(pos-tip-background-color "#FFF9DC")
  '(pos-tip-foreground-color "#011627")
@@ -477,10 +491,11 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t nil)))
  '(custom-set ((t nil)))
  '(org-level-1 ((t (:inherit outline-1 :height 1.6))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.4))))
  '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
  '(vc-state-base ((t nil)))
- '(whitespace-tab ((t (:background unspecified :foreground "#C792EA" :inverse-video unspecified :weight bold)))))
+ '(whitespace-tab ((t (:foreground "#636363")))))

@@ -47,6 +47,8 @@
                 (cons '(XF86AudioRaiseVolume) "pactl set-sink-volume @DEFAULT_SINK@ +1000")
                 (cons '(XF86AudioLowerVolume) "pactl set-sink-volume @DEFAULT_SINK@ -1000")
                 (cons '(XF86AudioMute) "pactl set-sink-mute @DEFAULT_SINK@ toggle")
+                (cons '(Print) "scrot  '%Y-%m-%d_%H:%M:%S_$wx$h.png' -q 100 -e 'mv $f ~/Pictures/'")
+                (cons '(mod4 Print) "scrot  '%Y-%m-%d_%H:%M:%S_$wx$h.png' -u -q 100 -e 'mv $f ~/Pictures/'")
                 ;; (cons '(mod4 Return) "st")
                 (cons '(mod4 shift Return) "st -e tmux attach")
                 ;; ––– •char number• –––

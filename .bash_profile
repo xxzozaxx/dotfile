@@ -36,18 +36,5 @@ _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 
 # export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 if [ -e /home/master/.nix-profile/etc/profile.d/nix.sh ]; then . /home/master/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
-
-# Ruby
-# export GEM_HOME=$HOME/.gem
-
-# Python
-# export PATH=$PATH:/home/master/.local/bin/
-
-# GO home and bin
-# export GOROOT=$HOME/go
-# export PATH=$PATH:$GOROOT/bin
-
-# export PATH=$PATH:$HOME/go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
 
 export PATH="$HOME/.cargo/bin:$PATH"
