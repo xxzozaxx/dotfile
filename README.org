@@ -3,15 +3,15 @@
 
 * What programs I use:
   tl;dr: Emacs and linux
-+ ~Bash~  mksh
++ +Bash+  mksh
 + Emacs (Spacemacs)
-+ ~I3wm~ dwm
-+ ~urxvt~, st
-+ ~Screen~ tmux
++ +I3wm+ dwm
++ +urxvt+, st
++ +Screen+ tmux
 + Vim
 + Qutebrowser
 + Ranger
-+ ~rofi~ dmenu
++ +rofi+ dmenu
 + zathura
 + Compton
 + neofetch
