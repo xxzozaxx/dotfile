@@ -119,7 +119,7 @@
                 ;; (cons '(SEQ shift c) "BIND")
                 ;; (cons '(SEQ v) "BIND")
                 ;; (cons '(SEQ shift v) "BIND")
-                (cons '(mod4 b) "conkeror")
+                (cons '(mod4 b) "$BROWSER")
                 ;; (cons '(SEQ shift b) "BIND")
                 ;; (cons '(SEQ n) "BIND")
                 ;; (cons '(SEQ shift n) "BIND")

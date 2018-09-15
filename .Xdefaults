@@ -54,37 +54,37 @@ Xcursor.size:  0
 ! | | | | |_) |\ \/ /\ \ / / __|
 ! | |_| |  _ <  >  <  \ V /| |_
 !  \___/|_| \_\/_/\_\  \_/  \__| :urxvt:
-URxvt.color24:         #076678
-URxvt.color66:         #427b58
-URxvt.color88:         #9d0006
-URxvt.color96:         #8f3f71
-URxvt.color100:        #79740e
-URxvt.color108:        #8ec07c
-URxvt.color109:        #83a598
-URxvt.color130:        #af3a03
-URxvt.color136:        #b57614
-URxvt.color142:        #b8bb26
-URxvt.color167:        #fb4934
-URxvt.color175:        #d3869b
-URxvt.color208:        #fe8019
-URxvt.color214:        #fabd2f
-URxvt.color223:        #ebdbb2
-URxvt.color228:        #f2e5bc
-URxvt.color229:        #fbf1c7
-URxvt.color230:        #f9f5d7
-URxvt.color234:        #1d2021
-URxvt.color235:        #282828
-URxvt.color236:        #32302f
-URxvt.color237:        #3c3836
-URxvt.color239:        #504945
-URxvt.color241:        #665c54
-URxvt.color243:        #7c6f64
-URxvt.color244:        #928374
-URxvt.color245:        #928374
-URxvt.color246:        #a89984
-URxvt.color248:        #bdae93
-URxvt.color250:        #d5c4a1
-URxvt.highlightColor:  #bdbdbd
+URxvt.color24:           #076678
+URxvt.color66:           #427b58
+URxvt.color88:           #9d0006
+URxvt.color96:           #8f3f71
+URxvt.color100:          #79740e
+URxvt.color108:          #8ec07c
+URxvt.color109:          #83a598
+URxvt.color130:          #af3a03
+URxvt.color136:          #b57614
+URxvt.color142:          #b8bb26
+URxvt.color167:          #fb4934
+URxvt.color175:          #d3869b
+URxvt.color208:          #fe8019
+URxvt.color214:          #fabd2f
+URxvt.color223:          #ebdbb2
+URxvt.color228:          #f2e5bc
+URxvt.color229:          #fbf1c7
+URxvt.color230:          #f9f5d7
+URxvt.color234:          #1d2021
+URxvt.color235:          #282828
+URxvt.color236:          #32302f
+URxvt.color237:          #3c3836
+URxvt.color239:          #504945
+URxvt.color241:          #665c54
+URxvt.color243:          #7c6f64
+URxvt.color244:          #928374
+URxvt.color245:          #928374
+URxvt.color246:          #a89984
+URxvt.color248:          #bdae93
+URxvt.color250:          #d5c4a1
+URxvt.highlightColor:    #bdbdbd
 URxvt.highlighTextColor: #424242
 URxvt.perl-lib :         /home/master/.urxvt/
 ! !URxvt*perl-ext-common: default,keyboard-select,bidi
@@ -93,7 +93,8 @@ URxvt*perl-ext-common: default
 
 !!!! Config
 URxvt*termName:               xterm-256color
-URxvt.font:                   xft:tamsyn:size=11
+! URxvt.font:                   xft:tamsyn:size=11
+URxvt.font:                   xft:GoMono Nerd Font:pixelsize=12:antialias=true:autohint=true
 URxvt*scrollBar:              false
 urxvt*internalBorder:         3
 URxvt*cursorBlink:            true
