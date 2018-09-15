@@ -1,0 +1,130 @@
+;;; packages.el --- dired layer packages file for Spacemacs.
+;;
+;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
+;;
+;; Author:  Ahmed Khaled (David Gabriel)
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+;;; Commentary:
+
+;; See the Spacemacs documentation and FAQs for instructions on how to implement
+;; a new layer:
+;;
+;;   SPC h SPC layers RET
+;;
+;;
+;; Briefly, each package to be installed or configured by this layer should be
+;; added to `dired-packages'. Then, for each package PACKAGE:
+;;
+;; - If PACKAGE is not referenced by any other Spacemacs layer, define a
+;;   function `dired/init-PACKAGE' to load and initialize the package.
+
+;; - Otherwise, PACKAGE is already referenced by another Spacemacs layer, so
+;;   define the functions `dired/pre-init-PACKAGE' and/or
+;;   `dired/post-init-PACKAGE' to customize the package as it is loaded.
+
+;;; Code:
+
+(defconst dired-packages
+  '(
+    (dired :location built-in)
+    dired-hacks-utils
+    dired-rainbow
+    dired-subtree
+    dired-narrow
+    dired-collapse
+    dired-quick-sort
+    ;; init-dired-details
+    dired-k
+    diredfl
+    ))
+
+(defun dired/post-init-dired ()
+  ;; always delete and copy recursively
+  (setq dired-recursive-deletes 'always
+        dired-recursive-copies 'always)
+  ;; Make sizes human-readable by default, sort version numbers
+  ;; correctly, and put directories, dotfiles and capital-letters first.
+  (setq-default dired-listing-switches "-alhv --group-directories-first")
+  )
+(defun dired/init-dired-hacks-utils ()
+  (use-package dired-hacks-utils
+    :ensure t))
+
+(defun dired/init-dired-rainbow ()
+  (use-package dired-rainbow
+    :ensure t
+    :after (dired dired-hack-utils)
+    :init
+    (dired-rainbow-define dotfiles   "gray" "\\..*")
+    (dired-rainbow-define html       "#4e9a06" ("htm" "html" "xhtml"))
+    (dired-rainbow-define xml        "#b4fa70" ("xml"))
+    (dired-rainbow-define document   "#fce94f" ("pdf" "djvu" ))
+    (dired-rainbow-define text       "yellow green" ("tex" "md" "org"))
+    (dired-rainbow-define log        "#c17d11" (".*\\.log"))
+    (dired-rainbow-define compressed "#ad7fa8" ("gz" "zip" "7z" "bz2"))
+    (dired-rainbow-define encrypted  "LightBlue" ("gpg" "pgp"))
+    (dired-rainbow-define image      "#ff4b4b" ("png"  "jng" "jpeg" "bmp"))
+    (dired-rainbow-define audio      "#329ee8" rc/dired-audio-files-extensions)
+    (dired-rainbow-define video      "#b3ccff" ("mp4" "gif" "webm" "flv" "m4v" "mkv"))
+    ;; highlight executable files, but not directories
+    (dired-rainbow-define-chmod executable-unix "green" "-[rw-]+x.*")
+    ;; boring regexp due to lack of imagination
+    (dired-rainbow-define log (:inherit default :italic t) ".*\\.log")
+
+    ;; highlight executable files, but not directories
+    (dired-rainbow-define-chmod
+     executable-unix "Green" "-[rw-]+x.*")))
+
+(defun dired/init-dired-subtree ()
+  (use-package dired-subtree
+    :ensure t
+    :after dired
+    :config
+    (bind-key "<tab>" #'dired-subtree-toggle dired-mode-map)
+    (bind-key "<backtab>" #'dired-subtree-cycle dired-mode-map)
+    ))
+
+(defun dired/init-dired-narrow ()
+  "Initialize dired-narrow"
+  (use-package dired-narrow))
+
+(defun dired/init-dired-collapse ()
+  "Initialize dired-collapse"
+  (use-package dired-collapse
+    :ensure t
+    :after dired
+    :config
+    (add-hook 'dired-mode-hook 'dired-collapse-mode)
+    ))
+
+(defun dired/init-dired-quick-sort ()
+  "Initialize dired-quick-sort"
+  (use-package dired-quick-sort
+    :init (dired-quick-sort-setup)))
+
+(defun dired/init-dired-k ()
+  (use-package dired-k
+    :after dired
+    :config
+    (setq dired-k-human-readable t)
+    (add-hook 'dired-initial-position-hook 'dired-k)
+    ))
+
+(defun dired/init-diredfl ()
+  "Initialize dired-k"
+  (use-package diredfl
+    :after dired
+    :config
+    (diredfl-global-mode)
+    ))
+
+;;TODO
+;; (defun dired/init-all-the-icons-dired ()
+;;   )
+
+;;; packages.el ends here
