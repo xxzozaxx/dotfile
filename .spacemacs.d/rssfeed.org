@@ -20,6 +20,7 @@
 ** https://brennan.io/blog/rss.xml                                                    :Brennan:
 ** https://venam.nixers.net/blog/feed.xml                                               :Venam:
 ** http://endlessparentheses.com/atom.xml                                               :ELP:
+** https://speice.io/feed.xml                                                       :bradlee:
 * News                                                               :elfeed:
 ** https://hnrss.org/newest?points=10
 ** https://www.reddit.com/.rss?feed=453180888de169bbde28bf72272be11f6a5322a9&user=XxZozaxX

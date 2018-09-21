@@ -48,6 +48,6 @@ export GIT_HOSTING='xxzozaxx@github.com'
 [ -f ~/.fzf.mksh ] && source ~/.fzf.mksh
 stty -ixon
 ## History
-HISTFILE=$HOME/history
+HISTFILE=$HOME/.history
 HISTSIZE=4096
 # ––– •OTHER END here• –––

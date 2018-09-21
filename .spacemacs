@@ -71,11 +71,6 @@
                                       sqlite
                                       esqlite
                                       ;; --- Theme ---
-                                      ;; doom-themes
-                                      ;; base16-theme
-                                      ;; cyberpunk-theme
-                                      ;; color-theme-modern
-                                      ;; nyx-theme
                                       dracula-theme
                                       monochrome-theme
                                       gruvbox-theme
@@ -98,13 +93,11 @@
                                     fancy-battery
                                     rainbow-delimiters
                                     )
-   ;; Defines the behaviour of Spacemacs when installing packages.
-   ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
-   ;; `used-only' installs only explicitly used packages and uninstall any
-   ;; unused packages as well as their unused dependencies.
-   ;; `used-but-keep-unused' installs only the used packages but won't uninstall
-   ;; them if they become unused. `all' installs *all* packages supported by
-   ;; Spacemacs and never uninstall them. (default is `used-only')
+   ;; Package install behaviour;
+   ;;         - `used-only': install only explicitly used packages
+   ;;         - `used-but-keep-unused': install only the used package
+   ;; but won't uninstall them if they become unused.
+   ;;         - `all'
    dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
@@ -113,8 +106,6 @@ This function is called at the very startup of Spacemacs initialization
 before layers configuration.
 You should not put any user code in there besides modifying the variable
 values."
-  ;; This setq-default sexp is an exhaustive list of all the supported
-  ;; spacemacs settings.
   (setq-default
    ;; If non nil ELPA repositories are contacted via HTTPS whenever it's
    ;; possible. Set it to nil if you have no way to use HTTPS in your
@@ -342,9 +333,6 @@ values."
 
 (defun dotspacemacs/user-init ()
 
-  ;; load my theme
-  (load "~/.emacs.d/private/local/simple-monochrome-theme.el")
-
   ;;; org-mode init
   (setq org-bullets-bullet-list '("◉" "○" "⚫" "❖" )
         org-ellipsis "⤵")
@@ -393,8 +381,9 @@ you should place your code here."
     :init (global-git-gutter-mode +1))
 
   ;; Load prettify mode config
-  (load-file "~/.spacemacs.d/pretty.el")
-  (load-file "~/.spacemacs.d/mail.el")
+  (load-file "~/.spacemacs.d/pretty.el")  ; pretty config
+  (load-file "~/.spacemacs.d/mail.el")    ; Mu4e   config
+
 
   ;; Source: https://dougie.io/coding/tabs-in-emacs/
   ;; Visualize tabs as a pipe character - "|"

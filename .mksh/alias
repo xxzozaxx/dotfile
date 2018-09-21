@@ -2,11 +2,14 @@
 
 # ––– •Alias START here• –––
 # better view
-alias cp='cp -iv'         # Preferred 'cp' implementation
-alias mv='mv -iv'         # Preferred 'mv' implementation
-alias mkdir='mkdir -pv'   # Preferred 'mkdir' implementation
-alias ll='ls -FGlAhp'     # Preferred 'ls' implementation
-alias less='less -FSRXc'  # Preferred 'less' implementation
+alias cp='cp -iv'                # Preferred 'cp' implementation
+alias mv='mv -iv'                # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'          # Preferred 'mkdir' implementation
+alias ll='ls -FGlAhp'            # Preferred 'ls' implementation
+alias e='exa --classify'         # preferred "exa" impl
+alias el='exa --long --classify --git' # preferred "exa" impl
+alias ell='exa --long --classify --git' # preferred "exa" impl
+alias less='less -FSRXc'         # Preferred 'less' implementation
 # Open program faster
 alias r='ranger'
 alias d='date && cal'
@@ -58,4 +61,7 @@ aptse () { apt search $1 | colout "^.*installed.*" 242
          }
 aptsh () { apt show $1 | colout "Version" 45 | colout "Download-Size" 35
          }
+downp () {
+    wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains "$1" --no-parent $1;
+}
 # ––– •Alias END here• –––
