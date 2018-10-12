@@ -11,8 +11,8 @@
             (push '("==" . ?≡) prettify-symbols-alist)
 
             ;; Type
-            (push '("int"     . ?ℤ) prettify-symbols-alist)
-            (push '("float"   . ?ℝ) prettify-symbols-alist)
+            ;; (push '("int"     . ?ℤ) prettify-symbols-alist)
+            ;; (push '("float"   . ?ℝ) prettify-symbols-alist)
             ;; (push '("str"     . ?𝕊) prettify-symbols-alist)
             (push '("True"    . ?𝕋) prettify-symbols-alist)
             (push '("False"   . ?𝔽) prettify-symbols-alist)

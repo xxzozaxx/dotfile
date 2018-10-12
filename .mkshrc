@@ -30,13 +30,22 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$PATH:$GOROOT/bin
 PATH=$PATH:$HOME/.go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
-READER=zathura
+READER=okular
 VIDEOPLAYER=mpv
 VISUAL=$EDITOR
 
 export PAGER BROWSERCLI READER IMAGEVIEWER VIDEOPLAYER EDITOR VISUAL BROWSER GOROOT GEM_HOME GOPATH PATH
 
-export _JAVA_AWT_WM_NONREPARENTING=1   # FOR NAND2Tetris course, cuz Java GUI suck
+#export _JAVA_AWT_WM_NONREPARENTING=1   # FOR NAND2Tetris course, cuz Java GUI suck
+
+# Add color in manpages for less
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
 # ––– •Export END here• –––
 
 # ––– •export START here• –––
