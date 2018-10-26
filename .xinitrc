@@ -9,12 +9,13 @@
 ## ╹ ╹╹ ╹
 
 # launch programs
-setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle &
+#setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle &
 # feh --bg-fill /home/master/.config/wall.png &
 hsetroot -cover /home/master/.config/wall.png &
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
+emacs --daemon &
 #bash ~/.config/Scripts/Dzen2.sh &
 
 #when open dwm uncomment the follow

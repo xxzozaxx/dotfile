@@ -3,7 +3,7 @@
 export BASH_IT="/home/master/.bash_it"
 
 #export BASH_IT_THEME='purity'
-export PS1='$(/home/master/bin/pwr)'
+#export PS1='$(/home/master/bin/pwr)'
 export GIT_HOSTING='xxzozaxx@github.com'
 unset MAILCHECK
 export IRC_CLIENT='weechat'
