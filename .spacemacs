@@ -51,15 +51,15 @@
      ;; (elfeed :variables
      ;;         rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
      (shell :variables shell-default-shell 'eshell)
-     (erc :variables
-          erc-server-list '(;; ("irc.freenode.net"
-                            ;;  :port "6697"
-                            ;;  :ssl t
-                            ;;  :nick "Ahmedkh")
-                            ("irc.rizon.net"
-                             :port "6697"
-                             :ssl t
-                             :nick "Ahmedkh")))
+     ;; (erc :variables
+     ;;      erc-server-list '(;; ("irc.freenode.net"
+     ;;                        ;;  :port "6697"
+     ;;                        ;;  :ssl t
+     ;;                        ;;  :nick "Ahmedkh")
+     ;;                        ("irc.rizon.net"
+     ;;                         :port "6697"
+     ;;                         :ssl t
+     ;;                         :nick "Ahmedkh")))
 
      ;; –––– fun stuff ––––
      ;;selectric ; exwm
