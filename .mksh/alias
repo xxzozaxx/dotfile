@@ -25,7 +25,7 @@ alias pping='prettyping'
 alias mpvs='mpv --sub-file'
 alias mpvm='mpv --ytdl-format=18'
 alias mpvms='mpv --ytdl-format=18 --sub-file'
-alias usbm='sudo mount -o uid=1000 /dev/sdb /home/master/Public/sdb/'
+alias usbm='sudo mount -o uid=1000 /dev/sdb /home/master/sdb/'
 alias usbum='sudo umount /dev/sdb'
 # Git alias and color
 alias g='grc git'
