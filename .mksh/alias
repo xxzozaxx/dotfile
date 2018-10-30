@@ -25,6 +25,7 @@ alias pping='prettyping'
 alias mpvs='mpv --sub-file'
 alias mpvm='mpv --ytdl-format=18'
 alias mpvms='mpv --ytdl-format=18 --sub-file'
+alias setkey='setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle'
 alias usbm='sudo mount -o uid=1000 /dev/sdb /home/master/sdb/'
 alias usbum='sudo umount /dev/sdb'
 # Git alias and color
@@ -57,18 +58,22 @@ alias last='grc last'
 alias ldap='grc ldap'
 alias cvs='grc cvs'
 ## with colout
-alias setkey='setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle'
 alias colorshow='for c in {0..255}; do echo "$c color" | colout "color" $c; done'
-alias aptup='sudo apt update | colout "Get" 118 | colout "Ign" 124 | colout "Hit" 226 | colout "^.*see.*$" 51'
+alias aptup='sudo apt update | colout "Get" 118 | colout "Ign" 124 | colout "Hit" 226 | colout "^.*see.*$" 51 | colout "\d* .B | \d*.\d* .B" 3 | colout "http.+ " 6'
 alias aptin='sudo apt install'
 aptse ()
 {
-    apt search $1 | colout "^.*installed.*" 242 | less
+    apt search $1 | colout "^.*installed.*" 242 | colout "(^.*)/.*" 2 | less
 }
 
 aptsh ()
 {
-    apt show $1 | colout "Version" 45 | colout "Download-Size" 35  | less
+    # Second Line capture any size
+    # Third line capture any link
+    apt show $1 | colout "Version" 4 |colout "^Installed-Size" 2 | colout "^Download-Size" 2  \
+        | colout "\d* .B | \d*.\d* .B" 3 \
+        | colout "http.+" 6 \
+        | less
 }
 
 downp ()
