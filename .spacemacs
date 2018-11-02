@@ -9,16 +9,7 @@
 ;; ┏┓╻╻ ╻
 ;; ┃┗┫╺╋╸
 ;; ╹ ╹╹ ╹
-;;   ▄▄
-;; ▄▀▀▀█
-;; ▀   ▀█
-;;      █
-;;     ▄██
-;;    ▄█▀█
-;;   ▄██ ▀▄
-;;  ▄██   █
-;; ▄██    ▀█▄▄█
-;; ▀▀      ▀▀▀
+
 (defun dotspacemacs/layers ()
   (setq-default
    dotspacemacs-distribution 'spacemacs ; spacemacs distribution: spacemacs full features
