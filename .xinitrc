@@ -16,6 +16,7 @@ hsetroot -solid "$(xrdb -query | grep "*color0" | awk '{print $2}')" -tile /home
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
+abduco -n dropdown &
 emacs --daemon &
 #bash ~/.config/Scripts/Dzen2.sh &
 

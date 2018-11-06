@@ -2,16 +2,16 @@
 #+AUTHOR: Ahmed Khaled
 
 * What programs I use:
-  tl;dr: Emacs and linux
-+ +Bash+  mksh
+  tl;dr: Emacs, suckless and linux (I wish I could run BSD instead)
++ +Bash+ -> mksh
 + Emacs (Spacemacs)
-+ +I3wm+ dwm
-+ +urxvt+, st
-+ +Screen+ tmux
++ +I3wm+ -> dwm
++ +urxvt+ st
++ +Screen+ -> +tmux+ -> dvtm + abduco
 + Vim
-+ Qutebrowser
++ +Qutebrowser+ -> Surf
 + Ranger
-+ +rofi+ dmenu
++ +rofi+ -> dmenu
 + zathura
 + Compton
 + neofetch
