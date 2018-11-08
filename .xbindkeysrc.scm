@@ -50,7 +50,7 @@
                 (cons '(Print) "scrot  '%Y-%m-%d_%H:%M:%S_$wx$h.png' -q 100 -e 'mv $f ~/Pictures/'")
                 (cons '(mod4 Print) "scrot  '%Y-%m-%d_%H:%M:%S_$wx$h.png' -u -q 100 -e 'mv $f ~/Pictures/'")
                 ;; (cons '(mod4 Return) "st")
-                ;; (cons '(mod4 shift Return) "urxvt")
+                (cons '(mod4 shift Return) "xterm")
                 ;; ––– •char number• –––
                 ;; (cons '(SEQ 1) "BIND")
                 ;; (cons '(SEQ shift 1) "BIND")

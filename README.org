@@ -9,7 +9,7 @@
 + +urxvt+ st
 + +Screen+ -> +tmux+ -> dvtm + abduco
 + Vim
-+ +Qutebrowser+ -> Surf
++ +Qutebrowser+ -> xlinks2 (mainly), surf, elinks (for gopher)
 + Ranger
 + +rofi+ -> dmenu
 + zathura
