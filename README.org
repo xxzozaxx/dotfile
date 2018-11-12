@@ -6,7 +6,7 @@
 + +Bash+ -> mksh
 + Emacs (Spacemacs)
 + +I3wm+ -> dwm
-+ +urxvt+ st
++ +urxvt+  -> st (mainly), xterm
 + +Screen+ -> +tmux+ -> dvtm + abduco
 + Vim
 + +Qutebrowser+ -> xlinks2 (mainly), surf, elinks (for gopher)
