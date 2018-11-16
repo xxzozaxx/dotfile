@@ -5,19 +5,19 @@ FullScreen=false
 AutomaticDetectionLanguage=1
 
 [MainWindow]
-Height 900=877
-State=AAAA/wAAAAD9AAAAAAAAAnwAAAM6AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+Height 900=881
+State=AAAA/wAAAAD9AAAAAAAABkAAAANdAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=636
+Width 1600=1600
 
 [Recent Files]
 File1[$e]=$HOME/Documents/Medician/Physiology/Physiology Magdy Sabry CNS.pdf
 File2[$e]=$HOME/Documents/ProgLang/Shell/Learning the Korn Shell-O'Reilly Media (1993).chm
 File3[$e]=$HOME/Documents/misc/The Power of Habit__2012.epub
 File4[$e]=$HOME/Documents/Medician/Physiology/Physiology Magdy Sabry CNS_test.pdf
-File5[$e]=$HOME/Documents/Naive Set Theory__2017.epub
+File5[$e]=$HOME/Documents/Mathematics/Foundation/Principles-of-Mathematics-A-Primer.pdf
 Name1[$e]=Physiology Magdy Sabry CNS.pdf
 Name2[$e]=Learning the Korn Shell-O'Reilly Media (1993).chm
 Name3[$e]=The Power of Habit__2012.epub
 Name4[$e]=Physiology Magdy Sabry CNS_test.pdf
-Name5[$e]=Naive Set Theory__2017.epub
+Name5[$e]=Principles-of-Mathematics-A-Primer.pdf

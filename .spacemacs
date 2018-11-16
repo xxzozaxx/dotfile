@@ -38,7 +38,7 @@
      ;;(colors :variables colors-colorize-identifiers 'variables)
 
      ;;  ---- Application -----
-     org pdf-tools dired mu4e gnus ;jabber ;vinegar
+     org pdf-tools dired mu4e gnus eww ;jabber ;vinegar
      ;; (elfeed :variables
      ;;         rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
      (shell :variables shell-default-shell 'eshell)
@@ -335,8 +335,8 @@ values."
   (setq load-prefer-newer t)
 
   ;;; org-mode init
-  (setq   org-bullets-bullet-list '(" ")
-          ;; org-bullets-bullet-list '("◉" "○" "⚫" "❖" )
+  (setq   ;; org-bullets-bullet-list '(" ")
+          org-bullets-bullet-list '("◉" "○" "⚫" "❖" )
           org-ellipsis " ⤵ "
           org-startup-indented t
           org-pretty-entities t
