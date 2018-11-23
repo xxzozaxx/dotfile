@@ -1,14 +1,14 @@
 ;; -*- mode: emacs-lisp -*-
 ;;  ____
-;; / ___| _ __   __ _  ___ ___ _ __ ___   __ _  ___ ___
-;; \___ \| '_ \ / _` |/ __/ _ \ '_ ` _ \ / _` |/ __/ __|
-;;  ___) | |_) | (_| | (_|  __/ | | | | | (_| | (__\__ \
-;; |____/| .__/ \__,_|\___\___|_| |_| |_|\__,_|\___|___/
-;;       |_| :Ahmed's spacemacs config file:
+;; / ___│ _ __   __ _  ___ ___ _ __ ___   __ _  ___ ___
+;; \___ \│ '_ \ / _` │/ __/ _ \ '_ ` _ \ / _` │/ __/ __│
+;;  ___) │ │_) │ (_│ │ (_│  __/ │ │ │ │ │ (_│ │ (__\__ \
+;; │____/│ .__/ \__,_│\___\___│_│ │_│ │_│\__,_│\___│___/
+;;       │_│ :Ahmed's spacemacs config file:
 ;;           :ahmed_khaledATzohoDoTCoM:
 ;; ┏┓╻╻ ╻
 ;; ┃┗┫╺╋╸
-;; ╹ ╹╹ ╹
+;; ╹ ╹╹ ╹ :NIXERS:
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -23,9 +23,9 @@
    '(
      ;; ---- Languages -----
      emacs-lisp
-     shell-scripts NAND ;nixos
-     haskell common-lisp python scheme rust go
-     c-c++ d sml racket ruby javascript
+     shell-scripts  ;NAND ;nixos
+     rust go c-c++ d ; haskell common-lisp
+     python scheme sml racket ;ruby javascript
      markdown html graphviz
      (latex :variables latex-enable-auto-fill t
             :variables latex-enable-folding t)
@@ -38,19 +38,10 @@
      ;;(colors :variables colors-colorize-identifiers 'variables)
 
      ;;  ---- Application -----
-     org pdf-tools dired mu4e gnus eww ;jabber ;vinegar
+     org  dired mu4e gnus eww ;jabber ;vinegar ;pdf-tools
      ;; (elfeed :variables
      ;;         rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
      (shell :variables shell-default-shell 'eshell)
-     ;; (erc :variables
-     ;;      erc-server-list '(;; ("irc.freenode.net"
-     ;;                        ;;  :port "6697"
-     ;;                        ;;  :ssl t
-     ;;                        ;;  :nick "Ahmedkh")
-     ;;                        ("irc.rizon.net"
-     ;;                         :port "6697"
-     ;;                         :ssl t
-     ;;                         :nick "Ahmedkh")))
 
      ;; –––– fun stuff ––––
      ;;selectric ; exwm
@@ -59,8 +50,11 @@
                                       all-the-icons-ivy
                                       git-gutter
                                       carbon-now-sh
-                                      sqlite
-                                      esqlite
+                                      sqlite esqlite
+                                      calfw calfw-org
+                                      org-gcal
+                                      ascii-art-to-unicode
+                                      ;; minimap
                                       ;; --- Theme ---
                                       dracula-theme
                                       monochrome-theme
@@ -140,7 +134,8 @@ values."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists '((recents . 5)
+   dotspacemacs-startup-lists '((agenda . 2)
+                                (recents . 5)
                                 (projects . 7))
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
@@ -150,6 +145,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         gruvbox-dark-medium
                          dracula
                          nyx
                          monokai-alt
@@ -159,12 +155,12 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   ;; font test: \/ {} () a* -: <>=&¿? #$|~`' ‘’,‚ .
+   ;; font test: \/ {} () a* -: <>=&¿? #$│~`' ‘’,‚ .
    ;; font test: a g l i α λ
 
    ;; List of fonts that you could use "Monoisome""DejaVu Sans Mono""Iosevka"
    ;; dotspacemacs-default-font '("{mplus, FantasqueSansMono} Nerd Font Mono, GoMono Nerd Font"
-   dotspacemacs-default-font '("GoMono Nerd Font"
+   dotspacemacs-default-font '("GoMono Nerd Font Mono"
                                :size 14
                                :weight normal
                                :width normal
@@ -335,16 +331,23 @@ values."
   (setq load-prefer-newer t)
 
   ;;; org-mode init
-  (setq   ;; org-bullets-bullet-list '(" ")
-          org-bullets-bullet-list '("◉" "○" "⚫" "❖" )
-          org-ellipsis " ⤵ "
-          org-startup-indented t
-          org-pretty-entities t
-          org-hide-emphasis-markers t
-          ;; show actually italicized text instead of /italicized text/
-          org-fontify-whole-heading-line t
-          org-fontify-done-headline t
-          org-fontify-quote-and-verse-blocks t)
+  (setq org-bullets-bullet-list '("◉" "○" "⚫" "❖" )
+        org-ellipsis " ⤵ "
+        org-todo-keywords '((sequence "TODO" "IN-PROGRESS" "WAITING" "│" "DONE" "CANCELED"))
+        org-agenda-custom-commands
+        '(("c" "Simple agenda view"
+           ((tags "PRIORITY=\"A\""
+                  ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                   (org-agenda-overriding-header "High-priority unfinished tasks:")))
+            (agenda "")
+            (alltodo ""))))
+        org-startup-indented t
+        org-pretty-entities t
+        org-hide-emphasis-markers t
+        ;; show actually italicized text instead of /italicized text/
+        org-fontify-whole-heading-line t
+        org-fontify-done-headline t
+        org-fontify-quote-and-verse-blocks t)
 
   ;; Org level fonts
   (custom-set-faces
@@ -374,6 +377,12 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; time in mode line
+  (display-time-mode 1)
+
+  (require 'calfw-org)
+
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 
   ;; allow aggressive-indent-mode
@@ -387,32 +396,30 @@ you should place your code here."
     :config
     (all-the-icons-ivy-setup))
 
-  ;; Git gutter: seeing the lines that are modified in the file
+  ;; Git gutter: seeing the lines that are modified in the file (left side)
   (use-package git-gutter
     :defer 1
     :diminish
     :init (global-git-gutter-mode +1))
 
   ;; Load prettify mode config
-  (load-file "~/.spacemacs.d/pretty.el")  ; pretty config
-  (load-file "~/.spacemacs.d/mail.el")    ; Mu4e   config
+  (load-file "~/.spacemacs.d/pretty.el")   ; pretty config
+  (load-file "~/.spacemacs.d/mail.el")     ; Mu4e   config
+  (load-file "~/.spacemacs.d/org-gcal.el") ;
 
 
   ;; Source: https://dougie.io/coding/tabs-in-emacs/
-  ;; Visualize tabs as a pipe character - "|"
+  ;; Visualize tabs as a pipe character - "│"
   ;; This will also show trailing characters as they are useful to spot.
   (setq whitespace-style '(face tabs tab-mark trailing))
   (custom-set-faces
    '(whitespace-tab ((t (:foreground "#636363")))))
   (setq whitespace-display-mappings
-        '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
+        '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\│'
   (global-whitespace-mode)              ; Enable whitespace mode everywhere
 
-  ;; time in mode line
-  (display-time-mode 1)
-
   (setq browse-url-browser-function 'browse-url-generic
-        browse-url-generic-program "/usr/bin/xlinks2")
+        browse-url-generic-program "/usr/bin/surf")
 
   ;; IRC:
   ;; (erc-spelling-mode 1)
@@ -437,6 +444,8 @@ you should place your code here."
  '(ecb-options-version "2.50")
  '(elfeed-feeds nil)
  '(evil-want-Y-yank-to-eol nil)
+ '(eww-form-checkbox-selected-symbol "☑")
+ '(eww-form-checkbox-symbol "☐")
  '(fci-rule-color "#010F1D" t)
  '(highlight-changes-colors '("#EF5350" "#7E57C2"))
  '(highlight-tail-colors
@@ -460,8 +469,9 @@ you should place your code here."
      (global-mode-string
       ("--" global-mode-string))
      "-%-"))
+ '(org-agenda-files '("~/Documents/PIM/gcal.org" "~/Documents/PIM/Agenda.org"))
  '(package-selected-packages
-   '(d-mode company-dcd flycheck-dmd-dub nov nyx-theme graphviz-dot-mode treepy graphql all-the-icons memoize writeroom-mode racer monotropic-theme monokai-alt-theme monokai-theme ranger evil-snipe weechat go-guru go-eldoc company-go go-mode circe org-outline-numbering outshine sqlite esqlite pcsv poet-theme autothemer symon speed-type monochrome-theme ibuffer-sidebar focus zeno-theme ecb fuzzy company-web web-completion-data company-tern tern company-statistics company-shell company-cabal company-c-headers company-auctex company-anaconda common-lisp-snippets auto-yasnippet ac-ispell auto-complete carbon-now-sh toml-mode flycheck-rust cargo rust-mode challenger-deep-theme night-owl-theme git-gutter smart-tabs-mode volatile-highlights vi-tilde-fringe uuidgen toc-org restart-emacs request rainbow-delimiters persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu eval-sexp-fu highlight dumb-jump column-enforce-mode clean-aindent-mode auto-highlight-symbol adaptive-wrap ace-link gruvbox-theme web-beautify livid-mode skewer-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode color-theme-modern rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))
+   '(minimap calfw-gcal ascii-art-to-unicode kanban w3 org-timeline calfw calfw-org d-mode company-dcd flycheck-dmd-dub nov nyx-theme graphviz-dot-mode treepy graphql all-the-icons memoize writeroom-mode racer monotropic-theme monokai-alt-theme monokai-theme ranger evil-snipe weechat go-guru go-eldoc company-go go-mode circe org-outline-numbering outshine sqlite esqlite pcsv poet-theme autothemer symon speed-type monochrome-theme ibuffer-sidebar focus zeno-theme ecb fuzzy company-web web-completion-data company-tern tern company-statistics company-shell company-cabal company-c-headers company-auctex company-anaconda common-lisp-snippets auto-yasnippet ac-ispell auto-complete toml-mode flycheck-rust cargo rust-mode challenger-deep-theme night-owl-theme git-gutter smart-tabs-mode volatile-highlights vi-tilde-fringe uuidgen toc-org restart-emacs request rainbow-delimiters persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu eval-sexp-fu highlight dumb-jump column-enforce-mode clean-aindent-mode auto-highlight-symbol adaptive-wrap ace-link gruvbox-theme web-beautify livid-mode skewer-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode color-theme-modern rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))
  '(paradox-github-token t)
  '(pos-tip-background-color "#FFF9DC")
  '(pos-tip-foreground-color "#011627")
@@ -495,6 +505,8 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(default ((t nil)))
  '(custom-set ((t nil)))
+ '(minimap-active-region-background ((t (:background "dim gray"))))
+ '(minimap-font-face ((t (:height 30 :family "DejaVu Sans Mono"))))
  '(org-level-1 ((t (:inherit outline-1 :height 1.6))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.4))))
  '(org-level-3 ((t (:inherit outline-3 :height 1.2))))

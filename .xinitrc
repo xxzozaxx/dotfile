@@ -17,8 +17,7 @@ compton --xrender-sync-fence &
 redshift &
 xbindkeys &
 abduco -n dropdown &
-emacs --daemon &
-#bash ~/.config/Scripts/Dzen2.sh &
+#emacs --daemon &
 
 #when open dwm uncomment the follow
 while true
@@ -30,6 +29,4 @@ do
 	  sleep 20s
 done &
 
-#exec i3
-#exec frankenwm
 exec dwm
