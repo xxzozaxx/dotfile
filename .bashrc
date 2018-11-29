@@ -48,3 +48,5 @@ export GOPATH=$HOME/.go/pkg
 #PATH
 export PATH=$PATH:$HOME/.go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
 export PATH="$HOME/.cargo/bin:$PATH" # rust
+
+source /etc/bash_completion.d/climate_completion

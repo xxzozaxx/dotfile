@@ -21,6 +21,7 @@ alias emt='emacsclient -t'
 alias nf='neofetch'
 alias tr='trans :ar'
 alias pping='prettyping'
+alias std='sr duckduckgo'
 # mpv short cut
 alias mpvs='mpv --sub-file'
 alias mpvm='mpv --ytdl-format=18'

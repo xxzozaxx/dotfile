@@ -86,7 +86,7 @@
                 ;; (cons '(SEQ shift t) "BIND")
                 ;; (cons '(SEQ y) "BIND")
                 ;; (cons '(SEQ shift y) "BIND")
-                (cons '(mod4 u) "st -t dropdown -e abduco -A dropdown")
+                (cons '(mod4 u) "st -t dropdown -e abduco -A dropdown mksh")
                 ;; (cons '(mod4 shift u) "st -t dropdown -e tmux attach")
                 ;; (cons '(mod4 shift u) "urxvt -title dropdown -geometry 70x25 -e tmux attach")
                 (cons '(mod4 i) "st -e htop")

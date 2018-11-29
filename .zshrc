@@ -66,3 +66,5 @@ export GEM_HOME=$HOME/.gem
 #GO
 export GOROOT=$HOME/.go
 export GOPATH=$HOME/.go/pkg
+
+source /etc/bash_completion.d/climate_completion
