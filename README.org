@@ -2,7 +2,7 @@
 #+AUTHOR: Ahmed Khaled
 
 * What programs I use:
-  *tl;dr*: Emacs, suckless and linux (I wish I could run BSD instead) [fn:1]
+  *tl;dr*: Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
 + +Bash+ -> mksh, eshell /(Emacs Shell)/
 + Emacs /(Spacemacs)/
   - Theme: Gruvbox, Dracula
@@ -23,7 +23,10 @@
   - for Termianl I use *DejaVu Sans Mono* /NerdFont version/
   - for PDF I use GNU *FreeSerif*, or *Modern Computer*
 
+
 * Feel free to suggest me anything
   you know how to use github, huh.
+
+* Footnotes
 
 [fn:1] read [[https://github.com/mayfrost/guides][ALTERNATIVES.md]] for more great software to use,
