@@ -22,6 +22,7 @@
   - for Emacs I use *GoMono* /NerdFont version/
   - for Termianl I use *DejaVu Sans Mono* /NerdFont version/
   - for PDF I use GNU *FreeSerif*, or *Modern Computer*
+  - Arabic Font is *Amiri*
 
 
 * Feel free to suggest me anything

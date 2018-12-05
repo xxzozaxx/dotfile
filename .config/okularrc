@@ -5,13 +5,18 @@ FullScreen=false
 AutomaticDetectionLanguage=1
 
 [MainWindow]
-Height 900=436
-State=AAAA/wAAAAD9AAAAAAAAAnwAAAGgAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+Height 900=877
+State=AAAA/wAAAAD9AAAAAAAAA7wAAANZAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=636
+Width 1600=956
+
+[Print Preview]
+Height 900=500
+Width 1600=600
 
 [Recent Files]
 File1[$e]=$HOME/Documents/Medician/Physiology/Physiology Magdy Sabry CNS.pdf
+File10[$e]=/tmp/tst/Principles-of-Mathematics-A-Primer.pdf
 File2[$e]=$HOME/Documents/ProgLang/Shell/Learning the Korn Shell-O'Reilly Media (1993).chm
 File3[$e]=$HOME/Documents/misc/The Power of Habit__2012.epub
 File4[$e]=$HOME/Documents/Mathematics/Foundation/Principles-of-Mathematics-A-Primer.pdf
@@ -21,6 +26,7 @@ File7[$e]=$HOME/Documents/Mathematics/Philosophy of mathematics. An introduction
 File8[$e]=$HOME/Documents/Mathematics/Notes/Note.ps
 File9[$e]=$HOME/Documents/Mathematics/Notes/Note.epub
 Name1[$e]=Physiology Magdy Sabry CNS.pdf
+Name10[$e]=Principles-of-Mathematics-A-Primer.pdf
 Name2[$e]=Learning the Korn Shell-O'Reilly Media (1993).chm
 Name3[$e]=The Power of Habit__2012.epub
 Name4[$e]=Principles-of-Mathematics-A-Primer.pdf

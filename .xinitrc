@@ -22,11 +22,19 @@ abduco -n dropdown &
 #when open dwm uncomment the follow
 while true
 do
-	  VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
-	  LOCALTIME=$(date +%a\ %d\ %m\ \|\ %H:%M)
-	  IP=$(for i in `ip r`; do echo $i; done | grep -A 1 src | tail -n1) # can get confused if you use vmware
-		xsetroot -name "[IP]: $IP | [VOL]: $VOL | $LOCALTIME"
-	  sleep 20s
+    VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
+    LOCALTIME=$(date +%a\ %d\ %m\ \|\ %H:%M)
+    IP=$(for i in `ip r`; do echo $i; done | grep -A 1 src | tail -n1) # can get confused if you use vmware
+    # Battery monitoring
+    if [ -d /sys/class/power_supply/BAT0 ]; then
+        BATSTA=$(cat /sys/class/power_supply/BAT0/status)
+        BATCAP=$(cat /sys/class/power_supply/BAT0/capacity)
+    else
+        BATSTA=$(echo NO)
+        BATCAP=$(echo BAT)
+    fi
+    xsetroot -name "[IP]: $IP | [BAT]: $BATSTA $BATCAP | [VOL]: $VOL | $LOCALTIME"
+    sleep 20s
 done &
 
 exec dwm
