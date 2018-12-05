@@ -18,6 +18,7 @@
 + zathura
 + Compton
 + neofetch
++ keyboard: custom us keyboard based on dead-intl but you know without dead kyes, standard ar keyboard.
 + Fonts:
   - for Emacs I use *GoMono* /NerdFont version/
   - for Termianl I use *DejaVu Sans Mono* /NerdFont version/
