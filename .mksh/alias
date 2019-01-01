@@ -5,6 +5,7 @@
 alias cp='cp -iv'                # Preferred 'cp' implementation
 alias mv='mv -iv'                # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'          # Preferred 'mkdir' implementation
+# alias vim='nvim'                 # nvim is the main vim
 alias ll='ls -FGlAhp'            # Preferred 'ls' implementation
 alias e='exa --classify --group-directories-first'  # preferred "exa" impl
 alias el='exa --long --classify --git --group-directories-first' # preferred "exa" impl
@@ -60,21 +61,16 @@ alias ldap='grc ldap'
 alias cvs='grc cvs'
 ## with colout
 alias colorshow='for c in {0..255}; do echo "$c color" | colout "color" $c; done'
-alias aptup='sudo apt update | colout "Get" 118 | colout "Ign" 124 | colout "Hit" 226 | colout "^.*see.*$" 51 | colout "\d* .B | \d*.\d* .B" 3 | colout "http.+ " 6'
+#alias aptup='sudo apt update | colout "Get" 118 | colout "Ign" 124 | colout "Hit" 226 | colout "^.*see.*$" 51 | colout "\d* .B | \d*.\d* .B" 3 | colout "http.+ " 6'
 alias aptin='sudo apt install'
 aptse ()
 {
-    apt search $1 | colout "^.*installed.*" 242 | colout "(^.*)/.*" 2 | less
+    apt search $1 | less
 }
 
 aptsh ()
 {
-    # Second Line capture any size
-    # Third line capture any link
-    apt show $1 | colout "Version" 4 |colout "^Installed-Size" 2 | colout "^Download-Size" 2  \
-        | colout "\d* .B | \d*.\d* .B" 3 \
-        | colout "http.+" 6 \
-        | less
+    apt show $1 | less
 }
 
 downp ()

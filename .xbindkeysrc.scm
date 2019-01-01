@@ -8,8 +8,6 @@
 ;; ┃┗┫╺╋╸
 ;; ╹ ╹╹ ╹
 
-;; Version: 1.8.2
-
 ;; To specify a key, you can use 'xbindkeys --key' or
 ;; 'xbindkeys --multikey' and put one of the two lines in this file.
 
@@ -49,8 +47,8 @@
                 (cons '(XF86AudioMute) "pactl set-sink-mute @DEFAULT_SINK@ toggle")
                 (cons '(Print) "scrot  '%Y-%m-%d_%H:%M:%S_$wx$h.png' -q 100 -e 'mv $f ~/Pictures/'")
                 (cons '(mod4 Print) "scrot  '%Y-%m-%d_%H:%M:%S_$wx$h.png' -u -q 100 -e 'mv $f ~/Pictures/'")
-                ;; (cons '(mod4 Return) "st")
-                (cons '(mod4 shift Return) "xterm")
+                ;; (cons '(mod4 Return) "st") ;Moved to dwm config. for safty reasons
+                (cons '(mod4 shift Return) "konsole")
                 ;; ––– •char number• –––
                 ;; (cons '(SEQ 1) "BIND")
                 ;; (cons '(SEQ shift 1) "BIND")
@@ -86,9 +84,9 @@
                 ;; (cons '(SEQ shift t) "BIND")
                 ;; (cons '(SEQ y) "BIND")
                 ;; (cons '(SEQ shift y) "BIND")
-                (cons '(mod4 u) "st -t dropdown -e abduco -A dropdown mksh")
-                ;; (cons '(mod4 shift u) "st -t dropdown -e tmux attach")
-                ;; (cons '(mod4 shift u) "urxvt -title dropdown -geometry 70x25 -e tmux attach")
+                ;; (cons '(mod4 u) "st -t dropdown -e abduco -A dropdown mksh")
+                ;; (cons '(mod4 shift u) "st -t dropdown -e abduco -A dropdown")
+                (cons '(mod4 u) "st -t dropdown -e tmux attach")
                 (cons '(mod4 i) "st -e htop")
                 ;; (cons '(SEQ shift i) "BIND")
                 ;; (cons '(SEQ o) "BIND")

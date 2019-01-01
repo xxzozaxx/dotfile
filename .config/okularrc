@@ -5,10 +5,10 @@ FullScreen=false
 AutomaticDetectionLanguage=1
 
 [MainWindow]
-Height 900=877
-State=AAAA/wAAAAD9AAAAAAAAA7wAAANZAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+Height 900=881
+State=AAAA/wAAAAD9AAAAAAAABkAAAANdAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=956
+Width 1600=1600
 
 [Print Preview]
 Height 900=500
@@ -16,22 +16,16 @@ Width 1600=600
 
 [Recent Files]
 File1[$e]=$HOME/Documents/Medician/Physiology/Physiology Magdy Sabry CNS.pdf
-File10[$e]=/tmp/tst/Principles-of-Mathematics-A-Primer.pdf
 File2[$e]=$HOME/Documents/ProgLang/Shell/Learning the Korn Shell-O'Reilly Media (1993).chm
-File3[$e]=$HOME/Documents/misc/The Power of Habit__2012.epub
-File4[$e]=$HOME/Documents/Mathematics/Foundation/Principles-of-Mathematics-A-Primer.pdf
-File5[$e]=$HOME/Documents/Medician/Physiology/Physiology Magdy Sabry CNS_test.pdf
-File6[$e]=$HOME/Pictures/2018-11-15-200253_623x634_scrot.png
-File7[$e]=$HOME/Documents/Mathematics/Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
-File8[$e]=$HOME/Documents/Mathematics/Notes/Note.ps
-File9[$e]=$HOME/Documents/Mathematics/Notes/Note.epub
+File3[$e]=$HOME/Documents/Medician/Physiology/Physiology Magdy Sabry CNS_test.pdf
+File4[$e]=$HOME/Documents/Mathematics/Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
+File5[$e]=$HOME/Documents/Mathematics/Notes/Note.ps
+File6[$e]=$HOME/Documents/Mathematics/Notes/Note.epub
+File7[$e]=$HOME/Documents/Deep Work__2016.epub
 Name1[$e]=Physiology Magdy Sabry CNS.pdf
-Name10[$e]=Principles-of-Mathematics-A-Primer.pdf
 Name2[$e]=Learning the Korn Shell-O'Reilly Media (1993).chm
-Name3[$e]=The Power of Habit__2012.epub
-Name4[$e]=Principles-of-Mathematics-A-Primer.pdf
-Name5[$e]=Physiology Magdy Sabry CNS_test.pdf
-Name6[$e]=2018-11-15-200253_623x634_scrot.png
-Name7[$e]=Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
-Name8[$e]=Note.ps
-Name9[$e]=Note.epub
+Name3[$e]=Physiology Magdy Sabry CNS_test.pdf
+Name4[$e]=Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
+Name5[$e]=Note.ps
+Name6[$e]=Note.epub
+Name7[$e]=Deep Work__2016.epub

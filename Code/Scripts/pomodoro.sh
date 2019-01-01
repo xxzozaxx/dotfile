@@ -35,43 +35,43 @@ tput civis #hide the cursor
 trap ctrl_c INT
 function ctrl_c() {
     tput cvvis
-	  exit
+    exit
 }
 
 #Loop those pomodoros
 while [ 1 ]; do
-	  if [ $sbreaker -eq 1 ] && [ $pomcount -ne $pommax  ]; then
+    if [ $sbreaker -eq 1 ] && [ $pomcount -ne $pommax  ]; then
         let "sbreaker=0"
-		    dominutes=$shortbreak
-		    theword="SHORT BREAK:"
-		    thesound="$sbsound"
-	  else
-		    if [ $pomcount -eq $pommax ]; then
-			      let "pomcount=0"
-			      dominutes=$longbreak
-			      theword="LONG BREAK:"
-			      thesound="$lbsound"
-			      let "sbreaker=0"
-		    else
-			      let "pomcount+=1"
-			      dominutes=$workminutes
-			      theword="WORK $pomcount:"
-			      thesound="$wksound"
-			      let "sbreaker=1"
-		    fi
-	  fi
+        dominutes=$shortbreak
+        theword="SHORT BREAK:"
+        thesound="$sbsound"
+    else
+        if [ $pomcount -eq $pommax ]; then
+            let "pomcount=0"
+            dominutes=$longbreak
+            theword="LONG BREAK:"
+            thesound="$lbsound"
+            let "sbreaker=0"
+        else
+            let "pomcount+=1"
+            dominutes=$workminutes
+            theword="WORK $pomcount:"
+            thesound="$wksound"
+            let "sbreaker=1"
+        fi
+    fi
 
-	  #echo "$pomcount | $thebreak | $dominutes"
+    #echo "$pomcount | $thebreak | $dominutes"
 
-	  secs=$(($dominutes * 60))
-	  echo $theword |espeak >/dev/null
-	  while [ $secs -gt 0 ]; do
-		    #echo -ne "$theword $secs\033[0K\r"
-		    theminutes=$(printf "%02d" $((m=(${secs}%3600)/60)))
-		    theseconds=$(printf "%02d" $((s=${secs}%60)))
-		    echo -ne "$theword $theminutes:$theseconds\033[0K\r"
-		    sleep 1
-		    : $((secs--))
-	  done
-	  #play "$thesound" >/dev/null
+    secs=$(($dominutes * 60))
+    echo $theword |espeak >/dev/null
+    while [ $secs -gt 0 ]; do
+        #echo -ne "$theword $secs\033[0K\r"
+        theminutes=$(printf "%02d" $((m=(${secs}%3600)/60)))
+        theseconds=$(printf "%02d" $((s=${secs}%60)))
+        echo -ne "$theword $theminutes:$theseconds\033[0K\r"
+        sleep 1
+        : $((secs--))
+    done
+    #play "$thesound" >/dev/null
 done

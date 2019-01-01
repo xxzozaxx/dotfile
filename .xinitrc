@@ -16,7 +16,7 @@ hsetroot -solid "$(xrdb -query | grep "*color0" | awk '{print $2}')" -tile /home
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
-abduco -n dropdown &
+abduco -n dropdown mksh &
 #emacs --daemon &
 
 #when open dwm uncomment the follow

@@ -10,8 +10,8 @@
   - +RSS: elfeed+
 + Vim -> neovim
 + +I3wm+ -> dwm
-+ +urxvt+  -> st /(mainly)/, xterm
-+ +Screen+ -> +tmux+ -> dvtm + abduco
++ +urxvt+  -> st /(mainly)/, +xterm+, konsole
++ +Screen+ -> tmux -> +dvtm + abduco+ (They are suck more)
 + +Qutebrowser+ -> xlinks2 /(mainly)/,eww /([E]macs [W]eb bro[w]ser)/, surf, elinks /(for gopher only)/
 + Ranger
 + +rofi+ -> dmenu
