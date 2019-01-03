@@ -8,7 +8,9 @@ alias mkdir='mkdir -pv'          # Preferred 'mkdir' implementation
 # alias vim='nvim'                 # nvim is the main vim
 alias ll='ls -FGlAhp'            # Preferred 'ls' implementation
 alias e='exa --classify --group-directories-first'  # preferred "exa" impl
+alias ze='clear && exa --classify --group-directories-first'  # preferred "exa" impl
 alias el='exa --long --classify --git --group-directories-first' # preferred "exa" impl
+alias zel='clear && exa --long --classify --git --group-directories-first' # preferred "exa" impl
 alias ell='exa --long --classify --git' # preferred "exa" impl
 alias less='less -FSRXc'         # Preferred 'less' implementation
 # Open program faster
