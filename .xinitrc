@@ -11,12 +11,12 @@
 # launch programs
 setxkbmap -layout us,ar -variant prog-intl, -option grp:alt_shift_toggle &
 # feh --bg-fill /home/master/.config/wall.png &
-# hsetroot -cover /home/master/.config/wall.png &
-hsetroot -solid "$(xrdb -query | grep "*color0" | awk '{print $2}')" -tile /home/master/.config/wall.png &
+hsetroot -cover /home/master/.config/wall.png &
+# hsetroot -solid "$(xrdb -query | grep "*color0" | awk '{print $2}')" -tile /home/master/.config/wall.png &
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
-abduco -n dropdown mksh &
+abduco -n dropdown tabbed -r st -w '' -e mksh &
 #emacs --daemon &
 
 #when open dwm uncomment the follow
@@ -34,7 +34,7 @@ do
         BATCAP=$(echo BAT)
     fi
     xsetroot -name "[IP]: $IP | [BAT]: $BATSTA $BATCAP | [VOL]: $VOL | $LOCALTIME"
-    sleep 20s
+    sleep 10s
 done &
 
 exec dwm

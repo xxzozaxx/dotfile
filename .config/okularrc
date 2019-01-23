@@ -5,10 +5,10 @@ FullScreen=false
 AutomaticDetectionLanguage=1
 
 [MainWindow]
-Height 900=881
-State=AAAA/wAAAAD9AAAAAAAABkAAAANdAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+Height 900=436
+State=AAAA/wAAAAD9AAAAAAAAAnwAAAEOAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=1600
+Width 1600=636
 
 [Print Preview]
 Height 900=500
@@ -21,11 +21,11 @@ File3[$e]=$HOME/Documents/Medician/Physiology/Physiology Magdy Sabry CNS_test.pd
 File4[$e]=$HOME/Documents/Mathematics/Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
 File5[$e]=$HOME/Documents/Mathematics/Notes/Note.ps
 File6[$e]=$HOME/Documents/Mathematics/Notes/Note.epub
-File7[$e]=$HOME/Documents/Deep Work__2016.epub
+File7[$e]=$HOME/Pictures/2018-12-19_22:13:26_1600x900.png
 Name1[$e]=Physiology Magdy Sabry CNS.pdf
 Name2[$e]=Learning the Korn Shell-O'Reilly Media (1993).chm
 Name3[$e]=Physiology Magdy Sabry CNS_test.pdf
 Name4[$e]=Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
 Name5[$e]=Note.ps
 Name6[$e]=Note.epub
-Name7[$e]=Deep Work__2016.epub
+Name7[$e]=2018-12-19_22:13:26_1600x900.png

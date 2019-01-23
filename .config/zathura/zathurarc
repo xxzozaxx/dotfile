@@ -1,10 +1,15 @@
-
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
 set statusbar-fg "white"
 set recolor-lightcolor "#252525"
 set recolor-darkcolor "#afafaf"
 set default-bg "#252525"
 set default-fg "#AFAFAF"
-# set recolor "true"
 
 set adjust-open "width"
 set selection-clipboard clipboard
+
+map r reload
+map R rotate
+map i recolor

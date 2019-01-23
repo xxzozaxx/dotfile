@@ -3098,3 +3098,37 @@ Feb 07 08:54 : exception: OutputThread could not get realtime scheduling, contin
 May 13 12:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 May 13 18:19 : avahi: Client Disconnected, will reconnect shortly
 May 13 18:19 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Jan 16 16:35 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 16 16:35 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 16 16:35 : update: added /ElZatoona_ThePowerOfHabit.mp3
+Jan 16 16:35 : update: added /DeepWork.mp3
+Jan 16 16:35 : update: added /ThePowerOfHabit.mp3
+Jan 16 16:35 : update: added /العادات السبع للأشخاص الأكثر فعالية-vmFA1Myamf4.m4a
+Jan 16 16:35 : update: added /DeepWork_1.mp3
+Jan 16 16:35 : update: added /مراجعة لكتاب العمل بشكل عميق  - Rules for focused  -Deep Work-C8jiDiV4M38.m4a
+Jan 16 16:35 : update: added /ar_DeepWork_1.mp3
+Jan 16 16:35 : update: added /Deep Work Rules for Focused Success in a Distracted World Audiobook-jGNiIpqWkUI.webm
+Jan 16 16:35 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 16 16:35 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 16 23:11 : avahi: Client Disconnected, will reconnect shortly
+Jan 17 12:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 17 12:00 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 17 23:40 : avahi: Client Disconnected, will reconnect shortly
+Jan 18 13:34 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 18 13:34 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 18 14:48 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 18 14:48 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 19 06:34 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 19 06:34 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 20 00:02 : avahi: Client Disconnected, will reconnect shortly
+Jan 20 13:40 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 20 13:40 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 20 22:31 : avahi: Client Disconnected, will reconnect shortly
+Jan 21 10:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 21 10:52 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 22 09:38 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 22 09:38 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 23 09:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 23 09:55 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
+Jan 23 14:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jan 23 14:24 : avahi: Service 'Music Player @ am-3ca9f452e714.intern' successfully established.
