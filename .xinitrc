@@ -23,7 +23,7 @@ abduco -n dropdown tabbed -r st -w '' -e mksh &
 while true
 do
     VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
-    LOCALTIME=$(date +%a\ %d\ %m\ \|\ %H:%M)
+    LOCALTIME=$(date +%a\ %d\ %m\(%b\)\ \|\ %H:%M)
     IP=$(for i in `ip r`; do echo $i; done | grep -A 1 src | tail -n1) # can get confused if you use vmware
     # Battery monitoring
     if [ -d /sys/class/power_supply/BAT0 ]; then
@@ -37,4 +37,5 @@ do
     sleep 10s
 done &
 
-exec dwm
+#exec dwm
+exec ~/Programs/DynamicWindowManager/dwm

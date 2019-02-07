@@ -27,6 +27,7 @@ alias pping='prettyping'
 alias std='sr duckduckgo'
 # mpv short cut
 alias mpvs='mpv --sub-file'
+alias mpva='mpv --no-video'
 alias mpvm='mpv --ytdl-format=18'
 alias mpvms='mpv --ytdl-format=18 --sub-file'
 alias setkey='setxkbmap -layout de,ar -variant qwertz_neo, -option grp:alt_shift_toggle'

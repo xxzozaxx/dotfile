@@ -58,7 +58,7 @@
                                       calfw calfw-org
                                       org-gcal
                                       ascii-art-to-unicode
-                                      nov
+                                      nov writeroom
                                         ; doom-modeline
                                       ;; minimap
                                       ;; --- Theme ---
