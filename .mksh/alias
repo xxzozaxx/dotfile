@@ -2,10 +2,11 @@
 
 # ––– •Alias START here• –––
 # better view
+alias acmef='edwood -f /mnt/font/GoMono/9a/font'
 alias cp='cp -iv'                # Preferred 'cp' implementation
 alias mv='mv -iv'                # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'          # Preferred 'mkdir' implementation
-# alias vim='nvim'                 # nvim is the main vim
+# alias vim='nvim'               # nvim is the main vim
 alias ll='ls -FGlAhp'            # Preferred 'ls' implementation
 alias e='exa --classify --group-directories-first'  # preferred "exa" impl
 alias ze='clear && exa --classify --group-directories-first'  # preferred "exa" impl

@@ -1,3 +1,0 @@
-for(${1:unsigned int} i; i ${2:< num}; i++) {
-  $0
-}

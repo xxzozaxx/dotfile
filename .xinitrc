@@ -11,8 +11,8 @@
 # launch programs
 setxkbmap -layout us,ar -variant prog-intl, -option grp:alt_shift_toggle &
 # feh --bg-fill /home/master/.config/wall.png &
-hsetroot -cover /home/master/.config/wall.png &
-# hsetroot -solid "$(xrdb -query | grep "*color0" | awk '{print $2}')" -tile /home/master/.config/wall.png &
+#hsetroot -cover /home/master/.config/wall.png &
+hsetroot -tile /home/master/.config/wall.png &
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
@@ -37,5 +37,6 @@ do
     sleep 10s
 done &
 
-#exec dwm
-exec ~/Programs/DynamicWindowManager/dwm
+exec dwm
+#exec ~/Programs/1WindowManager/dwm/dwm
+#exec ~/Programs/1WindowManager/DynamicWindowManager/dwm

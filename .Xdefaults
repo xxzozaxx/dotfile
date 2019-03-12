@@ -113,14 +113,16 @@ URxvt.url_select.underline:   true
 URxvt.matcher.button:         1
 
 
-XTerm*font:                   xft:GoMono Nerd Font:pixelsize=12:antialias=true:autohint=true
+!XTerm*font:             xft:GoMono Nerd Font:pixelsize=12:antialias=true:autohint=true
+XTerm*font:             xft:curie:pixelsize=12:antialias=true:autohint=true
 XTerm*dynamicColors:    true
 XTerm*utf8:             2
 XTerm*eightBitInput:    false
 XTerm*scrollBar:        false
 XTerm*loginShell:       true
-XTerm*background:       black
-XTerm*foreground:       green
+!! Make it acme-like
+XTerm*background:       #ffffea
+XTerm*foreground:       #111111
 
 !  ____                ____
 ! |  _ \ _______ _ __ |___ \

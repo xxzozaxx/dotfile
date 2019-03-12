@@ -1,14 +1,14 @@
 // This keyboard is just modified dead-intl keyboard inspired by neo-layout
 //
-// * Installation
-//   - To install it just copy the code in your
-//     ``/usr/share/X11/xkb/symbols/us''
-//   - Also you should make a code similar to intl keys in
-//     ``/usr/share/X11/xkb/rules/evdev.xml''
-//      just copy-past it whith new name, this is what I did.
+//  Installation
+//      - To install it just copy the code in your
+//          ``/usr/share/X11/xkb/symbols/us''
+//      - Also you should make a code similar to intl keys in
+//          ``/usr/share/X11/xkb/rules/evdev.xml''
+//           just copy-past it whith new name, this is what I did.
 //
-//      for more information, search about 'neo qwertz layout' on gitgist.
-//      I will make sure to add some documentation later
+//  for more information, search about 'neo qwertz layout' on gitgist.
+//  I will make sure to add some documentation later
 //
 partial alphanumeric_keys
 xkb_symbols "prog-intl" {
