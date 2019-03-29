@@ -8,15 +8,15 @@
 
 " General Settings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""
-set splitright            " Makes sure that new windows open on the right
-set splitbelow            " Makes sure that new windows open on the bottom
-set showmatch             " Show matching brackets when text indicator is over them
-set smartcase             " be smart about cases when searching
-set autoread              " update if the file is changed from the outside
-set mouse=a               " Enable mouse
-set foldmethod=marker     " Auto-fold tripe braces
-set colorcolumn=100       " Add a line at column 80
-set clipboard=unnamedplus " Use the OS clipboard for yanking/pasting
+set splitright				" Makes sure that new windows open on the right
+set splitbelow				" Makes sure that new windows open on the bottom
+set showmatch				" Show matching brackets when text indicator is over them
+set smartcase				" be smart about cases when searching
+set autoread				" update if the file is changed from the outside
+set mouse=a					" Enable mouse
+set foldmethod=marker		" Auto-fold tripe braces
+set colorcolumn=100			" Add a line at column 80
+set clipboard=unnamedplus	" Use the OS clipboard for yanking/pasting
 set nobackup				" Disable backup
 set noswapfile
 "}}}
@@ -38,21 +38,23 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-"set expandtab
 " Visualize tab
 set list
-set listchars=tab:\|\ ,trail:-,nbsp:.
+set listchars=tab:\│\ ,trail:-,nbsp:.
 "}}}
 " Status Line Settings {{{
 """"""""""""""""""""""""
 " Emacs like status line
 set statusline=
-      \\ %{&filetype!=#''?&filetype:'none'}
-      \\ %{&readonly\|\|!&modifiable?&modified?'%*':'%%':&modified?'**':'--'}
-      \\ %{expand('%:~:.')!=#''?expand('%:~:.'):'[No\ Name]'}
-      \%=
-      \%<\ C%c%3(%)L%l/%L%2(%)
-      \%6(%p%%\ %)
+		\\ [%n]
+		\\ %{&readonly\|\|!&modifiable?&modified?'%*':'%%':&modified?'**':'--'}
+		\\ %F
+		\\:%l:%c
+		\%=
+		\\ %{&filetype!=#''?&filetype:'none'}
+		\\ %{FugitiveStatusline()}
+"		\%<\ Col%c%3(%)L%l/%L%2(%)
+"		\%6(%p%%\ %)
 "}}}
 " Remappings {{{
 """"""""""""""
@@ -79,6 +81,8 @@ nnoremap Z zz
 """""""""""""""""""""""
 let mapleader = ' '     " Map our main leader Space
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+" Follow-mode like keybinding
+nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
 nnoremap <leader><leader> <C-z>
 nnoremap <leader>tn  :set number! relativenumber!<CR>
@@ -96,7 +100,7 @@ nnoremap <silent> <leader>p :put=py3eval(getline('.'))<CR>
 nnoremap <leader>s :w<CR>
 nnoremap <leader>S :w !sudo tee %<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>Q :q!<CR>
+nnoremap <leader>Q :bd<CR>
 
 " Easy Motion, make it spacemacs-ish
 map  <Leader>jl <Plug>(easymotion-bd-jk)
@@ -148,25 +152,19 @@ nnoremap <leader>y  "+y
 """"""""""""""
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf', { 'do': './install --all' }
-Plug 'liuchengxu/vim-which-key' " DELETE show leader keys 
 Plug 'tpope/vim-surround'       " Add surround feature
-Plug 'scrooloose/nerdtree'      " simple file manager
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'honza/vim-snippets'
+Plug 'tpope/vim-fugitive'       " GIT
+Plug 'vim-scripts/Smart-Tabs'   " Indent with TAB, align with SPC
 Plug 'jiangmiao/auto-pairs'     "DELETE Auto-close plugin
 Plug 'easymotion/vim-easymotion'
-Plug 'jceb/vim-orgmode'
-Plug 'majutsushi/tagbar'
-Plug 'sheerun/vim-polyglot'
-Plug 'alvan/vim-closetag'
-Plug 'spf13/vim-preview'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-Plug 'plan9-for-vimspace/acme-colors'
-"Plug 'lekv/vim-clewn'			" GDB, WTF
+Plug 'majutsushi/tagbar'        " Show functions, Golbal var, Macros etc etc
+Plug 'prabirshrestha/async.vim' " VIM LSP-helper
+Plug 'prabirshrestha/vim-lsp'   " VIM LSP
+Plug 'morhetz/gruvbox'          " My fav colorscheme
+Plug 'lekv/vim-clewn'           " GDB
+Plug 'sheerun/vim-polyglot'    " For language support
+"Plug 'tpope/vim-commentary'    " For faster comment !!
+"Plug 'alvan/vim-closetag'      " Faster (X)HML tag colser !!
 call plug#end()
 "}}}
 " Plugin Config {{{
@@ -215,35 +213,23 @@ set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 "}}}
-"{{{ WhichKey Dictionary  FIXME: it seem buggy
-let g:which_key_map = {}
-let g:which_key_map.j = {
-            \ 'name' : '+jump',
-            \ 'l'    : 'line',
-            \ 'j'    : 'char',
-            \ 'w'    : 'word',
-            \ }
-
-let g:which_key_map.g = {
-            \ 'name' : '+git',
-            \ }
-"}}}
 "{{{ LSP
-" Required for operations modifying multiple buffers like rename.
-set hidden
-
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['/usr/local/bin/pyls'],
-    \ }
-
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-" Or map each action separately
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+"" Registering Python
+if executable('pyls')
+	au User lsp_setup call lsp#register_server({
+		\ 'name' : 'pyls',
+		\ 'cmd'  : {server_info->['pyls']},
+		\ 'whitelist' : ['python'],
+		\ 'workspace_config' : {'pyls': {'plugins': {'pydocstyle': {'enable': v:true}}}}
+		\ })
+endif
+if executable('clangd')
+	au User lsp_setup call lsp#register_server({
+		\ 'name': 'clangd',
+		\ 'cmd': {server_info->['clangd']},
+		\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+		\ })
+endif
 "}}}
 "}}}
 " Misc {{{
@@ -251,9 +237,8 @@ nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 " Colorscheme
 "colorscheme vim-monokai-tasty
 "let g:vim_monokai_tasty_italic = 1
-"colorscheme acme
-syntax off
-colorscheme desert
+"syntax off
+colorscheme bw
 
 " Ignore files that vim doesn't use
 set wildignore+=.git,.hg,.svn

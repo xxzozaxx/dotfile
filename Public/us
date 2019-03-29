@@ -33,7 +33,7 @@ xkb_symbols "prog-intl" {
     key <AE11> { [ minus,   underscore,                        yen,               belowdot ] };
     key <AE12> { [ equal,         plus,                   multiply,               division ] };
 
-    key <AD01> { [ q,                Q,                 adiaeresis,             Adiaeresis ] };
+    key <AD01> { [ q,                Q,                      grave,             Adiaeresis ] };
     key <AD02> { [ w,                W,                 underscore,                  Aring ] };
     key <AD03> { [ e,                E,                bracketleft,                 Eacute ] };
     key <AD04> { [ r,                R,               bracketright,             registered ] };

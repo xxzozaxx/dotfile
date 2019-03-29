@@ -11,8 +11,8 @@
 # launch programs
 setxkbmap -layout us,ar -variant prog-intl, -option grp:alt_shift_toggle &
 # feh --bg-fill /home/master/.config/wall.png &
-#hsetroot -cover /home/master/.config/wall.png &
-hsetroot -tile /home/master/.config/wall.png &
+hsetroot -cover /home/master/.config/wall.png &
+#hsetroot -tile /home/master/.config/wall.png &
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
