@@ -2,28 +2,30 @@
 #+AUTHOR: Ahmed Khaled
 
 * What programs I use:
-  *tl;dr*: Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
-+ +Bash+ -> mksh, eshell /(Emacs Shell)/
-+ Emacs /(Spacemacs)/
-  - Theme: Gruvbox, Dracula
-  - Mail: mu4e
-  - +RSS: elfeed+
-+ Vim -> neovim
-+ +I3wm+ -> dwm
-+ +urxvt+  -> st /(mainly)/, +xterm+, konsole
-+ +Screen+ -> tmux -> +dvtm + abduco+ (They are suck more)
-+ +Qutebrowser+ -> xlinks2 /(mainly)/,eww /([E]macs [W]eb bro[w]ser)/, surf, elinks /(for gopher only)/
-+ Ranger
-+ +rofi+ -> dmenu
-+ zathura
-+ Compton
-+ neofetch
-+ keyboard: custom us keyboard based on dead-intl but you know without dead kyes, standard ar keyboard.
-+ Fonts:
-  - for Emacs I use *GoMono* /NerdFont version/
-  - for Termianl I use *DejaVu Sans Mono* /NerdFont version/
-  - for PDF I use GNU *FreeSerif*, or *Modern Computer*
-  - Arabic Font is *Amiri*
+  *tl;dr*: [Neo]vim, Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
+	+ +Bash+ -> mksh, eshell /(Emacs Shell)/
+	+ Emacs
+	  - Theme: Default with bg=#ffffdd
+	  - +Mail: mu4e+
+	  - +RSS: elfeed+
+	+ +Vim+ -> neovim
+	+ +I3wm+ -> dwm
+	+ +urxvt+  -> st /(mainly)/, +xterm+, +konsole+
+	+ +Screen+ -> +tmux+ -> +dvtm + abduco+
+	+ +Qutebrowser+ -> xlinks2 /(mainly)/,+eww /([E]macs [W]eb bro[w]ser)/+, surf, +elinks /(for gopher only)/+
+	+ Ranger
+	+ +rofi+ -> dmenu
+	+ zathura
+	+ sfeed /RSS, Atom/
+	+ s-nail, mailx /E-mail/
+	+ Compton
+	+ neofetch
+	+ keyboard: custom us keyboard based on dead-intl but you know without dead kyes, standard ar keyboard.
+	+ Fonts:
+	  - for Emacs I use +*GoMono*+, *Verily Serif Mono*
+	  - for Termianl I use +*DejaVu Sans Mono*+, *Verily Serif Mono*
+	  - for PDF I use GNU *EB Garamond* _mainly_, *FreeSerif*, or *Modern Computer*
+	  - Arabic Font is *Amiri*
 
 
 * Feel free to suggest me anything

@@ -3293,3 +3293,6 @@ Mar 28 09:27 : avahi: Service 'Music Player @ Debian' successfully established.
 Mar 28 23:58 : avahi: Client Disconnected, will reconnect shortly
 Mar 29 10:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Mar 29 10:00 : avahi: Service 'Music Player @ Debian' successfully established.
+Mar 29 23:26 : avahi: Client Disconnected, will reconnect shortly
+Mar 30 05:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 30 05:36 : avahi: Service 'Music Player @ Debian' successfully established.

@@ -42,13 +42,13 @@ hi DiffAdd        cterm=bold            ctermfg=NONE
 hi DiffChange     cterm=bold            ctermfg=NONE
 hi DiffDelete     cterm=bold            ctermfg=NONE
 hi DiffText       cterm=reverse         ctermfg=NONE
-hi Comment        cterm=bold            ctermfg=Gray
-hi Constant       cterm=underline       ctermfg=NONE
+hi Comment        cterm=bold            ctermfg=Gray " NONE -> Gray
+hi Constant       cterm=NONE            ctermfg=NONE " underline -> NONE
 hi Special        cterm=bold            ctermfg=NONE
 hi Identifier     cterm=bold            ctermfg=NONE
 hi Statement      cterm=bold            ctermfg=NONE
-hi PreProc        cterm=underline       ctermfg=NONE
-hi Type           cterm=underline       ctermfg=NONE
+hi PreProc        cterm=NONE            ctermfg=NONE " underline -> NONE
+hi Type           cterm=NONE            ctermfg=NONE " underline -> NONE
 hi Underlined     cterm=underline       ctermfg=NONE
 hi Ignore         cterm=bold            ctermfg=NONE
 hi Error          cterm=reverse         ctermfg=NONE

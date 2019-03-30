@@ -13,6 +13,7 @@ setxkbmap -layout us,ar -variant prog-intl, -option grp:alt_shift_toggle &
 # feh --bg-fill /home/master/.config/wall.png &
 hsetroot -cover /home/master/.config/wall.png &
 #hsetroot -tile /home/master/.config/wall.png &
+cat ~/.Doing.txt | xrootconsole  -geometry "200x70+10+20" &
 compton --xrender-sync-fence &
 redshift &
 xbindkeys &
