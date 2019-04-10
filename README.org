@@ -8,7 +8,7 @@
 	  - Theme: Default with bg=#ffffdd
 	  - +Mail: mu4e+
 	  - +RSS: elfeed+
-	+ +Vim+ -> neovim
+	+ +Vim+ -> neovim, neatvi (minimal vi clone with rock bi-direction support)
 	+ +I3wm+ -> dwm
 	+ +urxvt+  -> st /(mainly)/, +xterm+, +konsole+
 	+ +Screen+ -> +tmux+ -> +dvtm + abduco+
@@ -17,14 +17,15 @@
 	+ +rofi+ -> dmenu
 	+ zathura
 	+ sfeed /RSS, Atom/
-	+ s-nail, mailx /E-mail/
+	+ s-nail, neatmail(a simple INBOX parsing)+fdm
 	+ Compton
 	+ neofetch
 	+ keyboard: custom us keyboard based on dead-intl but you know without dead kyes, standard ar keyboard.
 	+ Fonts:
-	  - for Emacs I use +*GoMono*+, *Verily Serif Mono*
-	  - for Termianl I use +*DejaVu Sans Mono*+, *Verily Serif Mono*
-	  - for PDF I use GNU *EB Garamond* _mainly_, *FreeSerif*, or *Modern Computer*
+	  - Emacs I use +*Go Mono*+, *Verily Serif Mono*
+	  - Termianl I use +*DejaVu Sans Mono*+, +*Verily Serif Mono*+, *Luxi Mono*
+	  - PDF I use GNU *EB Garamond* _mainly_, *FreeSerif*, or *Modern Computer*
+	  - Zathura curie
 	  - Arabic Font is *Amiri*
 
 

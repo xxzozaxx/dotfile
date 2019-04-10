@@ -67,6 +67,7 @@ alias cvs='grc cvs'
 alias colorshow='for c in {0..255}; do echo "$c color" | colout "color" $c; done'
 #alias aptup='sudo apt update | colout "Get" 118 | colout "Ign" 124 | colout "Hit" 226 | colout "^.*see.*$" 51 | colout "\d* .B | \d*.\d* .B" 3 | colout "http.+ " 6'
 alias aptin='sudo apt install'
+alias nmk='fdm -k fetch && neatmail mk -st -r ~/mail/INBOX > ~/mail/inbox.nm'
 aptse ()
 {
     apt search $1 | less
@@ -80,5 +81,20 @@ aptsh ()
 downp ()
 {
     wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains "$1" --no-parent $1;
+}
+
+sfeed_cus()
+{
+	sfeed_update;
+	cd ~/.sfeed;
+	cat feeds/* > Upfeeds;
+	sfeed_archive $1 < Upfeeds > feeds.new;
+	mv -f Upfeeds feeds_$1_$(date +%Y%m%d).bk;
+	sfeed_plain feeds.new > feeds.txt;
+}
+
+nmpg() 
+{ 
+	neatmail pg -m -h from:subject:to:cc ~/mail/INBOX $1 > ~/mail/mail_$1.mail
 }
 # ––– •Alias END here• –––

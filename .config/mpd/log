@@ -3296,3 +3296,50 @@ Mar 29 10:00 : avahi: Service 'Music Player @ Debian' successfully established.
 Mar 29 23:26 : avahi: Client Disconnected, will reconnect shortly
 Mar 30 05:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Mar 30 05:36 : avahi: Service 'Music Player @ Debian' successfully established.
+Mar 31 09:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 31 09:00 : avahi: Service 'Music Player @ Debian' successfully established.
+Mar 31 15:12 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 31 15:12 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 02 00:01 : avahi: Client Disconnected, will reconnect shortly
+Apr 02 10:32 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 02 10:32 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 02 22:17 : avahi: Client Disconnected, will reconnect shortly
+Apr 03 11:20 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 11:20 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 03 12:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 12:02 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 03 19:43 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 19:44 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 03 19:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 19:55 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 03 21:51 : avahi: Client Disconnected, will reconnect shortly
+Apr 04 07:34 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 04 07:34 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 05 11:42 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 05 11:42 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 05 15:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 05 15:46 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 05 15:48 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 05 15:48 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 06 00:35 : avahi: Client Disconnected, will reconnect shortly
+Apr 06 06:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 06 06:55 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 07 11:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 07 11:26 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 08 15:37 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 08 15:37 : avahi: Service 'Music Player @ Debian' successfully established.
+                                                                                                                                                                                                                              Apr 08 15:42 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 08 15:42 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 08 17:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 08 17:54 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 08 22:39 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 08 22:39 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 09 00:05 : avahi: Client Disconnected, will reconnect shortly
+Apr 09 10:51 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 10:51 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 09 13:51 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 13:51 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 09 19:22 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 09 19:22 : avahi: Service 'Music Player @ Debian' successfully established.
+Apr 10 10:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 10 10:00 : avahi: Service 'Music Player @ Debian' successfully established.

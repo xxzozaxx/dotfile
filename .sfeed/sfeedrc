@@ -5,6 +5,7 @@ feeds() {
 	# feed <name> <feedurl> [basesiteurl] [encoding]
 	feed "codemadness" "https://www.codemadness.nl/atom.xml"
 	feed "slashdot" "http://rss.slashdot.org/Slashdot/slashdot" "http://slashdot.org"
+	feed "Reddit" "https://old.reddit.com/.rss?feed=a504d3ad1594f8dccee2b9c4c06891ab7e99a3bb&user=XxZozaxX"
 	feed "Guide" "https://github.com/mayfrost/guides/commits/master.atom"
-	feed "Reddit" "https://old.reddit.com/.rss?feed=453180888de169bbde28bf72272be11f6a5322a9&user=XxZozaxX"
+	feed "neatvi" "https://github.com/aligrudi/neatvi/commits/master.atom"
 }

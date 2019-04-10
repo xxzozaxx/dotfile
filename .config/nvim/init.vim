@@ -8,17 +8,18 @@
 
 " General Settings {{{
 """""""""""""""""""""""""""""""""""""""""""""""""
-set splitright				" Makes sure that new windows open on the right
-set splitbelow				" Makes sure that new windows open on the bottom
-set showmatch				" Show matching brackets when text indicator is over them
-set smartcase				" be smart about cases when searching
-set autoread				" update if the file is changed from the outside
-set mouse=a					" Enable mouse
-set foldmethod=marker		" Auto-fold tripe braces
-set colorcolumn=100			" Add a line at column 80
-set clipboard=unnamedplus	" Use the OS clipboard for yanking/pasting
-set nobackup				" Disable backup
+set splitright              " Makes sure that new windows open on the right
+set splitbelow              " Makes sure that new windows open on the bottom
+set showmatch               " Show matching brackets when text indicator is over them
+set smartcase               " be smart about cases when searching
+set autoread                " update if the file is changed from the outside
+set mouse=a                 " Enable mouse
+set foldmethod=marker       " Auto-fold tripe braces
+set colorcolumn=100         " Add a line at column 80
+set clipboard=unnamedplus   " Use the OS clipboard for yanking/pasting
+set nobackup                " Disable backup
 set noswapfile
+set tbidi
 "}}}
 " Colors, Fonts, and Encodings {{{
 """"""""""""""""""""""""""""""""""""
