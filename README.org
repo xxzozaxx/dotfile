@@ -2,24 +2,19 @@
 #+AUTHOR: Ahmed Khaled
 
 * What programs I use:
-  *tl;dr*: [Neo]vim, Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
-	+ +Bash+ -> mksh, eshell /(Emacs Shell)/
-	+ Emacs
-	  - Theme: Default with bg=#ffffdd
-	  - +Mail: mu4e+
-	  - +RSS: elfeed+
-	+ +Vim+ -> neovim, neatvi (minimal vi clone with rock bi-direction support)
-	+ +I3wm+ -> dwm
-	+ +urxvt+  -> st /(mainly)/, +xterm+, +konsole+
-	+ +Screen+ -> +tmux+ -> +dvtm + abduco+
-	+ +Qutebrowser+ -> xlinks2 /(mainly)/,+eww /([E]macs [W]eb bro[w]ser)/+, surf, +elinks /(for gopher only)/+
-	+ Ranger
-	+ +rofi+ -> dmenu
-	+ zathura
-	+ sfeed /RSS, Atom/
-	+ s-nail, neatmail(a simple INBOX parsing)+fdm
+  tl;dr:: [Neo]vim, Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
+	+ *Email client:* s-nail, neatmail(a simple INBOX parsing)+fdm
+	+ *Feeds:* sfeed /RSS, Atom/
+	+ *File Browser:* Ranger
+	+ *Multiplexer:* +Screen+ , +tmux+ , dvtm
+	+ *Pdf & other document viwer:* zathura
+	+ *Shell:* +Bash+ , +eshell+, mksh,
+	+ *Terminal Emulator:* +urxvt+ , +xterm+ , +konsole+  , st
+	+ *Text Editor:* +Vim+ , neovim, Emacs, neatvi (minimal vi clone with rock bi-direction support)
+	+ *Web Browser:* +Qutebrowser+, +eww+, +elinks /(for gopher only)/+, surf, xlinks2,
+	+ *Windows Manager:* +I3wm+ , dwm
+	+ +rofi+ , dmenu
 	+ Compton
-	+ neofetch
 	+ keyboard: custom us keyboard based on dead-intl but you know without dead kyes, standard ar keyboard.
 	+ Fonts:
 	  - Emacs I use +*Go Mono*+, *Verily Serif Mono*

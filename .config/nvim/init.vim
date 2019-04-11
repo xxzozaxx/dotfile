@@ -81,7 +81,7 @@ nnoremap Z zz
 " Leader Key Mappings {{{
 """""""""""""""""""""""
 let mapleader = ' '     " Map our main leader Space
-nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+"nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 " Follow-mode like keybinding
 nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
 
