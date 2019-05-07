@@ -6,7 +6,7 @@
 " Website: http://brennier.com
 " Description: My general vim configuration file
 
-" General Settings {{{
+" General Settings TODO
 """""""""""""""""""""""""""""""""""""""""""""""""
 set splitright              " Makes sure that new windows open on the right
 set splitbelow              " Makes sure that new windows open on the bottom
@@ -14,14 +14,15 @@ set showmatch               " Show matching brackets when text indicator is over
 set smartcase               " be smart about cases when searching
 set autoread                " update if the file is changed from the outside
 set mouse=a                 " Enable mouse
-set foldmethod=marker       " Auto-fold tripe braces
+"set foldmethod=marker       " Auto-fold tripe braces
+set foldmethod=syntax       " Auto-fold with indent level
 set colorcolumn=100         " Add a line at column 80
 set clipboard=unnamedplus   " Use the OS clipboard for yanking/pasting
 set nobackup                " Disable backup
 set noswapfile
 set tbidi
 "}}}
-" Colors, Fonts, and Encodings {{{
+" Colors, Fonts, and Encodings 
 """"""""""""""""""""""""""""""""""""
 " text file encoding/format
 set fileformat=unix
@@ -34,7 +35,7 @@ set t_AF=^[[38;5;%dm
 
 filetype plugin indent on
 " }}}
-" Tab and Spaces {{{
+" Tab and Spaces 
 """"""""""""""""""
 set tabstop=4
 set shiftwidth=4
@@ -43,8 +44,9 @@ set softtabstop=4
 set list
 set listchars=tab:\│\ ,trail:-,nbsp:.
 "}}}
-" Status Line Settings {{{
+" Status Line Settings 
 """"""""""""""""""""""""
+set laststatus=0
 " Emacs like status line
 set statusline=
 		\\ [%n]
@@ -53,11 +55,8 @@ set statusline=
 		\\:%l:%c
 		\%=
 		\\ %{&filetype!=#''?&filetype:'none'}
-		\\ %{FugitiveStatusline()}
-"		\%<\ Col%c%3(%)L%l/%L%2(%)
-"		\%6(%p%%\ %)
 "}}}
-" Remappings {{{
+" Remappings 
 """"""""""""""
 " Fast Escape
 imap jj <ESC>
@@ -78,7 +77,7 @@ nnoremap Q @q
 "inoremap <silent> m <C-r>=EscapeSequence()<CR>
 nnoremap Z zz
 "}}}
-" Leader Key Mappings {{{
+" Leader Key Mappings 
 """""""""""""""""""""""
 let mapleader = ' '     " Map our main leader Space
 "nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
@@ -114,11 +113,11 @@ nmap <Leader>jw <Plug>(easymotion-overwin-w)
 " Window commands
 nnoremap <leader>v  :vsp<CR>
 nnoremap <leader>vt :vsp<CR>:terminal<CR><C-\><C-n>
-nnoremap <leader>vo :call fzf#run({'source':'find ~/', 'right': winwidth('.')/2, 'sink':'vertical botright split'})<CR>
+"nnoremap <leader>vo :call fzf#run({'source':'find ~/', 'right': winwidth('.')/2, 'sink':'vertical botright split'})<CR>
 
 nnoremap <leader>V  :split<CR>
 nnoremap <leader>Vt :split<CR>:terminal<CR><C-\><C-n>
-nnoremap <leader>Vo :call fzf#run({'source':'find ~/', 'down':'40%', 'sink':'botright split'})<CR>
+"nnoremap <leader>Vo :call fzf#run({'source':'find ~/', 'down':'40%', 'sink':'botright split'})<CR>
 
 nnoremap <leader>wl :wincmd l<CR>
 nnoremap <leader>wh :wincmd h<CR>
@@ -149,29 +148,33 @@ nnoremap <leader>y  "+y
 "nnoremap <leader>T :call TranslateLine()<CR>
 "nnoremap <leader>a :call AddToFrenchFile()<CR>
 "}}}
-" Plugins {{{
+" Plugins 
 """"""""""""""
 call plug#begin('~/.config/nvim/plugged')
-Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'tpope/vim-surround'       " Add surround feature
-Plug 'tpope/vim-fugitive'       " GIT
 Plug 'vim-scripts/Smart-Tabs'   " Indent with TAB, align with SPC
-Plug 'jiangmiao/auto-pairs'     "DELETE Auto-close plugin
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'        " Show functions, Golbal var, Macros etc etc
 Plug 'prabirshrestha/async.vim' " VIM LSP-helper
 Plug 'prabirshrestha/vim-lsp'   " VIM LSP
 Plug 'morhetz/gruvbox'          " My fav colorscheme
-Plug 'lekv/vim-clewn'           " GDB
-Plug 'sheerun/vim-polyglot'    " For language support
-"Plug 'tpope/vim-commentary'    " For faster comment !!
-"Plug 'alvan/vim-closetag'      " Faster (X)HML tag colser !!
+Plug 'sheerun/vim-polyglot'     " For language support
+Plug 'lfv89/vim-foldfocus'      " fold into new buffer
+Plug 'troydm/easytree.vim'      " lighter NERDtree
+Plug 'severin-lemaignan/vim-minimap' " Test minimap
+"Plug 'jiangmiao/auto-pairs'     " DELETE Auto-close plugin
+"Plug 'lekv/vim-clewn'          " GDB
+"Plug 'tpope/vim-fugitive'       " GIT
+"Plug 'junegunn/fzf', { 'do': './install --all' }
 call plug#end()
 "}}}
-" Plugin Config {{{
+" Plugin Config 
 """""""""""""""""
-" Quicktex Setup {{{
-"
+" Fold Focus {{{
+nmap <CR> :call FoldFocus('e')<CR>
+nmap <Leader><CR> :call FoldFocus('vnew')<CR>
+"}}}
+" Quicktex Setup 
 "let g:quicktex_trigger = "\t"
 
 " let g:quicktex_cpp = {
@@ -179,7 +182,6 @@ call plug#end()
 "             \'func' : "<+++> <+Name+>(<+Arguments+>) {\<CR><+Content+>\<CR>}",
 "             \' '    : "\<ESC>/<+.*+>\<CR>\"_c/+>/e\<CR>",
 " \}
-
 
 " let g:quicktex_python = {
 "             \'boiler' : "#include <iostream>\<CR>using namespace std;\<CR>\<CR>int main(int argc, char **argv) {\<CR><+++>\<CR>\<CR>\<BS>return 0;\<CR>}",
@@ -208,13 +210,13 @@ call plug#end()
 "             \' '      : "\<ESC>/<+.*+>\<CR>\"_c/+>/e\<CR>",
 " \}
 "}}}
-"{{{ Syntastic
+" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 "}}}
-"{{{ LSP
+" LSP
 "" Registering Python
 if executable('pyls')
 	au User lsp_setup call lsp#register_server({
@@ -233,7 +235,7 @@ if executable('clangd')
 endif
 "}}}
 "}}}
-" Misc {{{
+" Misc 
 """"""""
 " Colorscheme
 "colorscheme vim-monokai-tasty
@@ -284,7 +286,7 @@ iabbrev isnt isn't
 iabbrev seperate separate
 iabbrev waht what
 "}}}
-"{{{ Compile Commands
+" Compile Commands
 """""""""""""""""""""
 nnoremap <leader>c :Compile<CR>
 "map <F5> : !gcc % ; ./a.out; rm a.out <CR>

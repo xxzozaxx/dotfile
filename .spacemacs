@@ -22,49 +22,49 @@
    dotspacemacs-configuration-layers
    '(
      ;; ---- Languages -----
-     shell-scripts  ;NAND nixos
-     java rust go c-c++ d  haskell common-lisp
-     scheme sml racket ruby javascript
+     ;; shell-scripts  ;NAND nixos
+     ;; java rust go c-c++ d  haskell common-lisp
+     ;; scheme sml racket ruby javascript
      markdown html graphviz
      (latex :variables latex-enable-auto-fill t
             :variables latex-enable-folding t)
-     (python :variables python-enable-yapf-format-on-save t)
+     ;; (python :variables python-enable-yapf-format-on-save t)
 
      ;;  ---- Editor -----
-     ivy imenu-list ibuffer dash git ;syntax-checking
+     ivy git ;; imenu-list ibuffer dash syntax-checking
      semantic lsp ;auto-completion
      (evil-snipe :variables evil-snipe-enable-alternate-f-and-t-behaviors t)
      (spell-checking :variables spell-checking-enable-by-default nil)
      ;;(colors :variables colors-colorize-identifiers 'variables)
 
      ;;  ---- Application -----
-     org dired gnus eww pandoc ;jabber ;vinegar ;pdf-tools
-     (mu4e :variables
-           mu4e-installation-path "/usr/share/emacs/site-lisp/mu4e/")
+     ;; org dired ;gnus eww pandoc ;jabber ;vinegar ;pdf-tools
+     ;; (mu4e :variables
+     ;;       mu4e-installation-path "/usr/share/emacs/site-lisp/mu4e/")
      ;; (elfeed :variables
      ;;         rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
-     (shell :variables shell-default-shell 'eshell)
+     ;; (shell :variables shell-default-shell 'eshell)
 
      ;; –––– fun stuff ––––
      ;;selectric ; exwm
      )
    dotspacemacs-additional-packages '(;; --- Extra Package ----
                                       carbon-now-sh
-                                      sqlite esqlite
-                                      calfw calfw-org
-                                      org-gcal ox-tufte ebib
-                                      ascii-art-to-unicode
+                                      ;; sqlite esqlite
+                                      ;; calfw calfw-org
+                                      ;; org-gcal ox-tufte ebib
+                                      ;; ascii-art-to-unicode
                                       nov
                                       ;; writeroom
                                       ;; doom-modeline
                                       ;; minimap
                                       ;; --- Theme ---
-                                      dracula-theme
-                                      monochrome-theme
-                                      gruvbox-theme
-                                      night-owl-theme
-                                      poet-theme
-                                      monokai-theme
+                                      ;; dracula-theme
+                                      ;; monochrome-theme
+                                      ;; gruvbox-theme
+                                      ;; night-owl-theme
+                                      ;; poet-theme
+                                      ;; monokai-theme
                                       ;; --- Fun ---
                                       speed-type
                                       symon
@@ -141,7 +141,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         monokai gruvbox-dark-medium dracula nyx night-owl
+                         spacemacs-light monokai gruvbox-dark-medium dracula nyx night-owl
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -152,8 +152,8 @@ values."
 
    ;; List of fonts that you could use "Monoisome""DejaVu Sans Mono""Iosevka"
    ;; dotspacemacs-default-font '("{mplus, FantasqueSansMono} Nerd Font Mono, GoMono Nerd Font"
-   dotspacemacs-default-font '("Go Mono"
-                               :size 12
+   dotspacemacs-default-font '("Luxi Mono"
+                               :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 1.4)

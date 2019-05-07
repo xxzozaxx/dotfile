@@ -3,8 +3,8 @@ set statusbar-v-padding 0
 set page-padding 1
 set font curie
 set statusbar-fg "white"
-set recolor-lightcolor "#252525"
-set recolor-darkcolor "#afafaf"
+set recolor-lightcolor "#ffffdd"
+set recolor-darkcolor "#000000"
 set default-bg "#252525"
 set default-fg "#AFAFAF"
 

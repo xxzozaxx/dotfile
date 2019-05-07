@@ -2,30 +2,30 @@
 #+AUTHOR: Ahmed Khaled
 
 * What programs I use:
-  tl;dr:: [Neo]vim, Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
-	+ *Email client:* s-nail, neatmail(a simple INBOX parsing)+fdm
-	+ *Feeds:* sfeed /RSS, Atom/
-	+ *File Browser:* Ranger
-	+ *Multiplexer:* +Screen+ , +tmux+ , dvtm
-	+ *Pdf & other document viwer:* zathura
-	+ *Shell:* +Bash+ , +eshell+, mksh,
-	+ *Terminal Emulator:* +urxvt+ , +xterm+ , +konsole+  , st
-	+ *Text Editor:* +Vim+ , neovim, Emacs, neatvi (minimal vi clone with rock bi-direction support)
-	+ *Web Browser:* +Qutebrowser+, +eww+, +elinks /(for gopher only)/+, surf, xlinks2,
-	+ *Windows Manager:* +I3wm+ , dwm
-	+ +rofi+ , dmenu
-	+ Compton
-	+ keyboard: custom us keyboard based on dead-intl but you know without dead kyes, standard ar keyboard.
-	+ Fonts:
-	  - Emacs I use +*Go Mono*+, *Verily Serif Mono*
-	  - Termianl I use +*DejaVu Sans Mono*+, +*Verily Serif Mono*+, *Luxi Mono*
-	  - PDF I use GNU *EB Garamond* _mainly_, *FreeSerif*, or *Modern Computer*
-	  - Zathura curie
-	  - Arabic Font is *Amiri*
+	*tl;dr:* [Neo]vim, Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
+		+ *Email client:* s-nail, neatmail(a simple INBOX parsing)+fdm
+		+ *Feeds:* sfeed /RSS, Atom/
+		+ *File Browser:* Ranger
+		+ *Multiplexer:* +Screen+ , +tmux+ , +dvtm+
+		+ *Pdf & other document viwer:* zathura, mupdf
+		+ *Shell:* +Bash+ , +eshell+, mksh,
+		+ *Terminal Emulator:* +urxvt+, +xterm+, +konsole+, st
+		+ *Text Editor:* +Vim+ , neovim, Emacs, neatvi (minimal vi clone with rock bi-direction support)
+		+ *Web Browser:* +Qutebrowser+, +eww+, +elinks /(for gopher only)/+, surf, xlinks2,
+		+ *Windows Manager:* +I3wm+ , dwm
+		+ +rofi+ , dmenu
+		+ Compton
+		+ keyboard: custom us keyboard based on dead-intl but you know without dead kyes, standard ar keyboard.
+		+ Fonts:
+			- Emacs I use +*Go Mono*+, *Verily Serif Mono*
+			- Termianl I use +*DejaVu Sans Mono*+, +*Verily Serif Mono*+, *Luxi Mono*
+			- PDF I use GNU *EB Garamond* _mainly_, *FreeSerif*, or *Modern Computer*
+			- Zathura curie
+			- Arabic Font is *Amiri*
 
 
 * Feel free to suggest me anything
-  you know how to use github, huh.
+	you know how to use github, huh.
 
 * Footnotes
 

@@ -36,7 +36,7 @@ hi Visual         cterm=reverse         ctermfg=NONE
 hi VisualNOS      cterm=bold,underline  ctermfg=NONE
 hi WarningMsg     cterm=standout        ctermfg=NONE
 hi WildMenu       cterm=standout        ctermfg=NONE
-hi Folded         cterm=standout        ctermfg=NONE
+hi Folded         cterm=standout        ctermfg=0       ctermbg=245
 hi FoldColumn     cterm=standout        ctermfg=NONE
 hi DiffAdd        cterm=bold            ctermfg=NONE
 hi DiffChange     cterm=bold            ctermfg=NONE
@@ -51,5 +51,5 @@ hi PreProc        cterm=NONE            ctermfg=NONE " underline -> NONE
 hi Type           cterm=NONE            ctermfg=NONE " underline -> NONE
 hi Underlined     cterm=underline       ctermfg=NONE
 hi Ignore         cterm=bold            ctermfg=NONE
-hi Error          cterm=reverse         ctermfg=NONE
-hi Todo           cterm=standout        ctermfg=NONE
+hi Error          cterm=bold            ctermfg=red     ctermbg=NONE
+hi Todo           cterm=NONE            ctermfg=NONE    ctermbg=35

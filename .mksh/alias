@@ -68,6 +68,7 @@ alias colorshow='for c in {0..255}; do echo "$c color" | colout "color" $c; done
 #alias aptup='sudo apt update | colout "Get" 118 | colout "Ign" 124 | colout "Hit" 226 | colout "^.*see.*$" 51 | colout "\d* .B | \d*.\d* .B" 3 | colout "http.+ " 6'
 alias aptin='sudo apt install'
 alias nmk='fdm -k fetch && neatmail mk -st -r ~/mail/INBOX > ~/mail/inbox.nm'
+alias gonvim='/home/master/Programs/0TextEditors/Gonvim-0.3.5-linux/gonvim'
 aptse ()
 {
     apt search $1 | less
@@ -93,7 +94,7 @@ sfeed_cus()
 	sfeed_plain feeds.new > feeds.txt;
 }
 
-nmpg() 
+nmpgd() 
 { 
 	neatmail pg -m -h from:subject:to:cc ~/mail/INBOX $1 > ~/mail/mail_$1.mail
 }

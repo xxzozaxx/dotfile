@@ -40,8 +40,8 @@
                 ;; Example (cons '(control shift q) "xbindkeys_show")
                 ;; ––– •non char key• –––
                 ;; -- •Functional key• ––
-                (cons '(XF86MonBrightnessDown) "xbacklight -dec 10")
-                (cons '(XF86MonBrightnessUp) "xbacklight -inc 10")
+                (cons '(XF86MonBrightnessDown) "xbacklight -dec 5")
+                (cons '(XF86MonBrightnessUp) "xbacklight -inc 5")
                 (cons '(XF86AudioRaiseVolume) "pactl set-sink-volume @DEFAULT_SINK@ +1000")
                 (cons '(XF86AudioLowerVolume) "pactl set-sink-volume @DEFAULT_SINK@ -1000")
                 (cons '(XF86AudioMute) "pactl set-sink-mute @DEFAULT_SINK@ toggle")
@@ -93,7 +93,7 @@
                 ;; (cons '(SEQ shift o) "BIND")
                 ;; (cons '(SEQ p) "BIND")
                 ;; (cons '(SEQ shift p) "BIND")
-                ;; (cons '(SEQ a) "BIND")
+                (cons '(mod4 a) "a")
                 (cons '(mod4 shift a) "pavucontrol")
                 ;; (cons '(SEQ s) "BIND")
                 ;; (cons '(SEQ shift s) "BIND")
