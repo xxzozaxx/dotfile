@@ -3,14 +3,14 @@
 
 * What programs I use:
 	*tl;dr:* [Neo]vim, Emacs, suckless[fn:1] and linux (I wish I could run BSD instead)
-		+ *Email client:* s-nail, neatmail(a simple INBOX parsing)+fdm
+		+ *Email client:* +s-nail, neatmail(a simple INBOX parsing)+fdm+, Mu4e(with offlineimap)_{again}
 		+ *Feeds:* sfeed /RSS, Atom/
 		+ *File Browser:* Ranger
 		+ *Multiplexer:* +Screen+ , +tmux+ , +dvtm+
 		+ *Pdf & other document viwer:* zathura, mupdf
 		+ *Shell:* +Bash+ , +eshell+, mksh,
 		+ *Terminal Emulator:* +urxvt+, +xterm+, +konsole+, st
-		+ *Text Editor:* +Vim+ , neovim, Emacs, neatvi (minimal vi clone with rock bi-direction support)
+		+ *Text Editor:* +Vim+ , neovim, Emacs, neatvi_{minimal vi clone with rock bi-direction support}
 		+ *Web Browser:* +Qutebrowser+, +eww+, +elinks /(for gopher only)/+, surf, xlinks2,
 		+ *Windows Manager:* +I3wm+ , dwm
 		+ +rofi+ , dmenu

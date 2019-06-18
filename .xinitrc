@@ -36,3 +36,4 @@ do
 done &
 
 exec dwm
+#exec /home/master/Programs/plan9port/bin/rio

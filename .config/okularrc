@@ -6,9 +6,9 @@ AutomaticDetectionLanguage=1
 
 [MainWindow]
 Height 900=882
-State=AAAA/wAAAAD9AAAAAAAAAnwAAANeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA7wAAANeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1600=636
+Width 1600=956
 
 [Print Preview]
 Height 900=500
@@ -22,7 +22,6 @@ File4[$e]=$HOME/Documents/Mathematics/Notes/Note.ps
 File5[$e]=$HOME/Documents/Mathematics/Notes/Note.epub
 File6[$e]=$HOME/Pictures/2018-12-19_22:13:26_1600x900.png
 File7[$e]=$HOME/Documents/ProgLang/Rust/The Rust Programming Language__2018.epub
-File8[$e]=$HOME/A Mind at Play_ How Claude Shannon Invented the Information Age.epub
 Name1[$e]=Learning the Korn Shell-O'Reilly Media (1993).chm
 Name2[$e]=Physiology Magdy Sabry CNS_test.pdf
 Name3[$e]=Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
@@ -30,4 +29,3 @@ Name4[$e]=Note.ps
 Name5[$e]=Note.epub
 Name6[$e]=2018-12-19_22:13:26_1600x900.png
 Name7[$e]=The Rust Programming Language__2018.epub
-Name8[$e]=A Mind at Play_ How Claude Shannon Invented the Information Age.epub

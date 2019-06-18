@@ -4,7 +4,7 @@
 ;; \___ \│ '_ \ / _` │/ __/ _ \ '_ ` _ \ / _` │/ __/ __│
 ;;  ___) │ │_) │ (_│ │ (_│  __/ │ │ │ │ │ (_│ │ (__\__ \
 ;; │____/│ .__/ \__,_│\___\___│_│ │_│ │_│\__,_│\___│___/
-;;       │_│ :Ahmed's spacemacs config file:
+;;       │_│ :Ahmeds' spacemacs config file:
 ;;           :ahmed_khaledATzohoDoTCoM:
 ;; ┏┓╻╻ ╻
 ;; ┃┗┫╺╋╸
@@ -12,7 +12,7 @@
 
 (defun dotspacemacs/layers ()
   (setq-default
-   dotspacemacs-distribution 'spacemacs-bootstrap
+   dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-enable-lazy-installation nil
    dotspacemacs-ask-for-lazy-installation t ;; ask before installing a lazy layer
    dotspacemacs-configuration-layer-path '()
@@ -20,58 +20,58 @@
    ;; List of layers  ••••••••••••••••••••••••••••••••••••••••••••••••
    ;; ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
    dotspacemacs-configuration-layers
-   '(
-     ;; ---- Languages -----
+   '(;; ---- Languages -----
      ;; shell-scripts  ;NAND nixos
-     ;; java rust go c-c++ d  haskell common-lisp
-     ;; scheme sml racket ruby javascript
+     rust go c-c++ haskell scheme sml racket ruby javascript ; java d  common-lisp
      markdown html graphviz
      (latex :variables latex-enable-auto-fill t
             :variables latex-enable-folding t)
      ;; (python :variables python-enable-yapf-format-on-save t)
 
-     ;;  ---- Editor -----
+     ;;   ---- Editor -----
      ivy git ;; imenu-list ibuffer dash syntax-checking
-     semantic lsp ;auto-completion
+     semantic lsp auto-completion
      (evil-snipe :variables evil-snipe-enable-alternate-f-and-t-behaviors t)
      (spell-checking :variables spell-checking-enable-by-default nil)
      ;;(colors :variables colors-colorize-identifiers 'variables)
-
-     ;;  ---- Application -----
-     ;; org dired ;gnus eww pandoc ;jabber ;vinegar ;pdf-tools
-     ;; (mu4e :variables
-     ;;       mu4e-installation-path "/usr/share/emacs/site-lisp/mu4e/")
+     
+     ;;   ---- Application -----
+     dired pdf-tools erc emms org ;eww ;gnus pandoc ;jabber ;vinegar
+     (mu4e :variables
+           mu4e-installation-path "/usr/share/emacs/site-lisp/mu4e/")
      ;; (elfeed :variables
-     ;;         rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
-     ;; (shell :variables shell-default-shell 'eshell)
-
+     ;;          rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
+     (shell :variables shell-default-shell 'eshell)
+     
      ;; –––– fun stuff ––––
      ;;selectric ; exwm
      )
    dotspacemacs-additional-packages '(;; --- Extra Package ----
                                       carbon-now-sh
+                                      nov
+                                      keyfreq
                                       ;; sqlite esqlite
                                       ;; calfw calfw-org
                                       ;; org-gcal ox-tufte ebib
                                       ;; ascii-art-to-unicode
-                                      nov
                                       ;; writeroom
                                       ;; doom-modeline
                                       ;; minimap
                                       ;; --- Theme ---
+                                      gruvbox-theme
+                                      poet-theme
                                       ;; dracula-theme
                                       ;; monochrome-theme
-                                      ;; gruvbox-theme
                                       ;; night-owl-theme
-                                      ;; poet-theme
                                       ;; monokai-theme
                                       ;; --- Fun ---
                                       speed-type
                                       symon
                                       focus
+                                      ;; gopher
                                       )
    dotspacemacs-frozen-packages '(;; ––– Package cannot be updated –––
-                                  )
+   )
    dotspacemacs-excluded-packages '(;; Pkgs cannot be installed or loaded
                                     persp-mode
                                     spinner
@@ -84,10 +84,10 @@
                                     ;; racer
                                     )
    ;; Package install behaviour;
-   ;;         - `used-only': install only explicitly used packages
-   ;;         - `used-but-keep-unused': install only the used package
+   ;;          - `used-only': install only explicitly used packages
+   ;;          - `used-but-keep-unused': install only the used package
    ;; but won't uninstall them if they become unused.
-   ;;         - `all'
+   ;;          - `all'
    dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
@@ -141,7 +141,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         spacemacs-light monokai gruvbox-dark-medium dracula nyx night-owl
+                         gruvbox-light-medium spacemacs-light nyx
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -153,7 +153,7 @@ values."
    ;; List of fonts that you could use "Monoisome""DejaVu Sans Mono""Iosevka"
    ;; dotspacemacs-default-font '("{mplus, FantasqueSansMono} Nerd Font Mono, GoMono Nerd Font"
    dotspacemacs-default-font '("Luxi Mono"
-                               :size 13
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.4)
@@ -271,13 +271,13 @@ values."
    ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
    ;; This variable can also be set to a property list for finer control:
    ;; '(:relative nil
-   ;;   :disabled-for-modes dired-mode
-   ;;                       doc-view-mode
-   ;;                       markdown-mode
-   ;;                       org-mode
-   ;;                       pdf-view-mode
-   ;;                       text-mode
-   ;;   :size-limit-kb 1000)
+   ;;    :disabled-for-modes dired-mode
+   ;;                        doc-view-mode
+   ;;                        markdown-mode
+   ;;                        org-mode
+   ;;                        pdf-view-mode
+   ;;                        text-mode
+   ;;    :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers nil
    ;; Code folding method. Possible values are `evil' and `origami'.
@@ -351,7 +351,10 @@ values."
   ;;; arabic font
   (when window-system
     (set-fontset-font "fontset-default" '(#x600 . #x6ff)
-                      "Amiri"))
+;                      "NoName Fixed"))
+;                      "Noto Naskh Arabic"))
+                      "Noto Kufi Arabic"))
+;                      "Amiri Typewriter"))
 
   ;; ESHELL path
   (setq eshell-path-env (getenv "PATH"))
@@ -381,10 +384,16 @@ values."
   ;;(add-hook 'racket-mode-hook #'aggressive-indent-mode)
   ;;(add-hook 'rust-mode-hook #'aggressive-indent-mode)
 
-  ;; Load prettify mode config
-  ;;(load-file "~/.spacemacs.d/pretty.el")   ; pretty config
-  (load-file "~/.spacemacs.d/mail.el")     ; Mu4e   config
+  ;; Load separated config/eLisp files
+  ;;(load-file "~/.spacemacs.d/pretty.el")       ; pretty config
+  (load-file "~/.spacemacs.d/mail.el")           ; Mu4e   config
+  (load-file "~/.spacemacs.d/gopher.el")         ; Gopher client
+  (load-file "~/.spacemacs.d/elpher/elpher.el")  ; Gopher client
   ;;(load-file "~/.spacemacs.d/org-gcal.el") ;
+  (use-package telega
+    :load-path "~/.spacemacs.d/telega.el"
+    :commands (telega)
+    :defer t)
 
 
   ;; Source: https://dougie.io/coding/tabs-in-emacs/
@@ -400,14 +409,19 @@ values."
   (setq browse-url-browser-function 'browse-url-generic
         browse-url-generic-program "/usr/bin/surf")
 
+  ;; Some statics to improve keybinding
+  (require 'keyfreq)
+  (keyfreq-mode 1)
+  (keyfreq-autosave-mode 1)
+
   ;; IRC:
   ;; (erc-spelling-mode 1)
-  (setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
-  (setq erc-autojoin-channels-alist '(("rizon.net" . ("#nfo"
-                                                      "#/g/sicp"))))
+  ;; (setq erc-log-channels-directory "~/.emacs.d/erc/logs/")
+  ;; (setq erc-autojoin-channels-alist '(("rizon.net" . ("#nfo"
+  ;;                                                    "#/g/sicp"))))
   ;; Java Eclipse and Eclim files
-  (setq eclim-eclipse-dirs '("~/.eclipse/java-2018-12/eclipse")
-        eclim-executable "~/.eclipse/java-2018-12/eclipse/eclim")
+  ;; (setq eclim-eclipse-dirs '("~/.eclipse/java-2018-12/eclipse")
+  ;;       eclim-executable "~/.eclipse/java-2018-12/eclipse/eclim")
   ;; ----- User config End here ––––
   )
 
@@ -423,7 +437,10 @@ values."
  '(ansi-term-color-vector
    [unspecified "#1b1818" "#ca4949" "#4b8b8b" "#a06e3b" "#7272ca" "#8464c4" "#7272ca" "#8a8585"] t)
  '(compilation-message-face 'default)
+ '(custom-safe-themes
+   '("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default))
  '(ecb-options-version "2.50")
+ '(erc-nick "Ahmedkh")
  '(evil-want-Y-yank-to-eol nil)
  '(eww-form-checkbox-selected-symbol "☑")
  '(eww-form-checkbox-symbol "☐")
@@ -448,7 +465,7 @@ values."
  '(mode-line-percent-position '(-3 "%o"))
  '(org-agenda-files '("~/Documents/PIM/gcal.org" "~/Documents/PIM/Agenda.org"))
  '(package-selected-packages
-   '(ox-tufte ebib ox-trac auctex-latexmk inverse-acme-theme plan9-theme xbm-life org-gcal request-deferred spaceline-all-the-icons doom-modeline lsp-ui company-lsp lsp-mode darktooth-theme darkokai-theme flymd company-emacs-eclim eclim badwolf-theme pandoc-mode ox-pandoc latex-math-preview typo olivetti minimap calfw-gcal ascii-art-to-unicode kanban w3 org-timeline calfw calfw-org d-mode company-dcd flycheck-dmd-dub nov nyx-theme graphviz-dot-mode treepy graphql all-the-icons memoize writeroom-mode racer monotropic-theme monokai-alt-theme monokai-theme ranger evil-snipe weechat go-guru go-eldoc company-go go-mode circe org-outline-numbering outshine sqlite esqlite pcsv poet-theme autothemer symon speed-type monochrome-theme ibuffer-sidebar focus zeno-theme ecb fuzzy company-web web-completion-data company-tern tern company-statistics company-shell company-cabal company-c-headers company-auctex company-anaconda common-lisp-snippets auto-yasnippet ac-ispell auto-complete toml-mode flycheck-rust cargo rust-mode challenger-deep-theme night-owl-theme git-gutter smart-tabs-mode volatile-highlights vi-tilde-fringe uuidgen toc-org restart-emacs request rainbow-delimiters persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu eval-sexp-fu highlight dumb-jump column-enforce-mode clean-aindent-mode auto-highlight-symbol adaptive-wrap ace-link gruvbox-theme web-beautify livid-mode skewer-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode color-theme-modern rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))
+   '(keyfreq esxml transient lv carbon-now-sh ox-tufte ebib ox-trac auctex-latexmk inverse-acme-theme plan9-theme xbm-life org-gcal request-deferred spaceline-all-the-icons doom-modeline lsp-ui company-lsp lsp-mode darktooth-theme darkokai-theme flymd company-emacs-eclim eclim badwolf-theme pandoc-mode ox-pandoc latex-math-preview typo olivetti minimap calfw-gcal ascii-art-to-unicode kanban w3 org-timeline calfw calfw-org d-mode company-dcd flycheck-dmd-dub nov nyx-theme graphviz-dot-mode treepy graphql all-the-icons memoize writeroom-mode racer monotropic-theme monokai-alt-theme monokai-theme ranger evil-snipe weechat go-guru go-eldoc company-go go-mode circe org-outline-numbering outshine sqlite esqlite pcsv poet-theme autothemer symon speed-type monochrome-theme ibuffer-sidebar focus zeno-theme ecb fuzzy company-web web-completion-data company-tern tern company-statistics company-shell company-cabal company-c-headers company-auctex company-anaconda common-lisp-snippets auto-yasnippet ac-ispell auto-complete toml-mode flycheck-rust cargo rust-mode challenger-deep-theme night-owl-theme git-gutter smart-tabs-mode volatile-highlights vi-tilde-fringe uuidgen toc-org restart-emacs request rainbow-delimiters persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu eval-sexp-fu highlight dumb-jump column-enforce-mode clean-aindent-mode auto-highlight-symbol adaptive-wrap ace-link gruvbox-theme web-beautify livid-mode skewer-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode color-theme-modern rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby rcirc-notify rcirc-color eyebrowse spaceline all-the-icons-ivy dracula-theme racket-mode faceup hl-todo highlight-parentheses doom-themes define-word aggressive-indent smartparens plain-theme doom-dracula-theme helm-themes helm-swoop helm-pydoc helm-projectile helm-nixos-options helm-mode-manager helm-hoogle helm-gitignore helm-flx helm-descbinds helm-css-scss helm-ag flyspell-correct-helm ace-jump-helm-line expand-region bitlbee stumpwm-mode nand2tetris-assembler company-nand2tetris nand2tetris all-the-icons-dired dired-sidebar dired-k diredfl dired-subtree dired-rainbow dired-quick-sort dired-narrow dired-hacks-utils dired-collapse rich-minority sml-modeline stickyfunc-enhance srefactor selectric-mode insert-shebang fish-mode zoom ws-butler winum zeal-at-point yapfify xterm-color web-mode tagedit smeargle slime-company slime slim-mode shell-pop scss-mode sass-mode rainbow-mode rainbow-identifiers pyvenv pytest pyenv-mode py-isort pug-mode pip-requirements pdf-tools tablist orgit org-projectile org-category-capture org-present org-pomodoro org-mime org-download ob-sml sml-mode nixos-options nix-mode multi-term mu4e-maildirs-extension mu4e-alert ht alert log4e gntp mmm-mode markdown-toc markdown-mode magit-gitflow live-py-mode less-css-mode intero imenu-list ibuffer-projectile hy-mode htmlize hlint-refactor hindent haskell-snippets yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md geiser flyspell-correct-ivy flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor eshell-z eshell-prompt-extras esh-help erc-yt erc-view-log erc-social-graph erc-image erc-hl-nicks emmet-mode elfeed-web simple-httpd elfeed-org org-plus-contrib elfeed-goodies ace-jump-mode noflet powerline popwin elfeed disaster cython-mode counsel-dash helm-dash dash-functional company-ghci company-ghc ghc company haskell-mode color-identifiers-mode cmm-mode cmake-mode clang-format auto-dictionary auctex anaconda-mode pythonic f dash s which-key wgrep use-package smex pcre2el macrostep ivy-hydra hydra helm-make helm helm-core popup flx exec-path-from-shell evil-visualstar evil-escape evil goto-chg undo-tree elisp-slime-nav diminish counsel-projectile projectile pkg-info epl counsel swiper ivy bind-map bind-key auto-compile packed async ace-window avy))
  '(paradox-github-token t)
  '(pdf-view-midnight-colors '("#282828" . "#f9f5d7"))
  '(pos-tip-background-color "#FFF9DC")

@@ -35,7 +35,7 @@ _prompt() {
 	  esac
 
 	  RET="[38;5;${RET}m"
-	  RET="${RET}─[0m "
+	  RET="${RET}λ[0m "
 
 	  $PRINT $RET
 }
@@ -57,12 +57,12 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$PATH:$GOROOT/bin
 PATH=$PATH:$HOME/.go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
+PATH=$PATH:$PLAN9/bin export PATH
 READER=okular
 VIDEOPLAYER=mpv
 VISUAL=$EDITOR
 FZF_DEFAULT_COMMAND='rg --files'
 PLAN9=/home/master/Programs/plan9port export PLAN9
-PATH=$PATH:$PLAN9/bin export PATH
 
 export PAGER BROWSERCLI READER IMAGEVIEWER VIDEOPLAYER EDITOR VISUAL BROWSER GEM_HOME PATH FZF_DEFAULT_COMMAND RUST_SRC_PATH GOROOT GOPATH
 export _JAVA_AWT_WM_NONREPARENTING=1   # cuz Java GUI suck
