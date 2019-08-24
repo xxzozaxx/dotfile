@@ -13,8 +13,6 @@
 
 
 # ––– •Style START here• –––
-#PS1='$(/home/master/bin/pwr)'
-#PS1='$(/home/master/bin/slcp $COLUMNS $?)'
 PRINT='echo -n'
 [ `$PRINT | wc -c` -ne 0 ] && PRINT=printf
 PS1='$(_prompt) '
@@ -43,26 +41,26 @@ _prompt() {
 # ––– •Style END here• –––
 
 # ––– •Export START here• –––
+# IMAGEVIEWER=meh
 BROWSER=xlinks2
 BROWSERCLI=links2
 EDITOR=nvim
+FZF_DEFAULT_COMMAND='rg --files'
 GEM_HOME=$HOME/.gem
 GEM_HOME=$HOME/.gem
 GOPATH=$HOME/.go
 GOROOT=/usr/local/go
-# IMAGEVIEWER=meh
-RUST_SRC_PATH=$HOME/.rustup/toolchains/nightly-2019-01-18-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/
 PAGER=less
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$PATH:$GOROOT/bin
 PATH=$PATH:$HOME/.go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master/.local/bin/
 PATH=$PATH:$PLAN9/bin export PATH
-READER=okular
+PLAN9=/home/master/Programs/plan9port export PLAN9
+READER=zathura
+RUST_SRC_PATH=$HOME/.rustup/toolchains/nightly-2019-01-18-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/
 VIDEOPLAYER=mpv
 VISUAL=$EDITOR
-FZF_DEFAULT_COMMAND='rg --files'
-PLAN9=/home/master/Programs/plan9port export PLAN9
 
 export PAGER BROWSERCLI READER IMAGEVIEWER VIDEOPLAYER EDITOR VISUAL BROWSER GEM_HOME PATH FZF_DEFAULT_COMMAND RUST_SRC_PATH GOROOT GOPATH
 export _JAVA_AWT_WM_NONREPARENTING=1   # cuz Java GUI suck
@@ -75,9 +73,8 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-# ––– •Export END here• –––
+# ––– • Color END here• –––
 
-# ––– •export START here• –––
 export GIT_HOSTING='xxzozaxx@github.com'
 # ––– •export  END here• –––
 
@@ -86,6 +83,16 @@ export GIT_HOSTING='xxzozaxx@github.com'
 [ -f ~/.fzf.mksh ] && source ~/.fzf.mksh
 stty -ixon
 ## History
-HISTFILE=$HOME/.history
 HISTSIZE=4096
+HISTFILESIZE=500
+HISTFILE=$HOME/.history
+export HISTSIZE HISTFILE
 # ––– •OTHER END here• –––
+# 
+
+# ––– • Bind START here• –––
+bind ^L=clear-screen
+# bind ^V=edit-line
+bind ^K=up-history
+bind ^J=down-history
+# ––– • Bind END here• –––

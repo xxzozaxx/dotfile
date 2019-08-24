@@ -10,13 +10,14 @@
 
 # launch programs
 setxkbmap -layout us,ar -variant prog-intl, -option grp:alt_shift_toggle &
+xbindkeys &
+xmodmap -e "keycode 72=" &
 hsetroot -cover /home/master/.config/wall.png &
 #hsetroot -tile /home/master/.config/wall.png &
-cat ~/.Doing.txt | xrootconsole  -geometry "200x70+10+20" &
+cat ~/.Doing.txt | xrootconsole  -geometry "200x70+10+20" ~/.Doing.txt &
+#ls ~/.Doing.txt | entr -r xrootconsole  -geometry "200x70+10+20" ~/.Doing.txt &
 compton --xrender-sync-fence &
 redshift &
-xbindkeys &
-
 #when open dwm uncomment the follow
 while true
 do
@@ -35,5 +36,7 @@ do
     sleep 10s
 done &
 
-exec dwm
+#exec dwm
+exec ~/Programs/1WindowManager/dwm-bk/dwm
+#exec wio
 #exec /home/master/Programs/plan9port/bin/rio

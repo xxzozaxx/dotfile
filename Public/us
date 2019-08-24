@@ -10,6 +10,7 @@
 //  for more information, search about 'neo qwertz layout' on gitgist.
 //  I will make sure to add some documentation later
 //
+
 partial alphanumeric_keys
 xkb_symbols "prog-intl" {
 
@@ -33,27 +34,27 @@ xkb_symbols "prog-intl" {
     key <AE11> { [ minus,   underscore,                        yen,               belowdot ] };
     key <AE12> { [ equal,         plus,                   multiply,               division ] };
 
-    key <AD01> { [ q,                Q,                      grave,             Adiaeresis ] };
+    key <AD01> { [ q,                Q,                      grave,              BackSpace ] };
     key <AD02> { [ w,                W,                 underscore,                  Aring ] };
-    key <AD03> { [ e,                E,                bracketleft,                 Eacute ] };
+    key <AD03> { [ e,                E,                bracketleft,                 Delete ] };
     key <AD04> { [ r,                R,               bracketright,             registered ] };
     key <AD05> { [ t,                T,                asciicircum,                  THORN ] };
     key <AD06> { [ y,                Y,                 udiaeresis,             Udiaeresis ] };
     key <AD07> { [ u,                U,                       less,          guillemotleft ] };
     key <AD08> { [ i,                I,                    greater,         guillemotright ] };
     key <AD09> { [ o,                O,                      equal,                 Oacute ] };
-    key <AD10> { [ p,                P,                  ampersand,             Odiaeresis ] };
+    key <AD10> { [ p,                P,                  ampersand,               Greek_pi ] };
     key <AD11> { [ bracketleft,      braceleft,      guillemotleft,    leftdoublequotemark ] };
     key <AD12> { [ bracketright,     braceright,    guillemotright,   rightdoublequotemark ] };
 
-    key <AC01> { [ a,                A,                     aacute,                 Aacute ] };
+    key <AC01> { [ a,                A,                     aacute,            Greek_alpha ] };
     key <AC02> { [ s,                S,                     ssharp,                section ] };
     key <AC03> { [ d,                D,                  braceleft,                    ETH ] };
     key <AC04> { [ f,                F,                 braceright,                      F ] };
-    key <AC05> { [ g,                G,                   asterisk,                      G ] };
+    key <AC05> { [ g,                G,                   asterisk,           Greek_lambda ] };
     key <AC06> { [ h,                H,                          h,                   Left ] };
     key <AC07> { [ j,                J,                  parenleft,                   Down ] };
-    key <AC08> { [ k,                K,                 parenright,                     Up ] };
+    key <AC08> { [ k,                K,                 parenright,           Greek_lambda ] };
     key <AC09> { [ l,                L,                      minus,                  Right ] };
     key <AC10> { [ colon,            semicolon,          paragraph,                 degree ] };
     key <AC11> { [ apostrophe,       quotedbl,                  at,                  acute ] };
