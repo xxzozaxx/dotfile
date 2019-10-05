@@ -1,0 +1,41 @@
+Config { font = "xft:scientifica"
+       , bgColor = "#000000"
+       , fgColor = "#ffffdd"
+       , border = NoBorder
+       , borderColor = "#000000"
+       , position = Top
+       , lowerOnStart = True
+       , hideOnStart = False
+       , allDesktops = True
+       , commands = [ Run Date "%a %b %_d %Y %H:%M" "date" 10
+                    , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"
+                                         , "--Low"      , "1000"       -- units: B/s
+                                         , "--High"     , "5000"       -- units: B/s
+                                         , "--low"      , "darkgreen"
+                                         , "--normal"   , "darkorange"
+                                         , "--high"     , "darkred"
+                                         ] 10
+                    , Run Battery        [ "--template" , "Batt: <acstatus>"
+                                         , "--Low"      , "10"        -- units: %
+                                         , "--High"     , "80"        -- units: %
+                                         , "--low"      , "darkred"
+                                         , "--normal"   , "darkorange"
+                                         , "--high"     , "darkgreen"
+
+                                         , "--" -- battery specific options
+                                                -- discharging status
+                                                , "-o"	, "<left>% (<timeleft>)"
+                                                -- AC "on" status
+                                                , "-O"	, "Charging"
+                                                -- charged status
+                                                , "-i"	, "Charged"
+                                         ] 50
+                    , Run Kbd            [ ("us" , "US")
+                                         , ("ar"         , "AR")
+                                         ]
+                    ]
+
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " }{ %dynnetwork% | %battery% | %kbd% | %date%"
+}

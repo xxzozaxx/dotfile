@@ -10,7 +10,14 @@ set default-fg "#AFAFAF"
 
 set adjust-open "width"
 set selection-clipboard clipboard
+set show-h-scrollbar=true
 
 map r reload
 map R rotate
 map i recolor
+
+# fk zathura Button4,5 doesn't work
+unmap <S-Button3>
+unmap <S-Button1>
+map <S-Button3> navigate next
+map <S-Button1> navigate previous

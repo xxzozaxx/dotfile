@@ -1,0 +1,84 @@
+#+title: Ahmeds' Homepage file
+#+author: Ahmed Khaled
+#+LANGUAGE: en
+#+OPTIONS: toc:nil c:nil
+#+STYLE: <link rel="stylesheet" type="text/css" href="style.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+#+begin_export html
+<div><pre class="">
+             ________________________________________________
+            /                                                \
+           |    _________________________________________     |
+           |   |                                         |    |
+           |   |  λ> whoami                              |    |
+           |   |  master                                 |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |                                         |    |
+           |   |_________________________________________|    |
+           |                                                  |
+            \_________________________________________________/
+                   \___________________________________/
+                ___________________________________________
+             _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_
+          _-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_
+       _-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_
+    _-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_
+ _-'.-.-.-.-.-. .---.-. .-------------------------. .-.---. .---.-.-.-.`-_
+:-------------------------------------------------------------------------:
+`---._.-------------------------------------------------------------._.---'
+                              -Roland Hangg-
+</pre></div>
+#+end_export
+
+* Links Bookmarks
+- [[https://ddg.gg/lite][DuckDuckGo]]
+
+** Community
+- [[https://nixers.net/][*Nixers]]
+- [[https://lainchan.org/][LAINCHAN]]
+- [[https://arisuchan.jp/%CE%BB/][/λ/ - programming]]
+- [[https://endchan.xyz/tech/][/tech/ - Technology]]
+- [[https://boards.systemspace.link/][TSUKICHAN]]
+- [[http://4-ch.net/code/][Programming @4-ch]]
+- [[https://wirechan.org/g/][/g/ - Technology]]
+
+** Computer Science
+- [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/][Math4CS old]]
+- [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/index.htm][Mathematics for Computer Science]]
+- [[https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/][18_01 Singel Var Cal]]
+- [[https://teachyourselfcs.com/][Teach yourself CS]]
+- [[https://functionalcs.github.io/curriculum/#orgeff02fd][λ Self-Learning]]
+- [[https://github.com/ossu/computer-science][OSSU CS]]
+- [[https://www.youtube.com/playlist?list=PLOtl7M3yp-DX32N0fVIyvn7ipWKNGmwpp][Algorithms Lectures]]
+- [[http://www3.cs.stonybrook.edu/~skiena/373/][Algorithms website page]]
+** Learning
+    - [[http://gen.lib.rus.ec/][Library Genesis]]
+    - [[http://134.209.43.254:8083/login?next=%2F][#DEAD DeepSpec Library | Recently Ad]]
+    - [[http://audiobookbay.nl/][audiobookbay]]
+    - [[https://teachyourselfcs.com/][Teach Yourself Computer Science]]
+    - [[https://github.com/ossu/computer-science][ossu/computer-science]]
+    - [[https://thufie.lain.haus/liberation.html][EBook Liberation Guide]]
+** Medicine
+- [[https://forsanalazhar.wixsite.com/medical-students][Forsan Alazhar]]
+- [[https://ocw.mit.edu/courses/health-sciences-and-technology/hst-035-principle-and-practice-of-human-pathology-spring-2003/lecture-notes/][Pathology]]
+- [[https://ocw.mit.edu/courses/health-sciences-and-technology/hst-151-principles-of-pharmacology-spring-2005/lecture-notes/][Pharmacology]]
+** News
+- [[https://serializer.ioi/cozydove][News | Serilizer]]
+- [[https://news.ycombinator.com/][Hacker News]]
+- [[https://news.bubblin.io/][HackerNews for Books]]
+
+** Technology
+- [[https://texteditors.org/cgi-bin/wiki.pl][Wiki|TextEditors]]
+*** intersting stuff
+- [[https://github.com/tuvtran/project-based-learning][ProjectBase0learning]]
+- [[https://github.com/danistefanovic/build-your-own-x   ][ProjectBase1learning]]
+- [[https://github.com/rby90/Project-Based-Tutorials-in-C][ProjectBase2learning]]
+- [[https://github.com/hellerve/programming-talks][Programming Talk]]

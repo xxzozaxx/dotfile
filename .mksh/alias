@@ -69,7 +69,11 @@ alias colorshow='for c in {0..255}; do echo "$c color" | colout "color" $c; done
 alias aptin='sudo apt install'
 alias nmk='fdm -k fetch && neatmail mk -st -r ~/mail/INBOX > ~/mail/inbox.nm'
 alias gonvim='/home/master/Programs/0TextEditors/Gonvim-0.3.5-linux/gonvim'
+alias mitlec='youtube-dl -f 134+bestaudio --write-sub --sub-lang en'
+alias twitch="mpv --ytdl-format='360p'"
+
 aptse ()
+
 {
     apt search $1 | less
 }
