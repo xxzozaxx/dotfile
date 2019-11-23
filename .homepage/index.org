@@ -4,39 +4,6 @@
 #+OPTIONS: toc:nil c:nil
 #+STYLE: <link rel="stylesheet" type="text/css" href="style.css" />
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
-#+begin_export html
-<div><pre class="">
-             ________________________________________________
-            /                                                \
-           |    _________________________________________     |
-           |   |                                         |    |
-           |   |  λ> whoami                              |    |
-           |   |  master                                 |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |                                         |    |
-           |   |_________________________________________|    |
-           |                                                  |
-            \_________________________________________________/
-                   \___________________________________/
-                ___________________________________________
-             _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_
-          _-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_
-       _-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_
-    _-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_
- _-'.-.-.-.-.-. .---.-. .-------------------------. .-.---. .---.-.-.-.`-_
-:-------------------------------------------------------------------------:
-`---._.-------------------------------------------------------------._.---'
-                              -Roland Hangg-
-</pre></div>
-#+end_export
 
 * Links Bookmarks
 - [[https://ddg.gg/lite][DuckDuckGo]]
@@ -49,6 +16,7 @@
 - [[https://boards.systemspace.link/][TSUKICHAN]]
 - [[http://4-ch.net/code/][Programming @4-ch]]
 - [[https://wirechan.org/g/][/g/ - Technology]]
+- [[https://tildes.net/]]
 
 ** Computer Science
 - [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/][Math4CS old]]
@@ -66,6 +34,7 @@
     - [[https://teachyourselfcs.com/][Teach Yourself Computer Science]]
     - [[https://github.com/ossu/computer-science][ossu/computer-science]]
     - [[https://thufie.lain.haus/liberation.html][EBook Liberation Guide]]
+    - [[https://www.webtoons.com/en/drama/dr-frost/list?title_no=371&page=13][Dr. Frost]]
 ** Medicine
 - [[https://forsanalazhar.wixsite.com/medical-students][Forsan Alazhar]]
 - [[https://ocw.mit.edu/courses/health-sciences-and-technology/hst-035-principle-and-practice-of-human-pathology-spring-2003/lecture-notes/][Pathology]]

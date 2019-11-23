@@ -2,10 +2,10 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/master/.gtkrc-2.0.mine"
-gtk-theme-name="Adwaita"
-gtk-icon-theme-name="HighContrast"
-gtk-font-name="Sans 10"
-gtk-cursor-theme-name="Adwaita"
+gtk-theme-name="Redmond"
+gtk-icon-theme-name="Enlightenment-X"
+gtk-font-name="Go 10"
+gtk-cursor-theme-name="posy-white-tiny"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_TEXT
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR

@@ -35,7 +35,7 @@ do
         BATCAP=$(echo BAT)
     fi
     xsetroot -name "[IP]: $IP | [BAT]: $BATSTA $BATCAP | [VOL]: $VOL | $LOCALTIME"
-    sleep 10s
+    sleep 7s
 done &
 
 exec dwm

@@ -1,16 +1,20 @@
-set statusbar-h-padding 0
-set statusbar-v-padding 0
-set page-padding 1
+include gruv.zathura
+
+set recolor                  true
+set guioptions               "shv"
+set page-padding                3
+set window-title-home-tilde  true
+set window-title-basename    true
+set statusbar-home-tilde     true
+set statusbar-basename       true
+
+
 set font curie
-set statusbar-fg "white"
-set recolor-lightcolor "#ffffdd"
-set recolor-darkcolor "#000000"
-set default-bg "#252525"
-set default-fg "#AFAFAF"
+# set default-bg "#252525"
+# set default-fg "#AFAFAF"
 
 set adjust-open "width"
 set selection-clipboard clipboard
-set show-h-scrollbar=true
 
 map r reload
 map R rotate

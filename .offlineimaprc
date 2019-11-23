@@ -13,6 +13,6 @@ localfolders = ~/Mail/Gmail
 [Repository Gmail-Remote]
 type = Gmail
 remoteuser = xxzeroxxah@gmail.com
-remotepass = 123DGahmed123
+remotepass = 1AmD@vidGabriel
 maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
