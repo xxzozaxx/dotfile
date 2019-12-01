@@ -1,11 +1,10 @@
 # youtube prefix : https://www.youtube.com/feeds/videos.xml?channel_id=
+
 * Plant                                                              :elfeed:
 **  http://planet.emacsen.org/atom.xml
 **  https://planet.gnu.org/rss20.xml
-# **  https://planet.nixos.org/rss20.xml
 **  https://planet.lisp.org/rss20.xml
 * Comic                                                              :elfeed:
-#**  https://xkcd.com/rss.xml
 **  http://explainxkcd.com/rss.xml
 **  https://linux.pictures/feed
 * Youtube                                                            :elfeed:
@@ -24,12 +23,10 @@
 ** https://ambrevar.xyz/rss.xml                                                      :ambrevar:
 ** https://www.romanzolotarev.com/rss.xml                                               :OpenBSD:
 * News                                                               :elfeed:
-** https://hnrss.org/newest?points=10
+** https://hnrss.org/newest?points=50
 ** https://www.reddit.com/.rss?feed=453180888de169bbde28bf72272be11f6a5322a9&user=XxZozaxX
 ** https://freepo.st/rss/new
 * Vocab                                                              :elfeed:
-** https://wordsmith.org/awad/rss1.xml                                                 :Vocab:
-** https://www.merriam-webster.com/wotd/feed/rss2                                          :Vocab:
-#** https://en.wiktionary.org/w/api.php?action=featuredfeed&feed=wotd  :Vocab:
+** https://en.wiktionary.org/w/api.php?action=featuredfeed&feed=wotd :Vocab:
 * Cast                                                               :elfeed:
 ** https://newrustacean.com/feed.xml                                                  :Rust:
