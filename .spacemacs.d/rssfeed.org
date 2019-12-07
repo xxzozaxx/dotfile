@@ -23,9 +23,10 @@
 ** https://ambrevar.xyz/rss.xml                                                      :ambrevar:
 ** https://www.romanzolotarev.com/rss.xml                                               :OpenBSD:
 * News                                                               :elfeed:
+** https://old.reddit.com/message/inbox/.rss?feed=a504d3ad1594f8dccee2b9c4c06891ab7e99a3bb&user=XxZozaxX :Reddit:
 ** https://hnrss.org/newest?points=50
-** https://www.reddit.com/.rss?feed=453180888de169bbde28bf72272be11f6a5322a9&user=XxZozaxX
 ** https://freepo.st/rss/new
+** https://lobste.rs/t/programming,emacs,linux,lisp,show,science,education.rss
 * Vocab                                                              :elfeed:
 ** https://en.wiktionary.org/w/api.php?action=featuredfeed&feed=wotd :Vocab:
 * Cast                                                               :elfeed:

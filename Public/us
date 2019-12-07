@@ -47,7 +47,7 @@ xkb_symbols "prog-intl" {
     key <AD11> { [ bracketleft,      braceleft,      guillemotleft,    leftdoublequotemark ] };
     key <AD12> { [ bracketright,     braceright,    guillemotright,   rightdoublequotemark ] };
 
-    key <AC01> { [ a,                A,                     aacute,            Greek_alpha ] };
+    key <AC01> { [ a,                A,                      U2200,            Greek_alpha ] }; // for all
     key <AC02> { [ s,                S,                     ssharp,                section ] };
     key <AC03> { [ d,                D,                  braceleft,                    ETH ] };
     key <AC04> { [ f,                F,                 braceright,                      F ] };
