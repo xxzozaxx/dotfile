@@ -80,73 +80,12 @@ nnoremap Z zz
 " Leader Key Mappings 
 """""""""""""""""""""""
 let mapleader = ' '     " Map our main leader Space
-"nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
-" Follow-mode like keybinding
-nmap <silent> <Leader>ef	:vsplit<bar>wincmd l<bar>exe "norm! Ljz<c-v><cr>"<cr>:set scb<cr>:wincmd h<cr>:set scb<cr>
-
-nnoremap <leader><leader> <C-z>
-nnoremap <leader>tn  :set number! relativenumber!<CR>
-
-nnoremap <leader>ev :split $MYVIMRC<CR>
-"nnoremap <leader>ep :call OpenFile(g:vimtexer)<CR>
-"nnoremap <leader>ez :call OpenFile("$HOME/.zshrc")<CR>
-"nnoremap <leader>ex :call OpenFile("$HOME/.xinitrc")<CR>
-"nnoremap <leader>ei :call OpenFile("$HOME/.i3/config")<CR>
-
-nnoremap <leader>u  :call Preserve("normal! Ypv$r-k")<CR>
-nnoremap <leader>h  za
-nnoremap <silent> <leader>p :put=py3eval(getline('.'))<CR>
-"nnoremap <silent> <leader>t :call Term('')<CR>
-nnoremap <leader>s :w<CR>
-nnoremap <leader>S :w !sudo tee %<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>Q :bd<CR>
-
-" Easy Motion, make it spacemacs-ish
-map  <Leader>jl <Plug>(easymotion-bd-jk)
-nmap <Leader>jl <Plug>(easymotion-overwin-line)
-map  <Leader>jj <Plug>(easymotion-bd-f)
-nmap <Leader>jj <Plug>(easymotion-overwin-f)
-map  <Leader>jw <Plug>(easymotion-bd-w)
-nmap <Leader>jw <Plug>(easymotion-overwin-w)
-
-" Window commands
-nnoremap <leader>v  :vsp<CR>
-nnoremap <leader>vt :vsp<CR>:terminal<CR><C-\><C-n>
-"nnoremap <leader>vo :call fzf#run({'source':'find ~/', 'right': winwidth('.')/2, 'sink':'vertical botright split'})<CR>
-
-nnoremap <leader>V  :split<CR>
-nnoremap <leader>Vt :split<CR>:terminal<CR><C-\><C-n>
-"nnoremap <leader>Vo :call fzf#run({'source':'find ~/', 'down':'40%', 'sink':'botright split'})<CR>
 
 nnoremap <leader>wl :wincmd l<CR>
 nnoremap <leader>wh :wincmd h<CR>
 nnoremap <leader>wk :wincmd k<CR>
 nnoremap <leader>wj :wincmd j<CR>
-
-" Git Commands
-nnoremap <leader>ga :Gwrite<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gp :Gpush origin master<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gl :Glog<CR>
-
-" Music Commands
-"nnoremap <leader>ms  :silent !mplayer ~/Audio/Playlist/*<CR>
-"nnoremap <leader>mp  :silent !echo "pause" > /home/brennier/Pipes/media_control<CR>
-"nnoremap <leader>mq  :silent !echo "quit" > /home/brennier/Pipes/media_control<CR>
-"nnoremap <leader>mvm :silent !echo "set_property volume 0" > /home/brennier/Pipes/media_control<CR>
-"nnoremap <leader>mvu :silent !echo "volume +5" > /home/brennier/Pipes/media_control<CR>
-"nnoremap <leader>mvd :silent !echo "volume -5" > /home/brennier/Pipes/media_control<CR>
-
-" Other Commands
-nnoremap <leader>T :NERDTreeToggle<CR>
-nnoremap <leader>F :call Format()<CR>
 nnoremap <leader>y  "+y
-"nnoremap <leader>f :call Translate()<CR>
-"nnoremap <leader>T :call TranslateLine()<CR>
-"nnoremap <leader>a :call AddToFrenchFile()<CR>
 "}}}
 " Plugins 
 """"""""""""""
@@ -157,11 +96,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'        " Show functions, Golbal var, Macros etc etc
 Plug 'prabirshrestha/async.vim' " VIM LSP-helper
 Plug 'prabirshrestha/vim-lsp'   " VIM LSP
-Plug 'morhetz/gruvbox'          " My fav colorscheme
+"Plug 'morhetz/gruvbox'          " My fav colorscheme
 Plug 'sheerun/vim-polyglot'     " For language support
 Plug 'lfv89/vim-foldfocus'      " fold into new buffer
 Plug 'troydm/easytree.vim'      " lighter NERDtree
-Plug 'severin-lemaignan/vim-minimap' " Test minimap
+"Plug 'severin-lemaignan/vim-minimap' " Test minimap
 "Plug 'jiangmiao/auto-pairs'     " DELETE Auto-close plugin
 "Plug 'lekv/vim-clewn'          " GDB
 "Plug 'tpope/vim-fugitive'       " GIT
@@ -176,13 +115,11 @@ nmap <Leader><CR> :call FoldFocus('vnew')<CR>
 "}}}
 " Quicktex Setup 
 "let g:quicktex_trigger = "\t"
-
 " let g:quicktex_cpp = {
 "             \'boiler' : "#include <iostream>\<CR>using namespace std;\<CR>\<CR>int main(int argc, char **argv) {\<CR><+++>\<CR>\<CR>\<BS>return 0;\<CR>}",
 "             \'func' : "<+++> <+Name+>(<+Arguments+>) {\<CR><+Content+>\<CR>}",
 "             \' '    : "\<ESC>/<+.*+>\<CR>\"_c/+>/e\<CR>",
 " \}
-
 " let g:quicktex_python = {
 "             \'boiler' : "#include <iostream>\<CR>using namespace std;\<CR>\<CR>int main(int argc, char **argv) {\<CR><+++>\<CR>\<CR>\<BS>return 0;\<CR>}",
 "             \'def'    : "def <+++>(<+Arguments+>):\<CR><++>",
@@ -198,12 +135,10 @@ nmap <Leader><CR> :call FoldFocus('vnew')<CR>
 "             \'cl'     : "## <+++> #############################################################",
 "             \' '      : "\<ESC>/<+.*+>\<CR>\"_c/+>/e\<CR>",
 " \}
-
 " let g:quicktex_html = {
 "             \'boiler' : "#include <iostream>\<CR>using namespace std;\<CR>\<CR>int main(int argc, char **argv) {\<CR><+++>\<CR>\<CR>\<BS>return 0;\<CR>}",
 "             \'tag'    : "\<BS>\<ESC>ByWi<\<ESC>Ea><+++></\<ESC>pa>",
 " \}
-
 " let g:quicktex_markdown = {
 "             \'b'      : "**<+++>**",
 "             \'i'      : "*<+++>*",
@@ -259,12 +194,6 @@ set wildignore+=*.swp,.lock,.DS_Store,._*
 
 " Close vim if NerdTree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Only show extra whitespace in normal mode
-" autocmd! InsertEnter * set nolist
-" autocmd! InsertLeave * set list
-"autocmd InsertLeave,WinEnter * set cursorline
-"autocmd InsertEnter,WinLeave * set nocursorline
 
 "if &term =~ "konsole"
     let &t_SI = "\<Esc>]50;CursorShape=1\x7"

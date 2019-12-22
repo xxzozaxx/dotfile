@@ -68,3 +68,6 @@ export GOROOT=$HOME/.go
 export GOPATH=$HOME/.go/pkg
 
 source /etc/bash_completion.d/climate_completion
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/master/.sdkman"
+[[ -s "/home/master/.sdkman/bin/sdkman-init.sh" ]] && source "/home/master/.sdkman/bin/sdkman-init.sh"

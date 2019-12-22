@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+export tabstop=4
+export TERM=dumb
+export PAGER=nobs
+SHELL=/home/master/Programs/plan9port/bin/rc
+# Path to 'a' script itself
+acme_bin_dir=/home/master/bin/acme
+PATH=$PATH:$acme_bin_dir
+# In `win`, Node.js REPL looks nicer without ANSI codes
+export NODE_NO_READLINE=1
+
+# Where are the plumber rules?
+acme_plumber_rules="$acme_bin_dir/plumbing"
+
+if [ "$(pgrep plumber)" ]; then
+	echo plumber is running
+else
+	echo starting plumber
+	plumber
+	cat "$acme_plumber_rules" "$PLAN9/plumb/basic" | 9p write plumb/rules
+fi
+
+if [ "$(ls acme.dump)" ]; then
+    edwood -l acme.dump -c 3 -a -f /mnt/font/DejaVuSansMono/10a/font -F /mnt/font/Amiri-Regular/14a/font $1
+else
+    edwood -c 3 -a -b -f /mnt/font/DejaVuSansMono/10a/font -F /mnt/font/Amiri-Regular/12a/font $1
+fi
+
+
+#### list of other fonts
+# /mnt/font/Menlo-Regular/12a/font
+# /mnt/font/GoMono/10a/font
+# DejaVuSansMono

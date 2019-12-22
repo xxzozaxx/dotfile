@@ -6,6 +6,8 @@
 ;;|_|  |_|\__,_|  |_|  \___| :ahmed_khaledAtzohoDoTCom:
 ;;
 ;; mu4e mode config
+
+;;; Code:
 (setq mu4e-maildir "~/Mail/Gmail"
       mu4e-drafts-folder "/[Gmail].Drafts"
       mu4e-sent-folder   "/[Gmail].Sent Mail"

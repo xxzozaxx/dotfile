@@ -14,14 +14,16 @@
 ** https://www.youtube.com/feeds/videos.xml?channel_id=UCd0dc7kQA1FUpJ76o1EjLqQ
 ** https://www.youtube.com/feeds/videos.xml?channel_id=UConVfxXodg78Tzh5nNu85Ew
 * Blog                                                               :elfeed:
-** https://lukesmith.xyz/rss.xml                                                     :Luke:
-** http://endlessparentheses.com/atom.xml                                               :ELP:
-** https://speice.io/feed.xml                                                       :bradlee:
-** https://venam.nixers.net/blog/feed.xml                                               :Venam:
-** http://blog.z3bra.org/rss/feed.xml                                                  :Z3bra:
-** https://brennan.io/blog/rss.xml                                                    :Brennan:
-** https://ambrevar.xyz/rss.xml                                                      :ambrevar:
-** https://www.romanzolotarev.com/rss.xml                                               :OpenBSD:
+** https://lukesmith.xyz/rss.xml                                   :Luke:
+** http://endlessparentheses.com/atom.xml                             :ELP:
+** https://speice.io/feed.xml                                      :bradlee:
+** https://venam.nixers.net/blog/feed.xml                           :Venam:
+** http://blog.z3bra.org/rss/feed.xml                               :Z3bra:
+** https://brennan.io/blog/rss.xml                                :Brennan:
+** https://ambrevar.xyz/rss.xml 																:ambrevar:
+** https://www.romanzolotarev.com/rss.xml													:OpenBSD:
+** https://www.aaronsw.com/2002/feeds/pgessays.rss                  :Paul:
+** https://asthasr.github.io/index.xml                           :Asthasr:
 * News                                                               :elfeed:
 ** https://old.reddit.com/message/inbox/.rss?feed=a504d3ad1594f8dccee2b9c4c06891ab7e99a3bb&user=XxZozaxX :Reddit:
 ** https://hnrss.org/newest?points=50

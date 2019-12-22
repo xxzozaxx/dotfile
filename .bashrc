@@ -50,3 +50,6 @@ export PATH=$PATH:$HOME/.go/bin:$(ruby -e 'print Gem.user_dir')/bin:/home/master
 export PATH="$HOME/.cargo/bin:$PATH" # rust
 
 source /etc/bash_completion.d/climate_completion
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/master/.sdkman"
+[[ -s "/home/master/.sdkman/bin/sdkman-init.sh" ]] && source "/home/master/.sdkman/bin/sdkman-init.sh"

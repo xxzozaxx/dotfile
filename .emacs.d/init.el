@@ -1,49 +1,56 @@
-;;; init.el --- Spacemacs Initialization File
+;;; init.el -*- lexical-binding: t; -*-
 ;;
-;; Copyright (c) 2012-2018 Sylvain Benner & Contributors
+;; Author:  Henrik Lissner <henrik@lissner.net>
+;; URL:     https://github.com/hlissner/doom-emacs
 ;;
-;; Author: Sylvain Benner <sylvain.benner@gmail.com>
-;; URL: https://github.com/syl20bnr/spacemacs
+;;   =================     ===============     ===============   ========  ========
+;;   \\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //
+;;   ||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||
+;;   || . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||
+;;   ||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||
+;;   || . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||
+;;   ||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||
+;;   || . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||
+;;   ||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||
+;;   ||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||
+;;   ||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||
+;;   ||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||
+;;   ||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||
+;;   ||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||
+;;   ||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||
+;;   ||.=='    _-'                                                     `' |  /==.||
+;;   =='    _-'                                                            \/   `==
+;;   \   _-'                                                                `-_   /
+;;    `''                                                                      ``'
 ;;
-;; This file is not part of GNU Emacs.
+;; These demons are not part of GNU Emacs.
 ;;
-;;; License: GPLv3
+;;; License: MIT
 
-;; Without this comment emacs25 adds (package-initialize) here
-;; (package-initialize)
+;; A big contributor to startup times is garbage collection. We up the gc
+;; threshold to temporarily prevent it from running, then reset it later with
+;; `doom-restore-garbage-collection-h'. Not resetting it will cause
+;; stuttering/freezes.
+(setq gc-cons-threshold most-positive-fixnum)
 
-;; Avoid garbage collection during startup.
-;; see `SPC h . dotspacemacs-gc-cons' for more info
-(defconst emacs-start-time (current-time))
-(setq gc-cons-threshold 402653184 gc-cons-percentage 0.6)
-(load (concat (file-name-directory load-file-name)
-              "core/core-versions.el")
-      nil (not init-file-debug))
-(load (concat (file-name-directory load-file-name)
-              "core/core-load-paths.el")
-      nil (not init-file-debug))
-(load (concat spacemacs-core-directory "core-dumper.el")
-      nil (not init-file-debug))
+;; In noninteractive sessions, prioritize non-byte-compiled source files to
+;; prevent the use of stale byte-code. Otherwise, it saves us a little IO time
+;; to skip the mtime checks on every *.elc file.
+(setq load-prefer-newer noninteractive)
 
-(if (not (version<= spacemacs-emacs-min-version emacs-version))
-    (error (concat "Your version of Emacs (%s) is too old. "
-                   "Spacemacs requires Emacs version %s or above.")
-           emacs-version spacemacs-emacs-min-version)
-  ;; Disable file-name-handlers for a speed boost during init
-  (let ((file-name-handler-alist nil))
-    (require 'core-spacemacs)
-    (spacemacs/dump-restore-load-path)
-    (configuration-layer/load-lock-file)
-    (spacemacs/init)
-    (configuration-layer/stable-elpa-init)
-    (configuration-layer/load)
-    (spacemacs-buffer/display-startup-note)
-    (spacemacs/setup-startup-hook)
-    (spacemacs/dump-eval-delayed-functions)
-    (when (and dotspacemacs-enable-server (not (spacemacs-is-dumping-p)))
-      (require 'server)
-      (when dotspacemacs-server-socket-dir
-        (setq server-socket-dir dotspacemacs-server-socket-dir))
-      (unless (server-running-p)
-        (message "Starting a server...")
-        (server-start)))))
+(let (file-name-handler-alist)
+  ;; Ensure Doom is running out of this file's directory
+  (setq user-emacs-directory (file-name-directory load-file-name)))
+
+;; Load the heart of Doom Emacs
+(load (concat user-emacs-directory "core/core")
+      nil 'nomessage)
+
+;; And let 'er rip!
+(doom-initialize)
+(if noninteractive
+    (doom-initialize-packages)
+  (doom-initialize-core)
+  (doom-initialize-modules)
+  (add-hook 'window-setup-hook #'doom-display-benchmark-h)
+  (add-to-list 'command-switch-alist (cons "--restore" #'doom-restore-session-handler)))
