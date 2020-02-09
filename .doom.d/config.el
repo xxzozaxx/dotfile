@@ -1,12 +1,9 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here
-
-;; UI
+;; UI λ () {} [] :;,. __-- 0oO
 (setq display-line-numbers-type nil)    ; no line number unless I want
-(setq doom-font (font-spec :family "Neep" :size 16)
-      doom-variable-pitch-font (font-spec :family "Go Mono" :size 12)
-      doom-big-font (font-spec :family "Go Mono" :size 19))
+(setq fancy-splash-image "~/Pictures/Logo2.png") ; custom banner.
+(setq doom-font (font-spec :family "Monospace" :weight 'bold :size 13))
 
 ;; Apps
 (after! elfeed

@@ -1,12 +1,12 @@
 #!/bin/bash
-##__  ___       _ _
-##\ \/ (_)_ __ (_) |_
-## \  /| | '_ \| | __|
-## /  \| | | | | | |_  :Ahmed's xinitrc:
-##/_/\_\_|_| |_|_|\__| :ahmed_khaledATzohoDoTCoM:
-## ┏┓╻╻ ╻
-## ┃┗┫╺╋╸
-## ╹╹ ╹╹ ╹
+## __  ___       _ _
+## \ \/ (_)_ __ (_) |_
+##  \  /| | '_ \| | __|
+##  /  \| | | | | | |_  :Ahmed's xinitrc:
+## /_/\_\_|_| |_|_|\__| :ahmed_khaledATzohoDoTCoM:
+##  ┏┓╻ ╻ ╻
+##  ┃┗┫ ╺╋╸
+##  ╹ ╹ ╹╹╹ :NIXERS:
 
 # launch programs
 setxkbmap -layout us,ar -variant prog-intl, -option grp:alt_shift_toggle &
@@ -35,7 +35,7 @@ do
         BATCAP=$(echo BAT)
     fi
     xsetroot -name "[IP]: $IP | [BAT]: $BATSTA $BATCAP | [VOL]: $VOL | $LOCALTIME"
-    sleep 7s
+    sleep 3s
 done &
 
 exec dwm
