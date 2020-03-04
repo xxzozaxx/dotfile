@@ -7,6 +7,9 @@
   (use-package hydra)
   (use-package company-lsp))
 
+(use-package ag  ; needed by projectile
+  :defer t)      ; for search 
+
 (use-package projectile
   :defer t
   :bind-keymap
