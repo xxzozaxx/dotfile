@@ -26,7 +26,7 @@ hi IncSearch      cterm=reverse         ctermfg=NONE
 hi Search         cterm=reverse         ctermfg=NONE
 hi MoreMsg        cterm=bold            ctermfg=NONE
 hi ModeMsg        cterm=bold            ctermfg=NONE
-hi LineNr         cterm=underline       ctermfg=NONE
+"hi LineNr         cterm=underline       ctermfg=NONE
 hi Question       cterm=standout        ctermfg=NONE
 hi StatusLine     cterm=bold,reverse    ctermfg=NONE
 hi StatusLineNC   cterm=reverse         ctermfg=NONE

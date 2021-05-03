@@ -1,6 +1,6 @@
 #            _        _
 #  _ __ ___ | | _____| |__  _ __ ___
-# | '_ ` _ \| |/ / __| '_ \| '__/ __|
+# | '_ ` _ \| |/ / __| '_ \| '__/ __|:ahmedgodaDoTmedDoTstuDoT2ATazhar.edu.eg:
 # | | | | | |   <\__ \ | | | | | (__ :Ahmed Khaled:
 # |_| |_| |_|_|\_\___/_| |_|_|  \___|:ahmed_khaledATzohoDoTCoM:
 ## ┏┓╻╻ ╻
@@ -37,13 +37,14 @@ _prompt() {
     $PRINT $RET
 }
 
+source /home/master/Programs/polyglot/polyglot.sh
 # ––– •Style END here• –––
 
 # ––– •Export START here• –––
 # IMAGEVIEWER=meh
 BROWSER=xlinks2
 BROWSERCLI=links2
-EDITOR=nvim
+EDITOR=emacs
 FZF_DEFAULT_COMMAND='rg --files'
 GEM_HOME=$HOME/.gem
 GEM_HOME=$HOME/.gem
@@ -62,7 +63,8 @@ RUST_SRC_PATH=$HOME/.rustup/toolchains/nightly-2019-01-18-x86_64-unknown-linux-g
 VIDEOPLAYER=mpv
 VISUAL=$EDITOR
 
-export PAGER BROWSERCLI READER IMAGEVIEWER VIDEOPLAYER EDITOR VISUAL BROWSER GEM_HOME PATH FZF_DEFAULT_COMMAND RUST_SRC_PATH GOROOT GOPATH
+export PAGER BROWSERCLI READER IMAGEVIEWER VIDEOPLAYER EDITOR VISUAL \
+       BROWSER GEM_HOME PATH FZF_DEFAULT_COMMAND RUST_SRC_PATH GOROOT GOPATH
 export _JAVA_AWT_WM_NONREPARENTING=1   # cuz Java GUI suck
 
 # Add color in manpages for less
@@ -88,7 +90,7 @@ HISTFILESIZE=500
 HISTFILE=$HOME/.history
 export HISTSIZE HISTFILE
 # ––– •OTHER END here• –––
-# 
+#
 
 # ––– • Bind START here• –––
 bind ^L=clear-screen

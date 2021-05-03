@@ -22,10 +22,10 @@
    dotspacemacs-configuration-layers
    '(;; ---- Languages -----
      ;; shell-scripts  ;NAND nixos
-     rust go c-c++ scheme sml racket ruby javascript ; java d  common-lisp
-     (haskell :variables
-              haskell-completion-backend 'ghci
-              haskell-process-type 'stack-ghci)
+     rust go c-c++ scheme sml ocaml ; racket ruby javascript java d  common-lisp
+     ;; (haskell :variables
+     ;;          haskell-completion-backend 'ghci
+     ;;          haskell-process-type 'stack-ghci)
      (python :variables python-enable-yapf-format-on-save t)
      markdown html graphviz
      (latex :variables latex-enable-auto-fill t
@@ -39,13 +39,14 @@
                       auto-completion-enable-sort-by-usage t)
      (evil-snipe :variables evil-snipe-enable-alternate-f-and-t-behaviors t)
      (spell-checking :variables spell-checking-enable-by-default nil)
+     spacemacs-project
 
      ;;   ---- Application -----
-     dired media erc org
-     (mu4e :variables
-           mu4e-installation-path "/usr/share/emacs/site-lisp/mu4e/")
-     (elfeed :variables
-              rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
+     dired org ;media erc 
+     ;; (mu4e :variables
+     ;;       mu4e-installation-path "/usr/share/emacs/site-lisp/mu4e/")
+     ;; (elfeed :variables
+     ;;          rmh-elfeed-org-files (list "~/.spacemacs.d/rssfeed.org"))
      (shell :variables shell-default-shell 'eshell))
 
    dotspacemacs-additional-packages '(;; --- Extra Package ----
@@ -152,7 +153,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
 
-   dotspacemacs-default-font '("DejaVu Sans Mono"
+   dotspacemacs-default-font '("Ubuntu Mono"
                                :size 16
                                :weight normal
                                :width normal
@@ -688,6 +689,7 @@ This function is called at the very end of Spacemacs initialization."
      (340 . "#2790C3")
      (360 . "#82AAFF")))
  '(vc-annotate-very-old-color nil)
+ '(warning-suppress-types '((use-package)))
  '(weechat-color-list
    '(unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0")))
 (custom-set-faces

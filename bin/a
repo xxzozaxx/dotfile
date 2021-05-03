@@ -4,11 +4,9 @@ export tabstop=4
 export TERM=dumb
 export PAGER=nobs
 SHELL=/home/master/Programs/plan9port/bin/rc
-# Path to 'a' script itself
-acme_bin_dir=/home/master/bin/acme
+acme_bin_dir=/home/master/bin/acme		# Path to 'a' script itself
 PATH=$PATH:$acme_bin_dir
-# In `win`, Node.js REPL looks nicer without ANSI codes
-export NODE_NO_READLINE=1
+export NODE_NO_READLINE=1	# In `win`, Node.js REPL looks nicer without ANSI codes
 
 # Where are the plumber rules?
 acme_plumber_rules="$acme_bin_dir/plumbing"
@@ -21,14 +19,25 @@ else
 	cat "$acme_plumber_rules" "$PLAN9/plumb/basic" | 9p write plumb/rules
 fi
 
-if [ "$(ls acme.dump)" ]; then
-    edwood -l acme.dump -c 3 -a -f /mnt/font/DejaVuSansMono/10a/font -F /mnt/font/Amiri-Regular/14a/font $1
+if [ "$(pgrep fontsrv)" ]; then
+    echo "Fontsrv is running"
 else
-    edwood -c 3 -a -b -f /mnt/font/DejaVuSansMono/10a/font -F /mnt/font/Amiri-Regular/12a/font $1
+    echo "Starting fontsrv"
+    fontsrv &
 fi
 
+ACME_DUMP=
+
+if [ -f "acme.dump" ]; then
+	echo "Loading dump"
+	ACME_DUMP="-l acme.dump"
+else
+	echo "No dump"
+fi
+
+eval "acme -a -f /mnt/font/GoMono/10a/font -F /mnt/font/DejaVuSansMono/10a/font $ACME_DUMP $* &"
 
 #### list of other fonts
 # /mnt/font/Menlo-Regular/12a/font
 # /mnt/font/GoMono/10a/font
-# DejaVuSansMono
+# /mnt/font/DejaVuSansMono/10a/font

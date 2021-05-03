@@ -1,112 +1,73 @@
-;; Don't play with functions that doesn't call in Init function
-;; which is the same as functions start ``user/''
-;;; Code:
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")))
-(eval-when-compile ; Use-package, from it's repo ddg: !git use-package
-  (add-to-list 'load-path "~/.emacs.d/use-package")
-  (require 'use-package))
+;;; init.el --- Spacemacs Initialization File -*- no-byte-compile: t -*-
+;;
+;; Copyright (c) 2012-2021 Sylvain Benner & Contributors
+;;
+;; Author: Sylvain Benner <sylvain.benner@gmail.com>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defun user/evil-init ()
-  (add-to-list 'load-path "~/.emacs.d/evil")
-  (require 'evil)
-  (evil-mode 1))
 
-(defun user/gui-frame ()      ; disable GUI-stuff
-  (scroll-bar-mode t)         ; My little mini-map :P
-  (set-scroll-bar-mode 'left)
-  ;; (menu-bar-mode -1)
-  (tool-bar-mode -1))
+;; Without this comment emacs25 adds (package-initialize) here
+;; (package-initialize)
 
-(defun user/acme-search-init ()
-  (add-to-list 'load-path "~/.emacs.d/acme")
-  (require 'acme-search)
-  (global-set-key [(mouse-3)] 'acme-search-forward)
-  (global-set-key [(shift mouse-3)] 'acme-search-backward))
+;; Avoid garbage collection during startup.
+;; see `SPC h . dotspacemacs-gc-cons' for more info
+(defconst emacs-start-time (current-time))
+(setq gc-cons-threshold 402653184 gc-cons-percentage 0.6)
+(load (concat (file-name-directory load-file-name)
+              "core/core-versions.el")
+      nil (not init-file-debug))
+(load (concat (file-name-directory load-file-name)
+              "core/core-load-paths.el")
+      nil (not init-file-debug))
+(load (concat spacemacs-core-directory "core-dumper.el")
+      nil (not init-file-debug))
 
-(defun user/require ()
-  (setq modules-dir
-	(expand-file-name "modules" user-emacs-directory)
-	use-package-always-ensure t)
-  (add-to-list 'load-path modules-dir)
-  (require 'programming)
-  (require 'prog_sml)
-  (require 'telegram)
-  (require 'emms))
-(defun user/scroll ()
-  (setq scroll-step            1      ; Scroll line by line via C-n, C-p
-	scroll-conservatively  10000) ; IDK
+;; Remove compiled core files if they become stale or Emacs version has changed.
+(load (concat spacemacs-core-directory "core-compilation.el")
+      nil (not init-file-debug))
+(load spacemacs--last-emacs-version-file t (not init-file-debug))
+(when (or (not (string= spacemacs--last-emacs-version emacs-version))
+          (spacemacs//dir-contains-stale-byte-compiled-files-p
+           spacemacs-core-directory))
+  (spacemacs//remove-byte-compiled-files-in-dir spacemacs-core-directory))
+;; Update saved Emacs version.
+(unless (string= spacemacs--last-emacs-version emacs-version)
+  (spacemacs//update-last-emacs-version))
 
-  (defun scroll-down-in-place (n)
-    (interactive "p")
-    (previous-line n)
-    (scroll-down n))
-
-  (defun scroll-up-in-place (n)
-    (interactive "p")
-    (next-line n)
-    (scroll-up n))
-
-  (global-set-key [mouse-4] 'scroll-down-in-place)
-  (global-set-key [mouse-5] 'scroll-up-in-place)
-  (global-set-key [C-up] 'scroll-down-in-place)
-  (global-set-key [C-down] 'scroll-up-in-place))
-
-(defun init () 
-  (user/gui-frame)
-  ;;(user/evil-init)
-  (user/acme-search-init)
-  (user/require)
-  (user/scroll))
-
-;; Init world
-(init)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(custom-safe-themes
-   '("cbd85ab34afb47003fa7f814a462c24affb1de81ebf172b78cb4e65186ba59d2" "8f5b54bf6a36fe1c138219960dd324aad8ab1f62f543bed73ef5ad60956e36ae" "d0fd069415ef23ccc21ccb0e54d93bdbb996a6cce48ffce7f810826bb243502c" "ffba0482d3548c9494e84c1324d527f73ea4e43fff8dfd0e48faa8fc6d5c2bc7" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" "5f1bd7f67dc1598977e69c6a0aed3c926f49581fdf395a6246f9bc1df86cb030" "6731049cee8f7cbd542d7b3e1c551f3fab716a92119bd7c77f0bd1ef20849fb8" default))
- '(inhibit-startup-echo-area-message "master")
- '(inhibit-startup-screen t)
- '(make-backup-files nil)
- '(package-selected-packages
-   '(almost-mono-themes color-theme-gruber-darker gruber-darker-theme ag minimal-theme dracula-theme company-lsp hydra lsp-clangd lsp-go lsp-python lsp-rust lsp-sh rust-mode dash use-package))
- '(visible-bell t)
- '(whitespace-display-mappings
-   '((space-mark 32
-		 [8226]
-		 [8226])
-     (space-mark 160
-		 [164]
-		 [95])
-     (tab-mark 9
-	       [9475 32 32 32]
-	       [92 9])))
- '(whitespace-line-column 120)
- '(whitespace-space-after-tab-regexp '("	+\\(\\( \\{%d,\\}\\)+\\)" . "\\(	+\\) \\{%d,\\}")))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :box nil :strike-through nil :overline nil :underline nil :slant normal :height 100 :width normal :family "Go Mono"))))
- '(isearch ((t (:background "wheat" :foreground "black"))))
- '(whitespace-big-indent ((t (:foreground "firebrick"))))
- '(whitespace-empty ((t (:background "yellow"))))
- '(whitespace-indentation ((t (:foreground "firebrick"))))
- '(whitespace-line ((t (:foreground "violet"))))
- '(whitespace-space ((t (:foreground "darkgray"))))
- '(whitespace-space-after-tab ((t (:foreground "firebrick"))))
- '(whitespace-space-before-tab ((t (:foreground "firebrick"))))
- '(whitespace-tab ((t (:foreground "darkgray"))))
- '(whitespace-trailing ((t (:foreground "yellow" :weight bold))))
- '(window-divider ((t nil)))
- '(window-divider-first-pixel ((t nil)))
- '(window-divider-last-pixel ((t nil))))
+(if (not (version<= spacemacs-emacs-min-version emacs-version))
+    (error (concat "Your version of Emacs (%s) is too old. "
+                   "Spacemacs requires Emacs version %s or above.")
+           emacs-version spacemacs-emacs-min-version)
+  ;; Disable file-name-handlers for a speed boost during init
+  (let ((file-name-handler-alist nil))
+    (require 'core-spacemacs)
+    (spacemacs/dump-restore-load-path)
+    (configuration-layer/load-lock-file)
+    (spacemacs/init)
+    (configuration-layer/stable-elpa-init)
+    (configuration-layer/load)
+    (spacemacs-buffer/display-startup-note)
+    (spacemacs/setup-startup-hook)
+    (spacemacs/dump-eval-delayed-functions)
+    (when (and dotspacemacs-enable-server (not (spacemacs-is-dumping-p)))
+      (require 'server)
+      (when dotspacemacs-server-socket-dir
+        (setq server-socket-dir dotspacemacs-server-socket-dir))
+      (unless (server-running-p)
+        (message "Starting a server...")
+        (server-start)))))

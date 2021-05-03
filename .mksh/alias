@@ -71,9 +71,9 @@ alias nmk='fdm -k fetch && neatmail mk -st -r ~/mail/INBOX > ~/mail/inbox.nm'
 alias gonvim='/home/master/Programs/0TextEditors/Gonvim-0.3.5-linux/gonvim'
 alias mitlec='youtube-dl -f 134+bestaudio --write-sub --sub-lang en'
 alias twitch="mpv --ytdl-format='360p'"
+alias recordscreen="ffmpeg -f x11grab -y -r 30 -s 1600x900 -i :0.0"
 
 aptse ()
-
 {
     apt search $1 | less
 }
@@ -102,4 +102,26 @@ nmpgd()
 { 
 	neatmail pg -m -h from:subject:to:cc ~/mail/INBOX $1 > ~/mail/mail_$1.mail
 }
+
+code2ps()
+{
+    if [[ "${1}" == "" ]]
+    then
+        echo "ERROR: missing argument \n code2ps [targetfile]"
+    else
+        vim -c "set printoptions=number:y,left:8pc,right:5pc" -c "set printfont=courier:h9" -c "syntax on" -c "hardcopy > ${1}.ps" -c "q" ${1}
+    fi
+}
+
+code2pdf()
+{
+	for i in *;
+	do code2ps $i;done
+
+	for i in *.ps;
+	do ps2pdf $i;done
+
+	pdfunite *.pdf main.pdf
+}
+
 # ––– •Alias END here• –––
