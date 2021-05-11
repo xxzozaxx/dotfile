@@ -689,7 +689,8 @@ This function is called at the very end of Spacemacs initialization."
      (340 . "#2790C3")
      (360 . "#82AAFF")))
  '(vc-annotate-very-old-color nil)
- '(warning-suppress-types '((use-package)))
+ '(warning-suppress-log-types '((comp) (comp) (use-package)))
+ '(warning-suppress-types '((comp) (comp) (use-package)))
  '(weechat-color-list
    '(unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0")))
 (custom-set-faces

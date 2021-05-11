@@ -1,0 +1,51 @@
+* Poor man pdf printing
+  - Print code to pdf using vim ::
+
+    convert all source code `for example rust code here` to ps files using this command
+      #+begin_src shell
+for i in *.rs; do code2pdf $i; done
+      #+end_src
+
+      and the code2ps function is
+      #+begin_src shell
+code2ps()
+{
+    if [[ "${1}" == "" ]]
+    then
+        echo "ERROR: missing argument \n code2ps [targetfile]"
+    else
+        vim -c "set printoptions=number:y,left:8pc,right:5pc" -c "set printfont=Cozette:h9" -c "syntax on" -c "hardcopy > ${1}.ps" -c "q" ${1}
+    fi
+}
+      #+end_src
+
+      finaly, we convert all ps files to pdf file using the same for loop but with ps2pdf program, merging them using `pdfunite *.pdf final.pdf`. Now you are free to clean up.
+
+    TODO NEXT UP, make a function the take a dir and convert all files within it to pdf recursily
+
+* Hackes
+* Mathematical representaiton of rubuik cube
+* How I compute
+* Learn git by riceing your system
+* Text Editor, theory and practice
+* Macro system of Lisp language
+* Cancers
+ I guessed cancers started be separated in history cuz our cell injury
+ sensitivity being low. maybe it's because Tumer cells is gaint thuh it should be
+ swelled and degenrates, which doesn't happen so, it continue to increase in size
+ and multiplue. Notice that tumer cells are gaint as thier has a huge nuclues maybe
+ with multiplue nucliei and so on.
+* How to setup android hello world with sdk only, NO ANDROID STUDIO
+* Why I prefer recursion more than loop.
+* Screenless day
+  [[https://tildes.net/~life/w0c/tildes_screenless_day_discussion_thread_april_2021][Screenless day]]
+* What makes different between me who wanted CS, and other ppl.
+ By other ppl I mean peapole who wanted whatever they joined in university, and they are proud of it.
+* I want to manipulate myself,
+- I want to focus more about Myself, not other peaople, I may spend hourse talk to people instead of study, not talking to them cuz I want to hear them, but because they want to speak and say whatever in their chest loud
+- I also want to control my emotions, I found myself want to be obyed more by people I need to think that THEY HAVE TO DEAL WITH THEIR OWN LIFE
+- ETC
+
+  I just want to talk about myself in my blog.
+* Mathematics proofs around Seudoko,
+- who to build system with seudoko and proof its' properties.

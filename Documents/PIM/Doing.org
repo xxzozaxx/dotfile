@@ -1,0 +1,386 @@
+#+LATEX_COMPILER: xelatex
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt, a4paper]
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Cormorant}
+#+LATEX_HEADER: \usepackage[margin=5mm]{geometry}
+#+LATEX_HEADER: \usepackage{type1cm}
+#+LATEX_HEADER: \usepackage{lettrine}
+#+OPTIONS: toc:nil c:nil
+#+STARTUP: hideblocks
+
+#+AUTHOR: Ahmed Khaled
+#+TITLE: What I do right now.
+
+#+BEGIN_abstract
+This file contain all non-medician todo for long range,
+Most of them (if not all of them} are courses of books,
+And I take a /signature/ -64 page- weekly or/and one /lecture/
+#+END_abstract
+
+#+BEGIN_COMMENT
+This is a comment
+#+END_COMMENT
+
+* Compiler
+- Section  :: Programming
+- Course   :: INSERT BLOG/COURSE URL HERE
+- Textbook :: NOT FOR NOW
+- [0%] Progress
+* SICP
+   - Section :: Computer Science
+   - Course :: [[https://www.youtube.com/playlist?list=PL7BcsI5ueSNFPCEisbaoQ0kXIDX9rR5FF][Structure and Interpretation of Computer Programs]]
+   - Textbook :: /Wizard Book/ /Jerry Sussman/'s SICP
+   - [59%] *Topics*:
+     - [X] 1.1 The Elements of Programming
+     - [X] 1.2 Procedures and the Processes They Generate
+     - [X] 1.3 Formulating Abstractions with Higher-Order Procedures
+     - [X] 2.1 Introduction to Data Abstraction
+     - [X] 2.2 Hierarchical Data and the Closure Property
+     - [X] 2.3 Symbolic Data
+     - [X] 2.4 Multiple Representations for Abstract Data
+     - [X] 2.5 Systems with Generic Operations
+     - [X] 3.1 Assignment and Local State
+     - [X] 3.2 The Environment Model of Evaluation
+     - [X] 3.3 Modeling with Mutable Data
+     - [X] 3.4 Concurrency: Time Is of the Essence
+     - [X] 3.5 Streams
+     - [-] 4.1 The Metacircular Evaluator
+     - [-] 4.2 Variations on a Scheme -- Lazy Evaluation
+     - [-] 4.3 Variations on a Scheme -- Nondeterministic Computing
+     - [ ] 4.4 Logic Programming
+     - [ ] 5.1 Designing Register Machines
+     - [ ] 5.2 A Register-Machine Simulator
+     - [ ] 5.3 Storage Allocation and Garbage Collection
+     - [ ] 5.4 The Explicit-Control Evaluator
+     - [ ] 5.5 Compilation
+   - Log
+     - =2019-09-17=
+
+       last log in summer of second year of medician school, i guess i'm ok with what
+       i did so far in this book, just gonna print the rest of it and bookbind it. I don't
+       know if i'm really done with it or i'm no longer interested. cuz i want to read/write
+       code in real software programs
+     - =2019-08-27=
+
+       Update this, now I finished almost 60% of this book, and I'm going to scape some of the 
+       chapter 4, so may jump directly to /4.4 logic programming/. which mean I done almost +70% of the book
+     - =2019-04-13=
+
+       Just finished 2.5 /last section in chapter 2/ and I decide not to start in chapter 3, instead
+       I will review chapter 2 and note on it. and start in chapter 3 after exams, yeah I will start
+       Medician exams on $04-05$ and end on $16-6$.  may be i will take slowly chapter 3 but it is
+       not a goal or even in my plan.
+     - =2019-03-28=
+
+       I re-read my last log, and the second part is not true, HtC & 2004 MIT lectures is noting.
+       Maybe 1998 lectures is the best, but I will not watch them.
+     - =2018-04-07=
+
+       I Notice that, Lectures make no-sense I think I will read book only,
+       and HtC lecture are good to replace the SICP 2004 lecture
+     - =2018-04-01=
+
+       DATE: 04/01/18 TIME: 16:58:55
+
+       I thinking in reading book and not watch video, book is rich more than
+       videos. but I did not take a decision yet. and I think I will not take
+       this decision
+     - =2018-03-25=
+
+       Started :smile:
+     - =2018-03-25=
+
+       Sun Mar 25 09:36:58 UTC 2018
+
+       Decide I will take SICP course. To know more theory about CS
+
+
+\newpage
+
+* Mathematics for Computer Science
+  - Section :: Mathematics
+  - Course :: [[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/][Math for Computer Science 2010]]
+  - Textbook :: Mathematics for Computer Science 2017 book
+  - [0%] Lectures
+    - [ ] Lecture 1: Introduction and Proofs
+    - [ ] Lecture 2: Induction
+    - [ ] Lecture 3: Strong Induction
+    - [ ] Lecture 4: Number Theory I
+    - [ ] Lecture 5: Number Theory II
+    - [ ] Lecture 6: Graph Theory and Coloring
+    - [ ] Lecture 7: Matching Problems
+    - [ ] Lecture 8: Graph Theory II: Minimum Spanning Trees
+    - [ ] Lecture 9: Communication Networks
+    - [ ] Lecture 10: Graph Theory III
+    - [ ] Lecture 11: Relations, Partial Orders, and Scheduling
+    - [ ] Lecture 12: Sums
+    - [ ] Lecture 13: Sums and Asymptotics
+    - [ ] Lecture 14: Divide and Conquer Recurrences
+    - [ ] Lecture 15: Linear Recurrences
+    - [ ] Lecture 16: Counting Rules I
+    - [ ] Lecture 17: Counting Rules II
+    - [ ] Lecture 18: Probability Introduction
+    - [ ] Lecture 19: Conditional Probability
+    - [ ] Lecture 20: Independence
+    - [ ] Lecture 21: Random Variables
+    - [ ] Lecture 22: Expectation I
+    - [ ] Lecture 23: Expectation II
+    - [ ] Lecture 24: Large Deviations
+    - [ ] Lecture 25: Random Walks
+  - \textsc{Log}
+    - =21-09-2019=
+
+      Init, Set & Go
+      
+
+\newpage
+* Algorithms
+  - Section :: Computer Science
+  - Course :: [[https://www.youtube.com/playlist?list=PLOtl7M3yp-DX32N0fVIyvn7ipWKNGmwpp][CSE373 - Analysis of Algorithms 2016 SBU]]
+  - Textbook :: The Algorithms Design Manul
+  - [0%] Lectures
+    - [ ] Lecture 01 - Introduction to Algorithms
+    - [ ] Lecture 02 - Asymptotic Notation
+    - [ ] Lecture 03 - Program Analysis
+    - [ ] Lecture 04 - Elementary Data Structures
+    - [ ] Lecture 05 - Dictionaries
+    - [ ] Lecture 06 - Hashing
+    - [ ] Lecture 07 - Heapsort / Priority Queues
+    - [ ] Lecture 08 - Mergesort / Quicksort
+    - [ ] Lecture 09 - Linear Sorting
+    - [ ] Lecture 10 - Graph Data Structures
+    - [ ] Lecture 11 - Breadth-First Search
+    - [ ] Lecture 12 - Depth-First Search
+    - [ ] Lecture 13 - Minimum Spanning Trees I
+    - [ ] Lecture 14 - Minimum Spanning Trees II
+    - [ ] Lecture 15 - Shortest Paths
+    - [ ] Lecture 16 - Backtracking I
+    - [ ] Lecture 17 - Backtracking II
+    - [ ] Lecture 18 - Introduction to Dynamic Programming
+    - [ ] Lecture 19 - Edit Distance I
+    - [ ] Lecture 20 - Edit Distance II
+    - [ ] Lecture 21 - Edit Distance III
+    - [ ] Lecture 22 - Applications of Dynamic Programming
+    - [ ] Lecture 23 - Introduction to NP-Completeness
+    - [ ] Lecture 24 - Satisfiability
+    - [ ] Lecture 25 - Other Reductions
+    - [ ] Lecture 26 - The NP-Completeness Challenge
+  - \textsc{Log}
+    - =21-09-2019=
+
+      Init, Set & Go
+      
+
+\newpage
+* Calculus :noexport:
+  - Section :: Mathematics
+  - Course :: \textsc{Todo}
+  - Textbook :: /Spivak/ Calculus, /Hebrew Uni/ Lecture notes in calculus
+  - [26%] Chapters
+    - [X] 1 Basic Properties of Numbers
+    - [X] 2 Numbers of Various Sorts
+    - [X] 3 Functions
+    - [X] 4 Graphs
+    - [X] 5 Limits
+    - [X] 6 Continuous Functions
+    - [X] 7 Three Hard Theorems
+    - [X] 8 Least Upper Bounds
+    - [ ] 9 Derivatives
+    - [ ] 10 Differentiation
+    - [ ] 11 Significance of the Derivative
+    - [ ] 12 Inverse Functions
+    - [ ] 13 Integrals
+    - [ ] 14 The Fundamental Theorem of Calculus
+    - [ ] 15 The Trigonometric Functions
+    - [ ] 16 $\pi$ is Irrational
+    - [ ] 17 Planetary Motion
+    - [ ] 18 The Logarithm and Exponential Functions
+    - [ ] 19 Integration in Elementary Terms
+    - [ ] 20 Approximation by Polynomial Functions
+    - [ ] 21 $e$ is Transcendental
+    - [ ] 22 Infinite Sequences
+    - [ ] 23 Infinite Series
+    - [ ] 24 Uniform Convergence and Power Series
+    - [ ] 25 Complex Numbers
+    - [ ] 26 Complex Functions
+    - [ ] 27 Complex Power Series
+    - [ ] 28 Fields
+    - [ ] 29 Construction of the Real Numbers
+    - [ ] 30 Uniqueness of the Real Numbers
+  - \textsc{Log}
+    - =2019-09-17=
+
+      last log in 2nd year summer in med school, i will try my best to keep read
+      this book even in school. pray to ALLAH
+    - =2019-04-18=
+
+      Hmmm, I decided to take a break and review some of what I studied so far
+      I found Notes from Hebrew university and it so good, will add it to my plain
+    - =2019-03-29=
+
+      Calculus Initalization with 13% \textsc{Done}, This is great,
+      although I'm late 1 week {signature}. I finished 4 chapters in 4 signature.
+
+      
+/newpage
+
+* \Psi                                                                :noexport:
+   - Section  :: Psychology
+   - Course   :: [[https://www.youtube.com/redirect?event=playlist_description&q=http%3A%2F%2Focw.mit.edu%2F9-00SCS11&redir_token=wwVe23YGej1d-acQ5OK8fhBQOYd8MTU1Mzk0ODYxMEAxNTUzODYyMjEw][/John Gabrieli/: \textsc{Mit} 9.00SC Introduction to Psychology]]
+   - Textbook :: /Stangor:/ Introduction to Psychology \textsc{Saylor Academy Open Textbooks}
+   - [20%] Lecture
+     - [X] Lec 1: Indroduction
+     - [X] Lec 2: Scintific Method
+     - [X] Lec 3: Brain
+     - [X] Lec 4: Brain, Search Methoid
+     - [X] Lec 5: Vision
+     - [ ] Lec 6
+     - [ ] Lec 7
+     - [ ] Lec 8
+     - [ ] Lec 9
+     - [ ] Lec 10
+     - [ ] Lec 11
+     - [ ] Lec 12
+     - [ ] Lec 13
+     - [ ] Lec 14
+     - [ ] Lec 15
+     - [ ] Lec 16
+     - [ ] Lec 17
+     - [ ] Lec 18
+     - [ ] Lec 19
+     - [ ] Lec 20
+     - [ ] Lec 21
+     - [ ] Lec 22
+     - [ ] Lec 23
+     - [ ] Lec 24
+   - \textsc{Log}
+     - =2019-09-17=
+
+       last log in 2nd year in med school summer,i think i'm no longer interested
+       in basic of it, so maybe gonna jump to memory and these stuff or just stop it.
+       i recebtly did't watch any lecture.
+     - =2019-04-18=
+
+       I stoped this course 2 weeks ago or so, it's not cuz it bad. I was in a bad mood,
+       I skipped Lec5 /which about the vision/ and I think when I will back, I will start
+       from memory.
+     - =2019-03-29=
+
+       Add \Psi to our list with 12% \textsc{Done}. Nice.
+
+
+\newpage
+
+* CS61C                                                            :noexport:
+   - Section :: Computer Architecture
+   - Course :: [[https://www.youtube.com/watch?v=9y_sUqHeyy8&list=PLhMnuBfGeCDM8pXLpqib90mDFJI-e1lpk][UC Berkeley CS 61C Great Ideas in Computer Architecture (Machine Structures)]]
+   - Textbook :: /P&H/ Computer Organization and desigin
+   - [24%] *Lecture*:
+     - [X] 1. Intro, Number Representation /P&H: 2.4/
+     - [X] 2. C Intro, Pointers /K&R Ch. 1-5/
+     - [X] 3. C Arrays, Strings, Pointers	/K&R Ch. 5-6/
+     - [X] 4. C Memory Mangement, Usage	/K&R: 7.8.5, 8.7/
+     - [X] 5. Intro to Assembly Language, MIPS Intro /P&H: 2.1-2.3/
+     - [X] 6. MIPS, MIPS Functions /P&H: 2.6 - 2.9, 2.10 (only p.111-113), A.6/
+     - [X] 7. MIPS Instruction Formats /P&H: 2.5, 2.10/
+     - [ ] 8. Compiler, Assembler, Linker, Loader (CALL) /P&H: 2.12, A.1-A.4/
+     - [ ] 9. Intro to Synchronous Digital Systems (SDS), Logic /P&H: B.2-B.3/ *See web.pdf*
+     - [ ] 10. Functional Units, FSMs
+     - [ ] 11. MIPS Datapath, Single-Cycle Control Intro /P&H: 4.1, 4.3, 4.4/
+     - [ ] \textsc{Review} 1
+     - [ ] 12. MIPS Single-Cycle Control, Pipelining Intro /P&H: 4.5-4.8/
+     - [ ] 13. MIPS Pipelining Hazards /P&H: 4.10, 4.11/
+     - [ ] 14. Memory Hierarchy, Fully Associative Caches /P&H: 5.1, 5.2, 5.3, 5.4, 5.8, 1.6/
+     - [ ] 15. Caches: Direct-mapped, Set-associative, Performance	/See 3/10 lec/
+     - [ ] 16. Multilevel Caches, Cache Questions	/See 3/10 lec/
+     - [ ] 17. Performance, Floating Point, Tech Trends /P&H: 3.5. 3.9/
+     - [ ] 18. Flynn Taxonomy, Data-Level Parallelism /P&H: 1.7, 1.8, 6.1, 6.2, 6.3, 6.7/
+     - [ ] 19. Amdahl's Law, Thread-Level Parallelism, OpenMP Intro /P&H: 6.5, 5.10, 2.11 OpenMP Summary Card/
+     - [ ] \textsc{Review 2}
+     - [ ] 20. Cache Coherence, OpenMP Sharing Issues, Performance /P&H: 5.10/
+     - [ ] 21. Warehouse Scale Computing /Spark Ch 1, Ch 2.4, Ch 3, 5.1-5.3/
+     - [ ] 22. OS Support, Base and Bounds, Interrupts, Virtual Memory Intro /P&H: 5.13, 5.15, 5.16/
+     - [ ] 23. More Virtual Memory, Intro to I/O /P&H: 6.9 (only p.4-10), 4.9/
+     - [ ] 24. I/O: DMA, Disks, Networking /P&H: 5.2, 5.5, 5.11/
+     - [ ] 25. Dependability: Parity, ECC, RAID /P&H: 5.5, B-65 to B-67/
+     - [ ] \textsc{Summary}, What's Next?
+     - [ ] \textsc{Final}
+   - LOG
+     - =2019-04-18=
+
+       It is so sad that I didn't study this course for a 2 week I think, I was
+       in very bad mood and I recover from it slowly.
+     - =2019-03-39=
+
+       Lecture 7 \textsc{Done}, Now its almost 24% \textsc{Done}. Nice work
+       I will continuo till \textsc{Review 1} and then I will take a break
+       review, do sections, labs & homework.
+     - =2019-03-25=
+
+       Lecture 6 DONE
+     - =2019-03-01=
+
+       Start
+
+\newpage
+
+
+
+* Pathology :noexport:
+  - Section :: Medicine
+  - Course :: Khalifa
+  - [0%] Lecutres
+    - [ ] Lecture 01
+    - [ ] Lecture 02
+    - [ ] Lecture 03
+    - [ ] Lecture 04
+    - [ ] Lecture 05
+    - [ ] Lecture 06
+    - [ ] Lecture 07
+    - [ ] Lecture 08
+    - [ ] Lecture 09
+    - [ ] Lecture 10
+    - [ ] Lecture 11
+    - [ ] Lecture 12
+    - [ ] Lecture 13
+    - [ ] Lecture 14
+    - [ ] Lecture 15
+    - [ ] Lecture 16
+
+  - \textsc{Log}
+    - =<2021-02-09 Tue>=
+      we done with this shit long time ago.
+
+\newpage
+
+* Pharmacology                                                     :noexport:
+** General Pharmacology
+  - Section :: Medicine
+  - Course :: Dr. Abdo
+  - [20%] Lecutres
+    - [X] Lecture 1
+    - [X] Lecture 2
+    - [ ] Lecture 3
+    - [ ] Lecture 4
+    - [ ] Lecture 5
+    - [ ] Lecture 6
+    - [ ] Lecture 7
+    - [ ] Lecture 8
+    - [ ] Lecture 9
+  - \textsc{Log}
+    - =<2021-02-09 Tue>=
+      we done with this shit long time ago.
+
+\newpage
+* Microcytology :noexport:
+  - \textsc{Log}
+    - =<2021-02-09 Tue>=
+      we done with this shit long time ago.
+
+* Paracytology :noexport:
+  - \textsc{Log}
+    - =<2021-02-09 Tue>=
+      we done with this shit long time ago.
+
+

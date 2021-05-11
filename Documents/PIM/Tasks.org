@@ -1,0 +1,10 @@
+#+TODO: TODO DOING | DONE(!)
+
+* Write Notes.
+
+
+* Bookbiding
+- Inductions practice
+- haskell 1 sig
+* Download videos
+* Prepare 2020 calender
