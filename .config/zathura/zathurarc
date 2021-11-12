@@ -9,6 +9,7 @@ set statusbar-home-tilde     true
 set statusbar-basename       true
 
 
+set font "monospace normal 14"
 # set font curie
 # set default-bg "#252525"
 # set default-fg "#AFAFAF"

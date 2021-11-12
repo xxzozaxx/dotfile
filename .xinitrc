@@ -17,6 +17,7 @@ compton --xrender-sync-fence							&
 redshift									&
 slstatus									&
 
+#exec shod
 exec dwm
 #exec wm
 #exec glazier

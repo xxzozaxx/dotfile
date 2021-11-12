@@ -6,7 +6,11 @@ AutomaticDetectionLanguage=1
 
 [MainWindow]
 Height 900=879
-State=AAAA/wAAAAD9AAAAAAAAA7oAAANbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+LVDS1 Height 900=879
+LVDS1 Width 1600=1594
+LVDS1 XPosition=3
+LVDS1 YPosition=18
+State=AAAA/wAAAAD9AAAAAAAABjoAAAM2AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
 Width 1600=954
 
@@ -17,5 +21,7 @@ Width 1600=600
 [Recent Files]
 File1[$e]=$HOME/Documents/Mathematics/Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
 File2[$e]=$HOME/Documents/Mathematics/Notes/Note.ps
+File3[$e]=$HOME/Downloads/tst/1_5121076900738892004.mobi
 Name1[$e]=Philosophy of mathematics. An introduction to the world of proofs and pictures__1999.djvu
 Name2[$e]=Note.ps
+Name3[$e]=1_5121076900738892004.mobi
